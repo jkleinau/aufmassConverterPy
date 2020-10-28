@@ -13,7 +13,7 @@ import xml.etree.ElementTree as ET
 #
 # # create a new XML file with the results
 
-def write_data_to_xml(data):
+def write_data_to_xml(data,path):
     project = ET.Element('PROJEKT', attrib={"xmlns": "urn:in-software-com:IN-AUFMASS"})
     position = ET.SubElement(project, 'POSITION', attrib={"ID": "01.01"})
 
@@ -56,5 +56,5 @@ def write_data_to_xml(data):
                 stichwort.text = line[i]
 
     mydata = ET.tostring(project,encoding='ISO-8859-1')
-    myfile = open("AUFMASS.xml", "wb")
+    myfile = open(path +"\AUFMASS.xml", "wb")
     myfile.write(mydata)

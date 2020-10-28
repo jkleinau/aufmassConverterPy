@@ -1,26 +1,50 @@
+from main import convert
 from tkinter import *
+import tkinter.filedialog
 
 fenster = Tk()
 
 fenster.title("Aufmass Converter")
+global import_path
+global export_path
 
 
-def button_action():
-    anweisungs_label.config(text="Ich wurde geändert!")
+def button_action_import():
+    name = tkinter.filedialog.askopenfile()
+    import_textfield.delete(0, END)
+    import_textfield.insert(0, name.name)
 
 
-change_button = Button(fenster, text="Ändern", command=button_action)
-exit_button = Button(fenster, text="Beenden", command=fenster.quit)
+def button_action_export():
+    name = tkinter.filedialog.askdirectory()
+    export_textfield.delete(0, END)
+    export_textfield.insert(0, name)
 
-anweisungs_label = Label(fenster, text="Ich bin eine Anweisung:\n\
-Klicke auf 'Ändern'.")
 
-info_label = Label(fenster, text="Ich bin eine Info:\n\
-Der Beenden Button schliesst das Programm.")
-anweisungs_label.pack(side=LEFT)
-change_button.pack(side=LEFT)
-info_label.pack(side=LEFT)
-exit_button.pack(side=LEFT)
+import_button = Button(fenster, text="Import", command=button_action_import)
 
+export_button = Button(fenster, text="Export", command=button_action_export)
+
+
+def button_action_convert():
+    convert()
+
+
+convert_button = Button(fenster, text="Umwandeln", command=button_action_convert)
+
+import_textfield = Entry(fenster, bd=2)
+export_textfield = Entry(fenster, bd=2)
+
+# Zuerst definieren wir die Grösse des Fensters
+fenster.geometry("610x205")
+# Wir benutzen die absoluten Koordinaten um die Komponenten zu
+# setzen und definieren deren Grösse
+# anweisungs_label.place(x = 0, y = 0, width=200, height=150)
+import_button.place(x=15, y=15, width=100, height=50)
+# info_label.place(x = 100, y = 160, width=300, height=100)
+export_button.place(x=15, y=75, width=100, height=50)
+import_textfield.place(x=130, y=30, width=465, height=20)
+export_textfield.place(x=130, y=90, width=465, height=20)
+convert_button.place(x=255, y=160, width=100, height=30)
 
 fenster.mainloop()
