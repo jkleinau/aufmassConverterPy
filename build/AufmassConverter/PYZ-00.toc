@@ -1044,13 +1044,13 @@
    'c:\\users\\bsu holding '
    '02\\appdata\\local\\programs\\python\\python39\\lib\\os.py',
    'PYMODULE'),
-  ('_py_abc',
-   'c:\\users\\bsu holding '
-   '02\\appdata\\local\\programs\\python\\python39\\lib\\_py_abc.py',
-   'PYMODULE'),
   ('stringprep',
    'c:\\users\\bsu holding '
    '02\\appdata\\local\\programs\\python\\python39\\lib\\stringprep.py',
+   'PYMODULE'),
+  ('_py_abc',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\_py_abc.py',
    'PYMODULE'),
   ('gui',
    'C:\\Users\\BSU Holding 02\\PycharmProjects\\aufmassConverterPy\\gui.py',

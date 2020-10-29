@@ -12,7 +12,7 @@ import xml.etree.ElementTree as ET
 # item2.text = 'item2abc'
 #
 # # create a new XML file with the results
-def write_data_to_xml(data_raume,data_waende, path, header_raume, header_waende):
+def write_data_to_xml(data_raume, data_waende, path, header_raume, header_waende):
     project = ET.Element('PROJEKT', attrib={"xmlns": "urn:in-software-com:IN-AUFMASS"})
     position = ET.SubElement(project, 'POSITION', attrib={"ID": "01.01"})
 
@@ -54,8 +54,6 @@ def write_data_to_xml_raume(data, header, root):
 
 
 def write_data_to_xml_waende(data, header, root):
-
-
     # create Iterator and skip first line
     iterdata = iter(data)
     next(iterdata)
@@ -67,19 +65,18 @@ def write_data_to_xml_waende(data, header, root):
         for i in range(len(line)):
             # Get Room description
             if name == "":
-                name = line[i] + ", " + line[i + 2]
+                name = line[i]
                 continue
 
             if i in header:
                 aufmasszeile = ET.SubElement(root, 'AUFMASSZEILE')
 
                 stichwort = ET.SubElement(aufmasszeile, 'STICHWORT')
-                stichwort.text = level + ", " + name
+                stichwort.text = level + ", " + name + ", " + line[8]
 
                 text = ET.SubElement(aufmasszeile, 'TEXT')
-                text.text = header[i] + ", " + name
+                text.text = header[i] + ", " + name + ", " + line[i + 2]
 
                 stichwort = ET.SubElement(aufmasszeile, 'AUFMASS')
                 if line[i]:
                     stichwort.text = line[i].split()[0]
-

@@ -23,8 +23,8 @@ def convert():
 
     header_waende = {
         3: "Oberfläche",
-        5: "Breite",
-        6: "Höhe",
+        #5: "Breite",
+        #6: "Höhe",
 
     }
 
