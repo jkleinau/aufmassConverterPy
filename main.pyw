@@ -15,7 +15,7 @@ def convert():
         2: "Volumen",
         3: "Boden Umfang",
         4: "Decke Umfang",
-        6: "Wandfläche ohne Öffnung",
+        5: "Wandfläche mit Öffnung",
         7: "Umfang Türen",
         8: "Fensterflächen",
         9: "Raumhöhe "
@@ -30,8 +30,9 @@ def convert():
 
     data = csvImport.import_data(gui.import_textfield.get())
     data_subsection_raume = csvImport.get_subsection('ATTRIBUTE DER RÄUME', data)
-    data_subsection_waende = csvImport.get_subsection('Wandeigenschaften', data)
-    xmlParser.write_data_to_xml(data_subsection_raume,data_subsection_waende, gui.export_textfield.get(), header_raueme, header_waende)
+    #TODO rausnehmen wenn wände mit sollen
+    #data_subsection_waende = csvImport.get_subsection('Wandeigenschaften', data)
+    xmlParser.write_data_to_xml(data_subsection_raume,None, gui.export_textfield.get(), header_raueme, header_waende)
 
 
 # Press the green button in the gutter to run the script.

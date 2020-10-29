@@ -1,26 +1,17 @@
 import xml.etree.ElementTree as ET
+from datetime import datetime
 
 
-# # create the file structure
-# data = ET.Element('data')
-# items = ET.SubElement(data, 'items')
-# item1 = ET.SubElement(items, 'item')
-# item2 = ET.SubElement(items, 'item')
-# item1.set('name', 'item1')
-# item2.set('name', 'item2')
-# item1.text = 'item1abc'
-# item2.text = 'item2abc'
-#
-# # create a new XML file with the results
 def write_data_to_xml(data_raume, data_waende, path, header_raume, header_waende):
     project = ET.Element('PROJEKT', attrib={"xmlns": "urn:in-software-com:IN-AUFMASS"})
-    position = ET.SubElement(project, 'POSITION', attrib={"ID": "01.01"})
+    position = ET.SubElement(project, 'POSITION', attrib={"ID": "1.01"})
 
     write_data_to_xml_raume(data_raume, header_raume, position)
-    write_data_to_xml_waende(data_waende, header_waende, position)
+    #TODO rausnehmen wenn wände
+    #write_data_to_xml_waende(data_waende, header_waende, position)
 
     mydata = ET.tostring(project, encoding='ISO-8859-1')
-    myfile = open(path + "\AUFMASS.xml", "wb")
+    myfile = open(path + "\AUFMASS-" + str(datetime.now().date()) + ".xml", "wb")
     myfile.write(mydata)
 
 
@@ -75,8 +66,8 @@ def write_data_to_xml_waende(data, header, root):
                 stichwort.text = level + ", " + name + ", " + line[8]
 
                 text = ET.SubElement(aufmasszeile, 'TEXT')
-                text.text = header[i] + ", " + name + ", " + line[i + 2]
+                text.text = header[i] + ", " + name + ", " + line[2]
 
-                stichwort = ET.SubElement(aufmasszeile, 'AUFMASS')
+                aufmass = ET.SubElement(aufmasszeile, 'AUFMASS')
                 if line[i]:
-                    stichwort.text = line[i].split()[0]
+                    aufmass.text = line[5]+"*"+line[6]
