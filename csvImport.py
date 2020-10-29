@@ -1,9 +1,9 @@
 import csv
 
 
-def import_data():
+def import_data(path):
     data = []
-    with open('resources/Grundriss 3.csv', newline='', encoding='UTF-8') as csvfile:
+    with open(path, newline='', encoding='UTF-8') as csvfile:
         reader = csv.reader(csvfile, delimiter=',')
         for row in reader:
             data.append(row)
