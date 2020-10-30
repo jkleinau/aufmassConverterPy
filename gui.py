@@ -1,6 +1,7 @@
-from main import convert
-from tkinter import *
 import tkinter.filedialog
+from tkinter import *
+
+from main import convert
 
 fenster = Tk()
 
