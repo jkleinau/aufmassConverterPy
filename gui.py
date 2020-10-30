@@ -22,7 +22,6 @@ def button_action_export():
 
 
 import_button = Button(fenster, text="Import", command=button_action_import)
-
 export_button = Button(fenster, text="Export", command=button_action_export)
 
 
