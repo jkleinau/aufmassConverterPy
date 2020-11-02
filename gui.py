@@ -3,7 +3,6 @@ from tkinter import *
 
 from main import convert
 
-
 fenster = Tk()
 fenster.configure(bg='#c0c0c0')
 fenster.title("Aufmass Converter")

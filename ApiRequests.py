@@ -1,7 +1,6 @@
-import requests
 import json
-import requests_cache
-from datetime import datetime
+import requests
+
 
 
 def jprint(obj):
@@ -27,11 +26,16 @@ def lastfm_get(payload):
     return response
 
 
-r = lastfm_get({
-    'method': 'chart.gettopartists'
-})
-print(r.status_code)
-jprint(r.json()['artists']['@attr'])
+r = requests.get("https://api.chucknorris.io/jokes/random")
+jprint(r.json()['value'])
+
+# requests_cache.install_cache()
+#
+# r = lastfm_get({
+#     'method': 'chart.gettopartists'
+# })
+# print(r.status_code)
+# jprint(r.json()['artists']['@attr'])
 #
 # parameters = {
 #     "lat": 40.71,
