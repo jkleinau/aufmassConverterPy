@@ -3,9 +3,11 @@ from tkinter import *
 
 from main import convert
 
-fenster = Tk()
 
+fenster = Tk()
+fenster.configure(bg='#c0c0c0')
 fenster.title("Aufmass Converter")
+
 global import_path
 global export_path
 
@@ -43,8 +45,8 @@ fenster.geometry("610x205")
 import_button.place(x=15, y=15, width=100, height=50)
 # info_label.place(x = 100, y = 160, width=300, height=100)
 export_button.place(x=15, y=75, width=100, height=50)
-import_textfield.place(x=130, y=30, width=465, height=20)
-export_textfield.place(x=130, y=90, width=465, height=20)
+import_textfield.place(x=130, y=25, width=465, height=30)
+export_textfield.place(x=130, y=85, width=465, height=30)
 convert_button.place(x=255, y=160, width=100, height=30)
 
 fenster.mainloop()
