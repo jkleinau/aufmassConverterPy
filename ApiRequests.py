@@ -1,33 +1,57 @@
 import requests
 import json
+import requests_cache
 from datetime import datetime
+
+
 def jprint(obj):
     # create a formatted string of the Python JSON object
     text = json.dumps(obj, sort_keys=True, indent=4)
     print(text)
 
 
-parameters = {
-    "lat": 40.71,
-    "lon": -74
-}
-response = requests.get("http://api.open-notify.org/iss-pass.json", params=parameters)
-print(response.status_code)
-#print(response.json())
+USER_AGENT = 'jkleinau'
+API_KEY = '5e5218e14b0315bc56d3991d49b53675'
 
-#jprint(response.json())
-pass_times = response.json()['response']
-#jprint(pass_times)
 
-risetimes = []
+def lastfm_get(payload):
+    # define headers and URL
+    headers = {'user-agent': USER_AGENT}
+    url = 'http://ws.audioscrobbler.com/2.0/'
 
-for d in pass_times:
-    time = d['risetime']
-    risetimes.append(time)
+    # Add API key and format to the payload
+    payload['api_key'] = API_KEY
+    payload['format'] = 'json'
 
-times = []
+    response = requests.get(url, headers=headers, params=payload)
+    return response
 
-for rt in risetimes:
-    time = datetime.fromtimestamp(rt)
-    times.append(time)
-    print(time)
+
+r = lastfm_get({
+    'method': 'chart.gettopartists'
+})
+print(r.status_code)
+jprint(r.json()['artists']['@attr'])
+#
+# parameters = {
+#     "lat": 40.71,
+#     "lon": -74,
+#     "n": 20
+# }
+# response = requests.get("http://api.open-notify.org/iss-pass.json", params=parameters)
+# print(response.status_code)
+#
+# pass_times = response.json()['response']
+#
+# risetimes = []
+#
+# for d in pass_times:
+#     time = d['risetime']
+#     risetimes.append(time)
+#
+# times = []
+#
+# for rt in risetimes:
+#     time = datetime.fromtimestamp(rt)
+#     times.append(time)
+#     print(time)

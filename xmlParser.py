@@ -10,7 +10,6 @@ def write_data_to_xml(data_raume, data_waende, path, header_raume, header_waende
     position = ET.SubElement(project, 'POSITION', attrib={"ID": "1.01"})
 
     rooms = create_rooms(data_raume, header_raume)
-    # TODO rausnehmen wenn wände
     for room in rooms:
         create_walls_for_room(data_waende,room)
         room.write_to_xml(position)
