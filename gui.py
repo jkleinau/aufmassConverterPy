@@ -1,7 +1,7 @@
 import tkinter.filedialog
 from tkinter import *
 import time
-from main import convert_to_xml
+import main
 
 
 class GUI:
