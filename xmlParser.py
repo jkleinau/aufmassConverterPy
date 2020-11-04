@@ -5,7 +5,7 @@ from room import Room
 from wall import Wall
 
 
-def write_data_to_xml(data_raume, data_waende, path, header_raume, header_waende):
+def write_data_to_xml(data_raume, data_waende, path, header_raume):
     project = ET.Element('PROJEKT', attrib={"xmlns": "urn:in-software-com:IN-AUFMASS"})
     position = ET.SubElement(project, 'POSITION', attrib={"ID": "1.01"})
 

@@ -8,7 +8,7 @@ import gui
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
 
-def convert():
+def convert_to_xml(gui):
     header_raueme = {
         1: "Bodenoberfläche",
         2: "Volumen",
@@ -20,20 +20,13 @@ def convert():
         9: "Raumhöhe "
     }
 
-    header_waende = {
-        3: "Oberfläche",
-        #5: "Breite",
-        #6: "Höhe",
-
-    }
-
     data = csvImport.import_data(gui.import_textfield.get())
     data_subsection_raume = csvImport.get_subsection('ATTRIBUTE DER RÄUME', data)
-    #TODO rausnehmen wenn wände mit sollen
     data_subsection_waende = csvImport.get_subsection('Wandeigenschaften', data)
-    xmlParser.write_data_to_xml(data_subsection_raume,data_subsection_waende, gui.export_textfield.get(), header_raueme, header_waende)
+    xmlParser.write_data_to_xml(data_subsection_raume, data_subsection_waende, gui.export_textfield.get(),
+                                header_raueme)
 
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    gui
+    gui = gui.GUI()
