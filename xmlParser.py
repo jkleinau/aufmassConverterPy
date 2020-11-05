@@ -1,5 +1,5 @@
 import xml.etree.ElementTree as ET
-from datetime import datetime
+
 
 from room import Room
 from wall import Wall
@@ -15,7 +15,7 @@ def write_data_to_xml(data_raume, data_waende, path, header_raume):
         room.write_to_xml(position)
 
     mydata = ET.tostring(project, encoding='ISO-8859-1')
-    myfile = open(path + "\AUFMASS-" + str(datetime.now().date()) + ".xml", "wb")
+    myfile = open(path, "wb")
     myfile.write(mydata)
 
 

@@ -1,4 +1,6 @@
+from datetime import datetime
 import tkinter.filedialog
+from tkinter.filedialog import asksaveasfile
 from tkinter import *
 from tkinter import messagebox
 import main
@@ -15,8 +17,9 @@ class GUI:
         self.import_path.set(name.name)
 
     def button_action_export(self):
-        name = tkinter.filedialog.askdirectory()
-        self.export_path.set(name)
+        name = asksaveasfile(mode='w', initialfile="AUFMASS-" + str(datetime.now().date()) + ".xml",
+                             title="Save as")
+        self.export_path.set(name.name)
 
     def main(self):
         self.fenster = Tk()
