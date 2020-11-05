@@ -18,7 +18,7 @@ class GUI:
         self.export_textfield.delete(0, END)
         self.export_textfield.insert(0, name)
 
-    def __init__(self):
+    def main(self):
         self.fenster = Tk()
         self.fenster.configure(bg='#c0c0c0')
         self.fenster.title("Aufmass Converter")
@@ -44,3 +44,30 @@ class GUI:
         self.convert_button.place(x=255, y=160, width=100, height=30)
 
         self.fenster.mainloop()
+
+    def __init__(self):
+        self.setup_login()
+
+    def login_check(self):
+        self.login.destroy()
+        self.main()
+
+    def setup_login(self):
+        self.login = Tk()
+        self.login.title("Login")
+        self.login.resizable = False
+        # username label and text entry box
+        usernameLabel = Label(self.login, text="User Name:").grid(row=0, column=0, sticky=E, padx=5, pady=5)
+        username = StringVar()
+        usernameEntry = Entry(self.login, textvariable=username).grid(row=0, column=1, padx=5, pady=5)
+
+        # password label and password entry box
+        passwordLabel = Label(self.login, text="Password:").grid(row=1, column=0, sticky=E, padx=5, pady=5)
+        password = StringVar()
+        passwordEntry = Entry(self.login, textvariable=password, show='*').grid(row=1, column=1, padx=5, pady=5)
+
+        # login button
+        loginButton = Button(self.login, text="Login", command=self.login_check).grid(row=4, column=0, sticky=N,
+                                                                                      columnspan=2, padx=5, pady=10)
+
+        self.login.mainloop()

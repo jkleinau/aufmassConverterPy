@@ -8,16 +8,16 @@ def jprint(obj):
     print(text)
 
 
-URL = "http://demo.hafas.de/openapi/vbb-proxy"
-ID = "kleinau-4b3e-a26d-1aecf90133f9"
+url = "http://demo.hafas.de/openapi/vbb-proxy"
+acces_ID = "kleinau-4b3e-a26d-1aecf90133f9"
 
 parameters = {
-    'accesId': ID,
+    'accesId': acces_ID,
     'name': 'jkleinau',
     'format': 'json',
 
 }
 
-r = requests.get(URL + "/location.name?input=berlin", params=parameters)
+r = requests.get(url + "/location.name?input=berlin", params=parameters)
 print(r.status_code)
-jprint(r.json())
+#jprint(r.json())
