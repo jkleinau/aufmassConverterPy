@@ -20,11 +20,11 @@ def convert_to_xml(gui):
         9: "Raumhöhe "
     }
 
-    data = csvImport.import_data(gui.import_textfield.get())
+    data = csvImport.import_data(gui.import_path.get())
     data_subsection_raume = csvImport.get_subsection('ATTRIBUTE DER RÄUME', data)
     data_subsection_waende = csvImport.get_subsection('Wandeigenschaften', data)
     xmlParser.write_data_to_xml(data_subsection_raume, data_subsection_waende,
-                                gui.export_textfield.get(), header_raueme)
+                                gui.export_path.get(), header_raueme)
 
 
 # Press the green button in the gutter to run the script.

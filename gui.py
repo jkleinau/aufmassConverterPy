@@ -13,42 +13,40 @@ class GUI:
 
     def button_action_import(self):
         name = tkinter.filedialog.askopenfile()
-        self.import_textfield.delete(0, END)
-        self.import_textfield.insert(0, name.name)
+        self.import_path.set(name.name)
 
     def button_action_export(self):
         name = tkinter.filedialog.askdirectory()
-        self.export_textfield.delete(0, END)
-        self.export_textfield.insert(0, name)
+        self.export_path.set(name)
 
     def main(self):
         self.fenster = Tk()
         self.fenster.title("Aufmass Converter")
         self.import_path = StringVar()
         self.export_path = StringVar()
-        self.import_textfield = Entry(self.fenster, textvariable=self.import_path, bd=2)
-        self.export_textfield = Entry(self.fenster, textvariable=self.export_path_path, bd=2)
+        import_textfield = Entry(self.fenster, textvariable=self.import_path, bd=2)
+        export_textfield = Entry(self.fenster, textvariable=self.export_path, bd=2)
 
-        self.import_button = Button(self.fenster, text="Import",
+        import_button = Button(self.fenster, text="Import",
                                     command=lambda: self.button_action_import())
-        self.import_button_api = Button(self.fenster, text="Import from API",
+        import_button_api = Button(self.fenster, text="Import from API",
                                         command=lambda: self.button_action_import_api())
-        self.export_button = Button(self.fenster, text="Export",
+        export_button = Button(self.fenster, text="Export",
                                     command=lambda: self.button_action_export())
-        self.convert_button = Button(self.fenster, text="Umwandeln",
+        convert_button = Button(self.fenster, text="Umwandeln",
                                      command=lambda: self.button_action_convert())
         # Zuerst definieren wir die Grösse des Fensters
         self.fenster.geometry("610x205")
         # Wir benutzen die absoluten Koordinaten um die Komponenten zu
         # setzen und definieren deren Grösse
         # anweisungs_label.place(x = 0, y = 0, width=200, height=150)
-        self.import_button_api.place(x=15, y=160, width=100, height=30)
-        self.import_button.place(x=15, y=15, width=100, height=50)
+        import_button_api.place(x=15, y=160, width=100, height=30)
+        import_button.place(x=15, y=15, width=100, height=50)
         # info_label.place(x = 100, y = 160, width=300, height=100)
-        self.export_button.place(x=15, y=75, width=100, height=50)
-        self.import_textfield.place(x=130, y=25, width=465, height=30)
-        self.export_textfield.place(x=130, y=85, width=465, height=30)
-        self.convert_button.place(x=255, y=160, width=100, height=30)
+        export_button.place(x=15, y=75, width=100, height=50)
+        import_textfield.place(x=130, y=25, width=465, height=30)
+        export_textfield.place(x=130, y=85, width=465, height=30)
+        convert_button.place(x=255, y=160, width=100, height=30)
 
         self.fenster.mainloop()
 
@@ -137,6 +135,5 @@ class GUI:
             self.listbox.insert(END, str(project))
 
     def select_project(self):
-        self.import_textfield.delete(0, END)
-        self.import_textfield.insert(0, "API/" + self.listbox.get(ANCHOR))
+        self.import_path.set("API/" + self.listbox.get(ANCHOR))
         self.api_select.destroy()
