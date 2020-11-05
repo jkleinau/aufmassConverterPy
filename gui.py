@@ -1,15 +1,14 @@
 import tkinter.filedialog
 from tkinter import *
-import time
+from tkinter import messagebox
 import main
 import random
-
-from main import convert_to_xml
 
 
 class GUI:
     def button_action_convert(self):
-        convert_to_xml(self)
+        main.convert_to_xml(self)
+        tkinter.messagebox.showinfo("Convert", "Die Datei wurde erfolgreich umgewandelt.")
 
     def button_action_import(self):
         name = tkinter.filedialog.askopenfile()
@@ -27,26 +26,28 @@ class GUI:
         import_textfield = Entry(self.fenster, textvariable=self.import_path, bd=2)
         export_textfield = Entry(self.fenster, textvariable=self.export_path, bd=2)
 
+        user_label = Label(self.fenster, text="Account: " + self.username.get())
+
         import_button = Button(self.fenster, text="Import",
-                                    command=lambda: self.button_action_import())
+                               command=lambda: self.button_action_import())
         import_button_api = Button(self.fenster, text="Import from API",
-                                        command=lambda: self.button_action_import_api())
+                                   command=lambda: self.button_action_import_api())
         export_button = Button(self.fenster, text="Export",
-                                    command=lambda: self.button_action_export())
-        convert_button = Button(self.fenster, text="Umwandeln",
-                                     command=lambda: self.button_action_convert())
+                               command=lambda: self.button_action_export())
+        convert_button = Button(self.fenster, text="Convert",
+                                command=lambda: self.button_action_convert())
+
         # Zuerst definieren wir die Grösse des Fensters
         self.fenster.geometry("610x205")
-        # Wir benutzen die absoluten Koordinaten um die Komponenten zu
-        # setzen und definieren deren Grösse
-        # anweisungs_label.place(x = 0, y = 0, width=200, height=150)
+
         import_button_api.place(x=15, y=160, width=100, height=30)
         import_button.place(x=15, y=15, width=100, height=50)
-        # info_label.place(x = 100, y = 160, width=300, height=100)
+
         export_button.place(x=15, y=75, width=100, height=50)
         import_textfield.place(x=130, y=25, width=465, height=30)
         export_textfield.place(x=130, y=85, width=465, height=30)
         convert_button.place(x=255, y=160, width=100, height=30)
+        user_label.place(x=400, y=160, width=200, height=30)
 
         self.fenster.mainloop()
 
@@ -63,18 +64,17 @@ class GUI:
         self.login.resizable = False
         # username label and text entry box
         usernameLabel = Label(self.login, text="User Name:").grid(row=0, column=0, sticky=E, padx=5, pady=5)
-        username = StringVar()
-        usernameEntry = Entry(self.login, textvariable=username).grid(row=0, column=1, padx=5, pady=5)
+        self.username = StringVar()
+        usernameEntry = Entry(self.login, textvariable=self.username).grid(row=0, column=1, padx=5, pady=5)
 
         # password label and password entry box
         passwordLabel = Label(self.login, text="Password:").grid(row=1, column=0, sticky=E, padx=5, pady=5)
-        password = StringVar()
-        passwordEntry = Entry(self.login, textvariable=password, show='*').grid(row=1, column=1, padx=5, pady=5)
+        self.password = StringVar()
+        passwordEntry = Entry(self.login, textvariable=self.password, show='*').grid(row=1, column=1, padx=5, pady=5)
 
         # login button
         loginButton = Button(self.login, text="Login", command=self.login_check).grid(row=4, column=0, sticky=N,
                                                                                       columnspan=2, padx=5, pady=10)
-
         self.login.mainloop()
 
     def setup_api_select(self):

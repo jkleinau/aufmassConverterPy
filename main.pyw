@@ -7,7 +7,6 @@ import gui
 # Press Umschalt+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
-
 def convert_to_xml(gui):
     header_raueme = {
         1: "Bodenoberfläche",
