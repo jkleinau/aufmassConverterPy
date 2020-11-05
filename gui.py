@@ -2,6 +2,9 @@ import tkinter.filedialog
 from tkinter import *
 import time
 import main
+import random
+
+from main import convert_to_xml
 
 
 class GUI:
@@ -20,13 +23,16 @@ class GUI:
 
     def main(self):
         self.fenster = Tk()
-        self.fenster.configure(bg='#c0c0c0')
         self.fenster.title("Aufmass Converter")
-        self.import_textfield = Entry(self.fenster, bd=2)
-        self.export_textfield = Entry(self.fenster, bd=2)
+        self.import_path = StringVar()
+        self.export_path = StringVar()
+        self.import_textfield = Entry(self.fenster, textvariable=self.import_path, bd=2)
+        self.export_textfield = Entry(self.fenster, textvariable=self.export_path_path, bd=2)
 
         self.import_button = Button(self.fenster, text="Import",
                                     command=lambda: self.button_action_import())
+        self.import_button_api = Button(self.fenster, text="Import from API",
+                                        command=lambda: self.button_action_import_api())
         self.export_button = Button(self.fenster, text="Export",
                                     command=lambda: self.button_action_export())
         self.convert_button = Button(self.fenster, text="Umwandeln",
@@ -36,6 +42,7 @@ class GUI:
         # Wir benutzen die absoluten Koordinaten um die Komponenten zu
         # setzen und definieren deren Grösse
         # anweisungs_label.place(x = 0, y = 0, width=200, height=150)
+        self.import_button_api.place(x=15, y=160, width=100, height=30)
         self.import_button.place(x=15, y=15, width=100, height=50)
         # info_label.place(x = 100, y = 160, width=300, height=100)
         self.export_button.place(x=15, y=75, width=100, height=50)
@@ -71,3 +78,65 @@ class GUI:
                                                                                       columnspan=2, padx=5, pady=10)
 
         self.login.mainloop()
+
+    def setup_api_select(self):
+        self.api_select = Tk()
+        self.api_select.title("Select Projekt")
+        self.api_select.geometry("450x550")
+
+        scrollbar = Scrollbar(self.api_select, orient=VERTICAL)
+        self.listbox = Listbox(self.api_select, yscrollcommand=scrollbar.set, selectmode=BROWSE)
+        scrollbar.config(command=self.listbox.yview)
+        self.listbox.config(font=20)
+        browse_button = Button(self.api_select, text="Reload", command=lambda: self.load_projects())
+        select_button = Button(self.api_select, text="Select", command=lambda: self.select_project())
+        self.load_projects()
+
+        scrollbar.place(x=430, y=50, width=20, height=500)
+        self.listbox.place(x=0, y=50, width=430, height=500)
+        browse_button.place(x=5, y=5, width=100, height=30)
+        select_button.place(x=345, y=5, width=100, height=30)
+
+    def button_action_import_api(self):
+        self.setup_api_select()
+        pass
+
+    def load_projects(self):
+        projects = [
+            "Ruhlachplatz 14b",
+            "Albin - Edelmann - St. 87c",
+            "Im Bruch 62c",
+            "Emil - Nolde - Str. 960",
+            "Salamanderweg 19a",
+            "Kolpingstr. 81",
+            "Gustav - Heinemann - Str. 608",
+            "Mühlenweg 4",
+            "Nobelstr. 4",
+            "Oskar - Moll - Str. 49",
+            "Karl - Krekeler - Str. 62c",
+            "Julius - Doms - Str. 434",
+            "Heinrich - Lützenkirchen - Weg 44a",
+            "Am Thelenhof 34b",
+            "Bernhard - Lichtenberg - Str. 51b", " Apt. 725",
+            "Auf dem Bruch 044",
+            "Bracknellstr. 15a",
+            "In der Hartmannswiese 622",
+            "Rudolf - Stracke - Str. 36",
+            "Carl - Duisberg - Str. 66a",
+            "Ringstr. 36c", " 2 OG",
+            "Leichlinger Str. 7",
+            "Friesenweg 11b",
+            "Teltower Str. 27c",
+            "Werkstättenstr. 5",
+            "Fritz - Henseler - Str. 3",
+            "Carl - Rumpff - Str. 15c",
+            "Van\'t-Hoff-Str. 77a",
+        ]
+        selection = random.choices(projects, k=6)
+        for project in selection:
+            self.listbox.insert(END, str(project))
+
+    def select_project(self):
+        self.import_textfield.delete(0, END)
+        self.import_textfield.insert(0, "API/" + self.listbox.get(ANCHOR))
+        self.api_select.destroy()
