@@ -21,20 +21,23 @@ class GUI:
                              title="Save as")
         self.export_path.set(name.name)
 
-    def main(self):
+    def __init__(self):
         self.fenster = Tk()
         self.fenster.title("Aufmass Converter")
         self.import_path = StringVar()
         self.export_path = StringVar()
+        self.username = StringVar()
         import_textfield = Entry(self.fenster, textvariable=self.import_path, bd=2)
         export_textfield = Entry(self.fenster, textvariable=self.export_path, bd=2)
 
-        user_label = Label(self.fenster, text="Account: " + self.username.get())
+        account_label = Label(self.fenster, text="Account: ", anchor=E)
 
         import_button = Button(self.fenster, text="Import",
                                command=lambda: self.button_action_import())
         import_button_api = Button(self.fenster, text="Import from API",
                                    command=lambda: self.button_action_import_api())
+        login_button = Button(self.fenster, text="Account",
+                              command=lambda: self.setup_login())
         export_button = Button(self.fenster, text="Export",
                                command=lambda: self.button_action_export())
         convert_button = Button(self.fenster, text="Convert",
@@ -50,26 +53,26 @@ class GUI:
         import_textfield.place(x=130, y=25, width=465, height=30)
         export_textfield.place(x=130, y=85, width=465, height=30)
         convert_button.place(x=255, y=160, width=100, height=30)
-        user_label.place(x=400, y=160, width=200, height=30)
+        login_button.place(x=360, y=160, width=100, height=30)
+        account_label.place(x=400, y=160, width=120, height=30)
 
         self.fenster.mainloop()
 
-    def __init__(self):
-        self.setup_login()
-
     def login_check(self):
+        user_label = Label(self.fenster, text=self.usernameEntry.get(), anchor=E)
+        user_label.place(x=525, y=160, width=85, height=30)
         self.login.destroy()
-        self.main()
 
     def setup_login(self):
         self.login = Tk()
         self.login.title("Login")
         self.login.resizable = False
+
         # username label and text entry box
         usernameLabel = Label(self.login, text="User Name:").grid(row=0, column=0, sticky=E, padx=5, pady=5)
-        self.username = StringVar()
-        usernameEntry = Entry(self.login, textvariable=self.username).grid(row=0, column=1, padx=5, pady=5)
 
+        self.usernameEntry = Entry(self.login, textvariable=self.username)
+        self.usernameEntry.grid(row=0, column=1, padx=5, pady=5)
         # password label and password entry box
         passwordLabel = Label(self.login, text="Password:").grid(row=1, column=0, sticky=E, padx=5, pady=5)
         self.password = StringVar()
