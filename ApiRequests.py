@@ -2,7 +2,6 @@ import json
 import requests
 
 
-
 def jprint(obj):
     # create a formatted string of the Python JSON object
     text = json.dumps(obj, sort_keys=True, indent=4)
@@ -28,6 +27,7 @@ def lastfm_get(payload):
 
 r = requests.get("https://api.chucknorris.io/jokes/random")
 jprint(r.json()['value'])
+
 
 # requests_cache.install_cache()
 #

@@ -9,5 +9,5 @@ reddit = praw.Reddit(client_id="RkREULvtiNB51w",
 print(reddit.user.me())
 i = 1
 for submission in reddit.subreddit("ProgrammerHumor").hot(limit=25):
-    print(i + ". " + submission.name)
+    print(str(i) + ". " + submission.title)
     i += 1
