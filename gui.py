@@ -3,12 +3,14 @@ import tkinter.filedialog
 from tkinter.filedialog import asksaveasfile
 from tkinter import *
 from tkinter import messagebox
-import main
+
 import random
+from main import Main
 
 
 class GUI:
     def button_action_convert(self):
+        main = Main()
         main.convert_to_xml(self)
         tkinter.messagebox.showinfo("Convert", "Die Datei wurde erfolgreich umgewandelt.")
 

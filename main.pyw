@@ -1,29 +1,31 @@
 # This is a sample Python script.
 import csvImport
 import xmlParser
+from magicXMLImport import import_data, create_rooms
 import gui
 
-
-# Press Umschalt+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-def convert_to_xml(gui):
-    header_raueme = {
-        1: "Bodenoberfläche",
-        2: "Volumen",
-        3: "Boden Umfang",
-        4: "Decke Umfang",
-        5: "Wandfläche mit Öffnung",
-        7: "Umfang Türen",
-        8: "Fensterflächen",
-        9: "Raumhöhe "
-    }
-
-    data = csvImport.import_data(gui.import_path.get())
-    data_subsection_raume = csvImport.get_subsection('ATTRIBUTE DER RÄUME', data)
-    data_subsection_waende = csvImport.get_subsection('Wandeigenschaften', data)
-    xmlParser.write_data_to_xml(data_subsection_raume, data_subsection_waende,
-                                gui.export_path.get(), header_raueme)
+class Main:
+    def convert_to_xml(self, gui):
+        header_raueme = {
+            1: "Bodenoberfläche",
+            2: "Volumen",
+            3: "Boden Umfang",
+            4: "Decke Umfang",
+            5: "Wandfläche mit Öffnung",
+            7: "Umfang Türen",
+            8: "Fensterflächen",
+            9: "Raumhöhe "
+        }
+        data = import_data('resources/Magic_plan_api_test.xml')
+        rooms = create_rooms(data)
+        xmlParser.write_data_to_xml(rooms, gui.export_path.get())
+        """
+            data = csvImport.import_data(gui.import_path.get())
+            data_subsection_raume = csvImport.get_subsection('ATTRIBUTE DER RÄUME', data)
+            data_subsection_waende = csvImport.get_subsection('Wandeigenschaften', data)
+            rooms = xmlParser.create_data(data_subsection_raume,data_subsection_waende,header_rauem)
+            xmlParser.write_data_to_xml(rooms, gui.export_path.get())
+        """
 
 
 # Press the green button in the gutter to run the script.

@@ -1,11 +1,13 @@
-from wall import *
+from component import *
 
 
 class Room:
 
-    def __init__(self, name, level, data, x, y):
+    def __init__(self, name, level, data, x, y, components=None):
 
-        self.walls = []
+        if components is None:
+            components = list()
+        self.components = components
         self.level = level
         self.data = data
         self.name = name
@@ -25,5 +27,5 @@ class Room:
             stichwort = ET.SubElement(aufmasszeile, 'AUFMASS')
             if self.data[tag]:
                 stichwort.text = self.data[tag].split()[0]
-        for wall in self.walls:
-            wall.write_to_xml(root)
+        for component in self.components:
+            component.write_to_xml(root)
