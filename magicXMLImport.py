@@ -6,13 +6,12 @@ from component import Component
 
 
 def import_data(path):
-    tree = ET.parse(path)
-    root = tree.getroot()
+    root = ET.fromstring(path)
     data = dict()
     data['rooms'] = list()
-    data['wallWidth'] = root.attrib['exteriorWallWidth']
-    data['level'] = 'Ergeschoss' if root[0].attrib['floorType'] == '0' else root[0].attrib['floorType'] + '. Stock'
-    for room in root[0]:
+    #data['wallWidth'] = root[fl].attrib['exteriorWallWidth']
+    data['level'] = 'Ergeschoss' if root[1].attrib['floorType'] == '0' else root[1].attrib['floorType'] + '. Stock'
+    for room in root[1]:
         if room.tag == 'floorRoom':
             data['rooms'].append(room)
     return data
@@ -26,7 +25,7 @@ def create_rooms(data):
         tags['Umfang'] = room.attrib['perimeter']
         temp_room = Room(room.attrib['type'], data['level'], tags, room.attrib['x'], room.attrib['y'])
         points = [datapoint for datapoint in room if datapoint.tag == 'point']
-        components = [[datapoint for datapoint in room if datapoint.tag == 'door' or datapoint.tag == 'window']]
+        components = [datapoint for datapoint in room if datapoint.tag == 'door' or datapoint.tag == 'window']
         components = create_components(components, temp_room)
         walls = create_walls(points, temp_room)
         temp_room.components = walls
@@ -37,7 +36,7 @@ def create_rooms(data):
 
 def create_components(data, room):
     components = list()
-    for component in data[0]:
+    for component in data:
         components.append(
             Component(component.attrib['width'], component.attrib['height'], component.tag, room))
     return components

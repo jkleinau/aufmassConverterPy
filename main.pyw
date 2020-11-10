@@ -4,8 +4,10 @@ import xmlParser
 from magicXMLImport import import_data, create_rooms
 import gui
 
+
 class Main:
-    def convert_to_xml(self, gui):
+    @staticmethod
+    def convert_to_xml(gui):
         header_raueme = {
             1: "Bodenoberfläche",
             2: "Volumen",
@@ -16,7 +18,7 @@ class Main:
             8: "Fensterflächen",
             9: "Raumhöhe "
         }
-        data = import_data('resources/Magic_plan_api_test.xml')
+        data = import_data(gui.xml)
         rooms = create_rooms(data)
         xmlParser.write_data_to_xml(rooms, gui.export_path.get())
         """

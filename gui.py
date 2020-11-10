@@ -3,14 +3,17 @@ import tkinter.filedialog
 from tkinter.filedialog import asksaveasfile
 from tkinter import *
 from tkinter import messagebox
-
+from magicPlanAPI import MagicPlanAPI
 import random
+
 from main import Main
 
 
 class GUI:
     def button_action_convert(self):
         main = Main()
+        id = [plan['id'] for plan in self.selection if plan['name'] == self.import_path.get().split('/')[-1]]
+        self.xml = self.magic_plan_api.get_project_plan(id[0])
         main.convert_to_xml(self)
         tkinter.messagebox.showinfo("Convert", "Die Datei wurde erfolgreich umgewandelt.")
 
@@ -24,7 +27,10 @@ class GUI:
         self.export_path.set(name.name)
 
     def __init__(self):
+        self.magic_plan_api = MagicPlanAPI()
+        self.selection = dict()
         self.fenster = Tk()
+        self.xml = StringVar()
         self.fenster.title("Aufmass Converter")
         self.import_path = StringVar()
         self.export_path = StringVar()
@@ -96,7 +102,8 @@ class GUI:
         self.listbox.config(font=20)
         browse_button = Button(self.api_select, text="Reload", command=lambda: self.load_projects())
         select_button = Button(self.api_select, text="Select", command=lambda: self.select_project())
-        self.load_projects()
+        if not self.selection:
+            self.load_projects()
 
         scrollbar.place(x=430, y=50, width=20, height=500)
         self.listbox.place(x=0, y=50, width=430, height=500)
@@ -105,42 +112,11 @@ class GUI:
 
     def button_action_import_api(self):
         self.setup_api_select()
-        pass
 
     def load_projects(self):
-        projects = [
-            "Ruhlachplatz 14b",
-            "Albin - Edelmann - St. 87c",
-            "Im Bruch 62c",
-            "Emil - Nolde - Str. 960",
-            "Salamanderweg 19a",
-            "Kolpingstr. 81",
-            "Gustav - Heinemann - Str. 608",
-            "Mühlenweg 4",
-            "Nobelstr. 4",
-            "Oskar - Moll - Str. 49",
-            "Karl - Krekeler - Str. 62c",
-            "Julius - Doms - Str. 434",
-            "Heinrich - Lützenkirchen - Weg 44a",
-            "Am Thelenhof 34b",
-            "Bernhard - Lichtenberg - Str. 51b", " Apt. 725",
-            "Auf dem Bruch 044",
-            "Bracknellstr. 15a",
-            "In der Hartmannswiese 622",
-            "Rudolf - Stracke - Str. 36",
-            "Carl - Duisberg - Str. 66a",
-            "Ringstr. 36c", " 2 OG",
-            "Leichlinger Str. 7",
-            "Friesenweg 11b",
-            "Teltower Str. 27c",
-            "Werkstättenstr. 5",
-            "Fritz - Henseler - Str. 3",
-            "Carl - Rumpff - Str. 15c",
-            "Van\'t-Hoff-Str. 77a",
-        ]
-        selection = random.choices(projects, k=6)
-        for project in selection:
-            self.listbox.insert(END, str(project))
+        self.selection = self.magic_plan_api.get_projects()
+        for project in self.selection:
+            self.listbox.insert(END, str(project['name']))
 
     def select_project(self):
         self.import_path.set("API/" + self.listbox.get(ANCHOR))
