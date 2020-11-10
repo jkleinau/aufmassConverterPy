@@ -3,11 +3,14 @@ from wall import *
 
 class Room:
 
-    def __init__(self, name, level, data):
+    def __init__(self, name, level, data, x, y):
+
         self.walls = []
         self.level = level
         self.data = data
         self.name = name
+        self.y = y
+        self.x = x
 
     def write_to_xml(self, root):
         for tag in self.data:
