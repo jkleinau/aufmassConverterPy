@@ -4,8 +4,6 @@ from tkinter.filedialog import asksaveasfile
 from tkinter import *
 from tkinter import messagebox
 from magicPlanAPI import MagicPlanAPI
-import random
-
 from main import Main
 
 
@@ -39,13 +37,13 @@ class GUI:
         export_textfield = Entry(self.fenster, textvariable=self.export_path, bd=2)
 
         account_label = Label(self.fenster, text="Account: ", anchor=E)
+        user_label = Label(self.fenster, text="matthias.herzog", anchor=E)
 
         import_button = Button(self.fenster, text="Import",
                                command=lambda: self.button_action_import())
         import_button_api = Button(self.fenster, text="Import from API",
                                    command=lambda: self.button_action_import_api())
-        login_button = Button(self.fenster, text="Account",
-                              command=lambda: self.setup_login())
+        # login_button = Button(self.fenster, text="Account",command=lambda: self.setup_login())
         export_button = Button(self.fenster, text="Export",
                                command=lambda: self.button_action_export())
         convert_button = Button(self.fenster, text="Convert",
@@ -61,9 +59,9 @@ class GUI:
         import_textfield.place(x=130, y=25, width=465, height=30)
         export_textfield.place(x=130, y=85, width=465, height=30)
         convert_button.place(x=255, y=160, width=100, height=30)
-        login_button.place(x=360, y=160, width=100, height=30)
+        # login_button.place(x=360, y=160, width=100, height=30)
         account_label.place(x=400, y=160, width=120, height=30)
-
+        user_label.place(x=510, y=160, width=95, height=30)
         self.fenster.mainloop()
 
     def login_check(self):

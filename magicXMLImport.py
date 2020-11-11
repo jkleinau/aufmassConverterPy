@@ -27,7 +27,7 @@ def get_translation(tag):
         'Stairway': 'Treppenhaus',
         'Furnace Room': 'Heizungsraum',
         'Toilet': 'Toilette',
-        'Vestibule': 'Innenhof',
+        'Vestibule': 'Flur',
         'Other': 'Sonstiges',
         'Hatched Room': 'Durchreiche',
         'Private Office': 'Arbeitszimmer',
