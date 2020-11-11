@@ -19,11 +19,7 @@ class Main:
             9: "Raumhöhe "
         }
         if api:
-            xml = ""
-            with open("resources/buro.xml", 'r') as f:
-                for line in f:
-                    xml += line
-            data = import_data(xml)
+            data = import_data(gui.xml)
             rooms = create_rooms(data)
             xmlParser.write_data_to_xml(rooms, gui.export_path.get())
         else:

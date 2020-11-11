@@ -10,10 +10,9 @@ from main import Main
 class GUI:
     def button_action_convert(self):
         main = Main()
-        #id = [plan['id'] for plan in self.selection if plan['name'] == self.import_path.get().split('/')[-1]]
-        #self.xml = self.magic_plan_api.get_project_plan(id[0])
-        #TODO turn true to checker again
-        main.convert_to_xml(self, True)
+        id = [plan['id'] for plan in self.selection if plan['name'] == self.import_path.get().split('/')[-1]]
+        self.xml = self.magic_plan_api.get_project_plan(id[0])
+        main.convert_to_xml(self, self.api_import_checker)
         tkinter.messagebox.showinfo("Convert", "Die Datei wurde erfolgreich umgewandelt.")
 
     def button_action_import(self):

@@ -42,9 +42,9 @@ class Room:
         laenge = float()
         for i, line in enumerate(walls):
             if i == 0:
-                breite = sum([wall.breite for wall in walls if wall.vector.dot(line.vector) != 0]) / 2
+                breite = sum([wall.breite for wall in walls if abs(wall.vector.dot(line.vector)) > 0.1]) / 2
             if i == 1:
-                laenge = sum([wall.breite for wall in walls if wall.vector.dot(line.vector) != 0]) / 2
+                laenge = sum([wall.breite for wall in walls if abs(wall.vector.dot(line.vector)) > 0.1]) / 2
             if i > 1:
                 break
         return "2*({}+{})*{}".format(round(breite, 2), round(laenge, 2), round(walls[0].hoehe, 2))

@@ -1486,6 +1486,9 @@
    'C:\\Users\\BSU Holding '
    '02\\PycharmProjects\\aufmassConverterPy\\magicXMLImport.py',
    'PYMODULE'),
+  ('line',
+   'C:\\Users\\BSU Holding 02\\PycharmProjects\\aufmassConverterPy\\line.py',
+   'PYMODULE'),
   ('component',
    'C:\\Users\\BSU Holding '
    '02\\PycharmProjects\\aufmassConverterPy\\component.py',
