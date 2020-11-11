@@ -7,7 +7,7 @@ import gui
 
 class Main:
     @staticmethod
-    def convert_to_xml(gui):
+    def convert_to_xml(gui, api):
         header_raueme = {
             1: "Bodenoberfläche",
             2: "Volumen",
@@ -18,16 +18,20 @@ class Main:
             8: "Fensterflächen",
             9: "Raumhöhe "
         }
-        data = import_data(gui.xml)
-        rooms = create_rooms(data)
-        xmlParser.write_data_to_xml(rooms, gui.export_path.get())
-        """
+        if api:
+            xml = ""
+            with open("resources/buro.xml", 'r') as f:
+                for line in f:
+                    xml += line
+            data = import_data(xml)
+            rooms = create_rooms(data)
+            xmlParser.write_data_to_xml(rooms, gui.export_path.get())
+        else:
             data = csvImport.import_data(gui.import_path.get())
             data_subsection_raume = csvImport.get_subsection('ATTRIBUTE DER RÄUME', data)
             data_subsection_waende = csvImport.get_subsection('Wandeigenschaften', data)
-            rooms = xmlParser.create_data(data_subsection_raume,data_subsection_waende,header_rauem)
+            rooms = xmlParser.create_data(data_subsection_raume, data_subsection_waende, header_raueme)
             xmlParser.write_data_to_xml(rooms, gui.export_path.get())
-        """
 
 
 # Press the green button in the gutter to run the script.

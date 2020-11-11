@@ -1,8 +1,9 @@
 import math
 import xml.etree.ElementTree as ET
-
 from room import Room
+import numpy as np
 from component import Component
+import line
 
 
 def get_translation(tag):
@@ -98,7 +99,7 @@ def create_walls(points, room, tag='Wand'):
         walls.append(Component(distance(point, points[(i + 1) % len(points)]),
                                (float(point.attrib['height']) / 2 + float(
                                    points[(i + 1) % len(points)].attrib['height']) / 2),
-                               tag, room))
+                               tag, room, vector_points(point, points[(i + 1) % len(points)])))
     return walls
 
 
@@ -108,3 +109,9 @@ def distance(point1, point2):
 
     return distance_num(point1.attrib['snappedX'], point2.attrib['snappedX'], point1.attrib['snappedY'],
                         point2.attrib['snappedY'])
+
+
+def vector_points(point1, point2):
+    return np.asarray(
+        [float(point2.attrib['snappedX']) - float(point1.attrib['snappedX']),
+         float(point2.attrib['snappedY']) - float(point1.attrib['snappedY'])])

@@ -10,14 +10,16 @@ from main import Main
 class GUI:
     def button_action_convert(self):
         main = Main()
-        id = [plan['id'] for plan in self.selection if plan['name'] == self.import_path.get().split('/')[-1]]
-        self.xml = self.magic_plan_api.get_project_plan(id[0])
-        main.convert_to_xml(self)
+        #id = [plan['id'] for plan in self.selection if plan['name'] == self.import_path.get().split('/')[-1]]
+        #self.xml = self.magic_plan_api.get_project_plan(id[0])
+        #TODO turn true to checker again
+        main.convert_to_xml(self, True)
         tkinter.messagebox.showinfo("Convert", "Die Datei wurde erfolgreich umgewandelt.")
 
     def button_action_import(self):
         name = tkinter.filedialog.askopenfile()
         self.import_path.set(name.name)
+        self.api_import_checker = False
 
     def button_action_export(self):
         name = asksaveasfile(mode='w', initialfile="AUFMASS-" + str(datetime.now().date()) + ".xml",
@@ -28,6 +30,7 @@ class GUI:
         self.magic_plan_api = MagicPlanAPI()
         self.selection = dict()
         self.fenster = Tk()
+        self.api_import_checker = False
         self.xml = StringVar()
         self.fenster.title("Aufmass Converter")
         self.import_path = StringVar()
@@ -119,6 +122,7 @@ class GUI:
     def select_project(self):
         self.import_path.set("API/" + self.listbox.get(ANCHOR))
         self.api_select.destroy()
+        self.api_import_checker = True
 
     def reload_projects(self):
         self.selection = self.magic_plan_api.get_projects()

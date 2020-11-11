@@ -34,4 +34,17 @@ class Room:
 
     def create_sums(self):
         self.data['Deckenfläche'] = self.data['Bodenfläche']
-        self.data['Wandfläche'] = round(sum([component.breite*component.hoehe for component in self.components if component.typ == 'Wand']),2)
+        self.data['Wandfläche'] = self.create_wall_area()
+
+    def create_wall_area(self):
+        walls = [component for component in self.components if component.typ == 'Wand']
+        breite = float()
+        laenge = float()
+        for i, line in enumerate(walls):
+            if i == 0:
+                breite = sum([wall.breite for wall in walls if wall.vector.dot(line.vector) != 0]) / 2
+            if i == 1:
+                laenge = sum([wall.breite for wall in walls if wall.vector.dot(line.vector) != 0]) / 2
+            if i > 1:
+                break
+        return "2*({}+{})*{}".format(round(breite, 2), round(laenge, 2), round(walls[0].hoehe, 2))

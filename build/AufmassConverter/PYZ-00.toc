@@ -232,6 +232,14 @@
    'c:\\users\\bsu holding '
    '02\\appdata\\local\\programs\\python\\python39\\lib\\zipimport.py',
    'PYMODULE'),
+  ('importlib.abc',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\importlib\\abc.py',
+   'PYMODULE'),
+  ('typing',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\typing.py',
+   'PYMODULE'),
   ('multiprocessing.process',
    'c:\\users\\bsu holding '
    '02\\appdata\\local\\programs\\python\\python39\\lib\\multiprocessing\\process.py',
@@ -768,10 +776,6 @@
    'c:\\users\\bsu holding '
    '02\\appdata\\local\\programs\\python\\python39\\lib\\asyncio\\staggered.py',
    'PYMODULE'),
-  ('typing',
-   'c:\\users\\bsu holding '
-   '02\\appdata\\local\\programs\\python\\python39\\lib\\typing.py',
-   'PYMODULE'),
   ('asyncio.tasks',
    'c:\\users\\bsu holding '
    '02\\appdata\\local\\programs\\python\\python39\\lib\\asyncio\\tasks.py',
@@ -955,10 +959,6 @@
   ('pathlib',
    'c:\\users\\bsu holding '
    '02\\appdata\\local\\programs\\python\\python39\\lib\\pathlib.py',
-   'PYMODULE'),
-  ('importlib.abc',
-   'c:\\users\\bsu holding '
-   '02\\appdata\\local\\programs\\python\\python39\\lib\\importlib\\abc.py',
    'PYMODULE'),
   ('importlib._bootstrap',
    'c:\\users\\bsu holding '

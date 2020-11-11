@@ -2,7 +2,8 @@ import xml.etree.ElementTree as ET
 
 
 class Component:
-    def __init__(self, breite, hoehe, typ, room):
+    def __init__(self, breite, hoehe, typ, room, vector=None):
+        self.vector = vector
         self.room = room
         self.typ = typ
         self.breite = breite
