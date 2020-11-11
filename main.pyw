@@ -1,8 +1,8 @@
 # This is a sample Python script.
 import csvImport
+import gui
 import xmlParser
 from magicXMLImport import import_data, create_rooms
-import gui
 
 
 class Main:

@@ -1,10 +1,12 @@
-from datetime import datetime
 import tkinter.filedialog
-from tkinter.filedialog import asksaveasfile
+from datetime import datetime
 from tkinter import *
 from tkinter import messagebox
-from magicPlanAPI import MagicPlanAPI
+from tkinter.filedialog import asksaveasfile
+
 from main import Main
+
+from magicPlanAPI import MagicPlanAPI
 
 
 class GUI:

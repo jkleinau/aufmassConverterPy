@@ -1,8 +1,7 @@
 import xml.etree.ElementTree as ET
 
-
-from room import Room
 from component import Component
+from room import Room
 
 
 def write_data_to_xml(rooms, path):

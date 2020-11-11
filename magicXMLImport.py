@@ -1,9 +1,8 @@
 import math
 import xml.etree.ElementTree as ET
-from room import Room
 import numpy as np
 from component import Component
-import line
+from room import Room
 
 
 def get_translation(tag):
