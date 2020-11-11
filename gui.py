@@ -100,10 +100,9 @@ class GUI:
         self.listbox = Listbox(self.api_select, yscrollcommand=scrollbar.set, selectmode=BROWSE)
         scrollbar.config(command=self.listbox.yview)
         self.listbox.config(font=20)
-        browse_button = Button(self.api_select, text="Reload", command=lambda: self.load_projects())
+        browse_button = Button(self.api_select, text="Reload", command=lambda: self.reload_projects())
         select_button = Button(self.api_select, text="Select", command=lambda: self.select_project())
-        if not self.selection:
-            self.load_projects()
+        self.load_projects()
 
         scrollbar.place(x=430, y=50, width=20, height=500)
         self.listbox.place(x=0, y=50, width=430, height=500)
@@ -114,10 +113,14 @@ class GUI:
         self.setup_api_select()
 
     def load_projects(self):
-        self.selection = self.magic_plan_api.get_projects()
+        if not self.selection:
+            self.reload_projects()
         for project in self.selection:
             self.listbox.insert(END, str(project['name']))
 
     def select_project(self):
         self.import_path.set("API/" + self.listbox.get(ANCHOR))
         self.api_select.destroy()
+
+    def reload_projects(self):
+        self.selection = self.magic_plan_api.get_projects()

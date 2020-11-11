@@ -1,3 +1,5 @@
+import math
+
 from component import *
 
 
@@ -24,8 +26,12 @@ class Room:
             text = ET.SubElement(aufmasszeile, 'TEXT')
             text.text = tag + ", " + self.name
 
-            stichwort = ET.SubElement(aufmasszeile, 'AUFMASS')
+            aufmass = ET.SubElement(aufmasszeile, 'AUFMASS')
             if self.data[tag]:
-                stichwort.text = self.data[tag].split()[0]
+                aufmass.text = str(self.data[tag]).split()[0]
         for component in self.components:
             component.write_to_xml(root)
+
+    def create_sums(self):
+        self.data['Deckenfläche'] = self.data['Bodenfläche']
+        self.data['Wandfläche'] = round(sum([component.breite*component.hoehe for component in self.components if component.typ == 'Wand']),2)
