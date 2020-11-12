@@ -54,8 +54,12 @@ def get_translation(tag):
     return translations[tag] if tag in translations.keys() else tag
 
 
-def import_data(path):
-    root = ET.fromstring(path)
+def import_data(path=None, data=None):
+    if path:
+        tree = ET.parse(path)
+        root = tree.getroot()
+    if data:
+        root = ET.fromstring(data)
     data = dict()
     data['rooms'] = list()
     # data['wallWidth'] = root[fl].attrib['exteriorWallWidth']

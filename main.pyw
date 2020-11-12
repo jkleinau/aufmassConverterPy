@@ -5,29 +5,34 @@ import xmlParser
 from magicXMLImport import import_data, create_rooms
 
 
-class Main:
-    @staticmethod
-    def convert_to_xml(gui, api):
-        header_raueme = {
-            1: "Bodenoberfläche",
-            2: "Volumen",
-            3: "Boden Umfang",
-            4: "Decke Umfang",
-            5: "Wandfläche mit Öffnung",
-            7: "Umfang Türen",
-            8: "Fensterflächen",
-            9: "Raumhöhe "
-        }
-        if api:
-            data = import_data(gui.xml)
-            rooms = create_rooms(data)
-            xmlParser.write_data_to_xml(rooms, gui.export_path.get())
-        else:
-            data = csvImport.import_data(gui.import_path.get())
-            data_subsection_raume = csvImport.get_subsection('ATTRIBUTE DER RÄUME', data)
-            data_subsection_waende = csvImport.get_subsection('Wandeigenschaften', data)
-            rooms = xmlParser.create_data(data_subsection_raume, data_subsection_waende, header_raueme)
-            xmlParser.write_data_to_xml(rooms, gui.export_path.get())
+def convert_to_xml(gui, api=True, path=None):
+    header_raueme = {
+        1: "Bodenoberfläche",
+        2: "Volumen",
+        3: "Boden Umfang",
+        4: "Decke Umfang",
+        5: "Wandfläche mit Öffnung",
+        7: "Umfang Türen",
+        8: "Fensterflächen",
+        9: "Raumhöhe "
+    }
+    if api:
+        data = import_data(path=path)
+        #data = import_data(data=gui.xml)
+        rooms = create_rooms(data)
+        xmlParser.write_data_to_xml(rooms, gui.export_path.get())
+    else:
+        data = csvImport.import_data(gui.import_path.get())
+        data_subsection_raume = csvImport.get_subsection('ATTRIBUTE DER RÄUME', data)
+        data_subsection_waende = csvImport.get_subsection('Wandeigenschaften', data)
+        rooms = xmlParser.create_data(data_subsection_raume, data_subsection_waende, header_raueme)
+        xmlParser.write_data_to_xml(rooms, gui.export_path.get())
+
+
+def save_to_file(gui, name):
+    with open("resources/" + name + ".xml", 'w') as f:
+        for line in gui.xml:
+            f.write(line)
 
 
 # Press the green button in the gutter to run the script.

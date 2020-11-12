@@ -14,11 +14,13 @@ def write_data_to_xml(rooms, path):
     myfile = open(path, "wb")
     myfile.write(mydata)
 
-def create_data(data_raume,  data_waende,header_raume):
+
+def create_data(data_raume, data_waende, header_raume):
     rooms = create_rooms(data_raume, header_raume)
     for room in rooms:
-        create_walls_for_room(data_waende,room)
+        create_walls_for_room(data_waende, room)
     return rooms
+
 
 def create_rooms(data, header):
     # create Iterator and skip first line
