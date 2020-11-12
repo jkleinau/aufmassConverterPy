@@ -1,40 +1,35 @@
 # This is a sample Python script.
 import csvImport
-import xmlParser
 import gui
+import xmlParser
+from magicXMLImport import import_data, create_rooms
 
 
-# Press Umschalt+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def convert():
-    header_raueme = {
-        0: "Raumname ",
-        1: "Bodenoberfläche",
-        2: "Volumen",
-        3: "Boden Umfang",
-        4: "Decke Umfang",
-        5: "Wandfläche mit Öffnung",
-        7: "Umfang Türen",
-        8: "Fensterflächen",
-        9: "Raumhöhe "
-    }
-
-    header_waende = {
-        3: "Oberfläche",
-        #5: "Breite",
-        #6: "Höhe",
-
-    }
-
-    data = csvImport.import_data(gui.import_textfield.get())
-    data_subsection_raume = csvImport.get_subsection('ATTRIBUTE DER RÄUME', data)
-    #TODO rausnehmen wenn wände mit sollen
-    #data_subsection_waende = csvImport.get_subsection('Wandeigenschaften', data)
-    xmlParser.write_data_to_xml(data_subsection_raume,None, gui.export_textfield.get(), header_raueme, header_waende)
+class Main:
+    @staticmethod
+    def convert_to_xml(gui, api):
+        header_raueme = {
+            1: "Bodenoberfläche",
+            2: "Volumen",
+            3: "Boden Umfang",
+            4: "Decke Umfang",
+            5: "Wandfläche mit Öffnung",
+            7: "Umfang Türen",
+            8: "Fensterflächen",
+            9: "Raumhöhe "
+        }
+        if api:
+            data = import_data(gui.xml)
+            rooms = create_rooms(data)
+            xmlParser.write_data_to_xml(rooms, gui.export_path.get())
+        else:
+            data = csvImport.import_data(gui.import_path.get())
+            data_subsection_raume = csvImport.get_subsection('ATTRIBUTE DER RÄUME', data)
+            data_subsection_waende = csvImport.get_subsection('Wandeigenschaften', data)
+            rooms = xmlParser.create_data(data_subsection_raume, data_subsection_waende, header_raueme)
+            xmlParser.write_data_to_xml(rooms, gui.export_path.get())
 
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    gui
+    gui = gui.GUI()

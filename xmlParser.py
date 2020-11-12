@@ -1,73 +1,46 @@
 import xml.etree.ElementTree as ET
-from datetime import datetime
+
+from component import Component
+from room import Room
 
 
-def write_data_to_xml(data_raume, data_waende, path, header_raume, header_waende):
+def write_data_to_xml(rooms, path):
     project = ET.Element('PROJEKT', attrib={"xmlns": "urn:in-software-com:IN-AUFMASS"})
     position = ET.SubElement(project, 'POSITION', attrib={"ID": "1.01"})
 
-    write_data_to_xml_raume(data_raume, header_raume, position)
-    #TODO rausnehmen wenn wände
-    #write_data_to_xml_waende(data_waende, header_waende, position)
-
+    for room in rooms:
+        room.write_to_xml(position)
     mydata = ET.tostring(project, encoding='ISO-8859-1')
-    myfile = open(path + "\AUFMASS-" + str(datetime.now().date()) + ".xml", "wb")
+    myfile = open(path, "wb")
     myfile.write(mydata)
 
+def create_data(data_raume,  data_waende,header_raume):
+    rooms = create_rooms(data_raume, header_raume)
+    for room in rooms:
+        create_walls_for_room(data_waende,room)
+    return rooms
 
-def write_data_to_xml_raume(data, header, root):
+def create_rooms(data, header):
+    # create Iterator and skip first line
+    rooms = []
+    iterdata = iter(data)
+    next(iterdata)
+    room_data = {}
+    for line in iterdata:
+        if len(line) <= 2:
+            level = line[0]
+            continue
+        name = line[0]
+        for tag in header:
+            room_data[header[tag]] = line[tag]
+        rooms.append(Room(name, level, room_data))
+    return rooms
+
+
+def create_walls_for_room(data, room):
     # create Iterator and skip first line
     iterdata = iter(data)
     next(iterdata)
     for line in iterdata:
-        name = ""
-        if len(line) <= 2:
-            level = line[0]
-            continue
-        for i in range(len(line)):
-            # Get Room description
-            if name == "":
-                name = line[i]
-                continue
-
-            if i in header:
-                aufmasszeile = ET.SubElement(root, 'AUFMASSZEILE')
-
-                stichwort = ET.SubElement(aufmasszeile, 'STICHWORT')
-                stichwort.text = level + ", " + name
-
-                text = ET.SubElement(aufmasszeile, 'TEXT')
-                text.text = header[i] + ", " + name
-
-                stichwort = ET.SubElement(aufmasszeile, 'AUFMASS')
-                if line[i]:
-                    stichwort.text = line[i].split()[0]
-
-
-def write_data_to_xml_waende(data, header, root):
-    # create Iterator and skip first line
-    iterdata = iter(data)
-    next(iterdata)
-    for line in iterdata:
-        name = ""
-        if len(line) <= 2:
-            level = line[0]
-            continue
-        for i in range(len(line)):
-            # Get Room description
-            if name == "":
-                name = line[i]
-                continue
-
-            if i in header:
-                aufmasszeile = ET.SubElement(root, 'AUFMASSZEILE')
-
-                stichwort = ET.SubElement(aufmasszeile, 'STICHWORT')
-                stichwort.text = level + ", " + name + ", " + line[8]
-
-                text = ET.SubElement(aufmasszeile, 'TEXT')
-                text.text = header[i] + ", " + name + ", " + line[2]
-
-                aufmass = ET.SubElement(aufmasszeile, 'AUFMASS')
-                if line[i]:
-                    aufmass.text = line[5]+"*"+line[6]
+        if room.name == line[0]:
+            room.components.append(Component(line[5], line[6], line[2], room))
