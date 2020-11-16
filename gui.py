@@ -13,7 +13,7 @@ class GUI:
         id = [plan['id'] for plan in self.selection if plan['name'] == self.import_path.get().split('/')[-1]]
         self.xml = self.magic_plan_api.get_project_plan(id[0])
         #main.save_to_file(self, self.import_path.get().split('/')[-1])
-        main.convert_to_xml(self, path="resources/Büro Hoppegarten.xml")
+        main.convert_to_xml(self, api=self.api_import_checker)
         tkinter.messagebox.showinfo("Convert", "Die Datei wurde erfolgreich umgewandelt.")
 
     def button_action_import(self):
@@ -82,6 +82,7 @@ class GUI:
 
         self.usernameEntry = Entry(self.login, textvariable=self.username)
         self.usernameEntry.grid(row=0, column=1, padx=5, pady=5)
+
         # password label and password entry box
         passwordLabel = Label(self.login, text="Password:").grid(row=1, column=0, sticky=E, padx=5, pady=5)
         self.password = StringVar()

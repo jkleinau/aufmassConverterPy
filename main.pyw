@@ -5,7 +5,13 @@ import xmlParser
 from magicXMLImport import import_data, create_rooms
 
 
-def convert_to_xml(gui, api=True, path=None):
+def convert_to_xml(gui, api=None, path=None):
+    """
+
+    :param gui: GUI instance where it gets the path or xml string
+    :param api: Boolean checker for import with API or from csv file
+    :param path: If import from csv file this is the path
+    """
     header_raueme = {
         1: "Bodenoberfläche",
         2: "Volumen",
@@ -17,8 +23,8 @@ def convert_to_xml(gui, api=True, path=None):
         9: "Raumhöhe "
     }
     if api:
-        data = import_data(path=path)
-        #data = import_data(data=gui.xml)
+        #data = import_data(path=path)
+        data = import_data(data=gui.xml)
         rooms = create_rooms(data)
         xmlParser.write_data_to_xml(rooms, gui.export_path.get())
     else:

@@ -60,13 +60,14 @@ def import_data(path=None, data=None):
         root = tree.getroot()
     if data:
         root = ET.fromstring(data)
+    interiorRoomPoints = [elem for elem in root if elem.tag == 'interiorRoomPoints']
+    interiorRoomPoints = interiorRoomPoints[0]
+    floor = interiorRoomPoints[0]
     data = dict()
     data['rooms'] = list()
     # data['wallWidth'] = root[fl].attrib['exteriorWallWidth']
-    data['level'] = 'Ergeschoss' if root[1].attrib['floorType'] == '0' else root[1].attrib['floorType'] + '. Stock'
-    for room in root[1]:
-        if room.tag == 'floorRoom':
-            data['rooms'].append(room)
+    data['level'] = 'Ergeschoss' if floor.attrib['floorType'] == '0' else floor.attrib['floorType'] + '. Stock'
+    data['rooms'] = [elem for elem in floor if elem.tag == 'floorRoom']
     return data
 
 
