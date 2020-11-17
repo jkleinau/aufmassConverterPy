@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plan name="Büro Hoppegarten" uid="5fabd12c.65f40bff" type="1" streetNumber="15" street="Gewerbestraße" city="Hoppegarten" province="Brandenburg" country="Deutschland" postalCode="15366" latitude="52.5136953096" longitude="13.6408504328" altitude="57.7244987488" locationIsValid="0" interiorWallWidth="0.12000" exteriorWallWidth="0.25000" schematic="0" hasLandSurveyAddress="0" lastPatchIdentifier="0" lastRollIdentifier="0">
+	<values>
+		<value key="date">2020-11-11</value>
+		<value key="statistics.areaOfHeight">2.0</value>
+		<value key="statistics.basement.account">100</value>
+		<value key="statistics.exteriorWalls">0</value>
+		<value key="statistics.interiorWalls">0</value>
+	</values>
+	<floor uid="5fabd16d.28a027ff" floorType="0" rotation="0.00000" compassAngle="-1.000000" areaWithoutWalls="34.83253" areaWithInteriorWallsOnly="34.92302" areaWithWalls="35.20142">
+		<symbolInstance id="floor" uid="5fabd16d.28a027ff" parentUid="" symbol="floor" isEstimated="0">
+			<values>
+				<value key="exteriorWallWidth">0.010000</value>
+				<value key="interiorWallWidth">0.010000</value>
+			</values>
+		</symbolInstance>
+		<symbolInstance id="W-0-0" uid="5fabd178.23fd93ff" parentUid="" symbol="doorglass" isEstimated="0">
+			<values>
+				<value key="symbolfilePrefix">doors</value>
+			</values>
+		</symbolInstance>
+		<symbolInstance id="W-1-0" uid="5fabd1a1.d0b427ff" parentUid="" symbol="doorglass" isEstimated="0">
+			<values>
+				<value key="symbolfilePrefix">doors</value>
+			</values>
+		</symbolInstance>
+		<symbolInstance id="W-1-1" uid="5fabd1ac.283793ff" parentUid="" symbol="windowfrench" isEstimated="0">
+			<values>
+				<value key="symbolfilePrefix">doors</value>
+				<value key="wallItemDistanceToFloor">1.0</value>
+			</values>
+		</symbolInstance>
+		<symbolInstance id="W-1-2" uid="5fabd1b1.e51ddfff" parentUid="" symbol="windowfrench" isEstimated="0">
+			<values>
+				<value key="symbolfilePrefix">doors</value>
+				<value key="wallItemDistanceToFloor">1.0</value>
+			</values>
+		</symbolInstance>
+		<symbolInstance id="W-1-3" uid="5fabd1b7.1d7d4bff" parentUid="" symbol="windowfrench" isEstimated="0">
+			<values>
+				<value key="symbolfilePrefix">doors</value>
+				<value key="wallItemDistanceToFloor">1.0</value>
+			</values>
+		</symbolInstance>
+		<symbolInstance id="W-1-4" uid="5fb29069.c79ac7ff" parentUid="" symbol="doorglass" isEstimated="0">
+			<values>
+				<value key="symbolfilePrefix">doors</value>
+			</values>
+		</symbolInstance>
+		<symbolInstance id="O-1-0" uid="5fad1204.8a0e93ff" parentUid="" symbol="4882b532-57a3-4fe2-8e72-ea551faad910" isEstimated="1">
+			<values>
+				<value key="boxCoverage">1</value>
+				<value key="boxType">m2</value>
+				<value key="estimatorPosition">0.000000</value>
+				<value key="price">30</value>
+				<value key="pricingModel">surface</value>
+				<value key="sharedDoor">1</value>
+				<value key="sku">03.01.0000</value>
+				<value key="surfaceReference">compute</value>
+				<value key="surfaceReferenceGround">1</value>
+				<value key="surfaceUnit">m2</value>
+				<value key="symbolfilePrefix">demoRemodeling</value>
+				<value key="trade">tiling</value>
+			</values>
+		</symbolInstance>
+		<symbolInstance id="O-1-1" uid="5fad1902.dfe1ebff" parentUid="" symbol="4ccae791-c889-4ce3-9bff-3c7d2f548cb2" isEstimated="1">
+			<linkedTo uid="5fabd18d.761037ff"/>
+			<linkedTo uid="5fabd18d.7656dfff"/>
+			<linkedTo uid="5fabd18d.768ed7ff"/>
+			<linkedTo uid="5fabd18d.76cdffff"/>
+			<values>
+				<value key="boxCoverage">1</value>
+				<value key="boxType">m2</value>
+				<value key="distanceUnit">m</value>
+				<value key="estimatorPosition">1.000000</value>
+				<value key="price">30</value>
+				<value key="pricingModel">surface</value>
+				<value key="rollUnit">m</value>
+				<value key="sharedDoor">1</value>
+				<value key="sku">03.02.0000</value>
+				<value key="surfaceReference">compute</value>
+				<value key="surfaceReferenceCeiling">0</value>
+				<value key="surfaceReferenceGround">0</value>
+				<value key="surfaceReferenceWalls">1</value>
+				<value key="surfaceUnit">m2</value>
+				<value key="symbolfilePrefix">demoRemodeling</value>
+				<value key="totaldistance">0.00</value>
+				<value key="totalprice">1.055,61 €</value>
+				<value key="totalsurface">35.2</value>
+				<value key="totalvolume">34.7</value>
+				<value key="trade">tiling</value>
+				<value key="volumeUnit">m3</value>
+			</values>
+		</symbolInstance>
+		<symbolInstance id="W-2-0" uid="5fabd204.b418c7ff" parentUid="" symbol="windowfrench" isEstimated="0">
+			<values>
+				<value key="symbolfilePrefix">doors</value>
+				<value key="wallItemDistanceToFloor">1.0</value>
+			</values>
+		</symbolInstance>
+		<symbolInstance id="W-2-1" uid="5fabd209.e5fd27ff" parentUid="" symbol="windowfrench" isEstimated="0">
+			<values>
+				<value key="symbolfilePrefix">doors</value>
+				<value key="wallItemDistanceToFloor">1.0</value>
+			</values>
+		</symbolInstance>
+		<symbolInstance id="W-2-2" uid="5fb29069.c79b43ff" parentUid="" symbol="doorglass" isEstimated="0">
+			<values>
+				<value key="symbolfilePrefix">doors</value>
+			</values>
+		</symbolInstance>
+		<symbolInstance id="W-2-3" uid="5fb29069.c79ba3ff" parentUid="" symbol="windowfrench" isEstimated="0">
+			<values>
+				<value key="symbolfilePrefix">doors</value>
+				<value key="wallItemDistanceToFloor">1.0</value>
+			</values>
+		</symbolInstance>
+		<symbolInstance id="O-2-0" uid="5fad1257.aa3a3bff" parentUid="" symbol="92b929bc-bcd8-4adc-b96b-0c80f4aebcf9" isEstimated="1">
+			<values>
+				<value key="boxType">m2</value>
+				<value key="estimatorPosition">0.000000</value>
+				<value key="price">25</value>
+				<value key="pricingModel">surface</value>
+				<value key="sharedDoor">1</value>
+				<value key="sku">01.03.0003</value>
+				<value key="surfaceReference">compute</value>
+				<value key="surfaceReferenceGround">1</value>
+				<value key="surfaceUnit">m2</value>
+				<value key="symbolfilePrefix">demoRemodeling</value>
+				<value key="trade">flooring</value>
+			</values>
+		</symbolInstance>
+		<floorRoom type="Shared Office" uid="5fabd167.9e95fbff" x="0.11120" y="-0.50745" rotation="0.00000" wasModified="1" linkedRoom0="-1" linkedRoom1="-1" area="8.58032" perimeter="11.86435">
+			<point snappedX="-1.25493" snappedY="-1.72116" height="2.440000" uid="5fabd16d.28e1f7ff"/>
+			<point snappedX="1.25495" snappedY="-1.72114" height="2.440000" uid="5fabd16d.294d93ff"/>
+			<point snappedX="1.25490" snappedY="1.72116" height="2.440000" uid="5fabd16d.29a577ff"/>
+			<point snappedX="-1.25495" snappedY="1.72114" height="2.440000" uid="5fabd16d.2a1423ff"/>
+			<door point="1" type="0" u="0.80243" width="0.80000" depth="0.80000" height="2.04000" orientation="0" snappedType="0" snappedPosition="0.80243" snappedWidth="0.80000" snappedDepth="0.80000" snappedHeight="2.04000" snappedOrientation="0" insetX="0.00000" insetY="0.00000" insetZ="0.00000" twinWallItemUid="5fb29069.c79ac7ff" symbolInstance="W-0-0"/>
+			<estimate/>
+			<mainDimension from="0" to="1" dir.x="-1.0000000000" dir.y="-0.0000080004" value="2.4998900001" actualValue="2.4998900001" isSet="0"/>
+			<mainDimension from="1" to="2" dir.x="0.0000080004" dir.y="-1.0000000000" value="3.4323000003" actualValue="3.4323000003" isSet="0"/>
+		</floorRoom>
+		<floorRoom type="Vestibule" uid="5fabd182.3a79dbff" x="4.45360" y="0.05688" rotation="0.00000" wasModified="1" linkedRoom0="-1" linkedRoom1="-1" area="14.20527" perimeter="16.93967">
+			<point snappedX="-3.08793" snappedY="-1.15722" height="2.440000" uid="5fabd18d.761037ff"/>
+			<point snappedX="3.08812" snappedY="-1.15632" height="2.440000" uid="5fabd18d.7656dfff"/>
+			<point snappedX="3.08792" snappedY="1.15722" height="2.440000" uid="5fabd18d.768ed7ff"/>
+			<point snappedX="-3.08812" snappedY="1.15683" height="2.440000" uid="5fabd18d.76cdffff"/>
+			<door point="0" type="0" u="0.50003" width="0.80000" depth="0.80000" height="2.04000" orientation="0" snappedType="0" snappedPosition="0.50003" snappedWidth="0.80000" snappedDepth="0.80000" snappedHeight="2.04000" snappedOrientation="0" insetX="0.00000" insetY="0.00000" insetZ="0.00000" twinWallItemUid="5fb29069.c79b43ff" symbolInstance="W-1-0"/>
+			<window point="0" type="3" u="0.20525" width="0.80000" depth="0.12000" height="1.20000" orientation="0" snappedType="3" snappedPosition="0.20525" snappedWidth="0.80000" snappedDepth="0.12000" snappedHeight="1.20000" snappedOrientation="0" insetX="0.00000" insetY="-0.06000" insetZ="-0.06000" twinWallItemUid="5fb29069.c79ba3ff" symbolInstance="W-1-1"/>
+			<window point="2" type="3" u="0.70120" width="0.80000" depth="0.12000" height="1.20000" orientation="0" snappedType="3" snappedPosition="0.70120" snappedWidth="0.80000" snappedDepth="0.12000" snappedHeight="1.20000" snappedOrientation="0" insetX="0.00000" insetY="-0.06000" insetZ="-0.06000" symbolInstance="W-1-2"/>
+			<window point="2" type="3" u="0.17264" width="0.80000" depth="0.12000" height="1.20000" orientation="0" snappedType="3" snappedPosition="0.17264" snappedWidth="0.80000" snappedDepth="0.12000" snappedHeight="1.20000" snappedOrientation="0" insetX="0.00000" insetY="-0.06000" insetZ="-0.06000" symbolInstance="W-1-3"/>
+			<door point="3" type="0" u="0.29432" width="0.80000" depth="0.80000" height="2.04000" orientation="3" snappedType="0" snappedPosition="0.29432" snappedWidth="0.80000" snappedDepth="0.80000" snappedHeight="2.04000" snappedOrientation="3" insetX="0.00000" insetY="0.00000" insetZ="0.00000" twinWallItemUid="5fabd178.23fd93ff" symbolInstance="W-1-4"/>
+			<object symbolInstance="O-1-0"/>
+			<object symbolInstance="O-1-1"/>
+			<estimate>
+				<item id="O-1-1"/>
+				<item id="O-1-0"/>
+			</estimate>
+			<mainDimension from="0" to="1" dir.x="-0.9999999896" dir.y="-0.0001443388" value="6.1661825543" actualValue="6.1661825543" isSet="0"/>
+			<mainDimension from="1" to="2" dir.x="0.0001443388" dir.y="-0.9999999896" value="2.3040400034" actualValue="2.3040400034" isSet="0"/>
+		</floorRoom>
+		<floorRoom type="Shared Office" uid="5fabd1da.296453ff" x="4.45374" y="-2.14787" rotation="0.00000" wasModified="0" linkedRoom0="-1" linkedRoom1="-1" area="12.06895" perimeter="16.51139">
+			<point snappedX="2.26465" snappedY="-0.03899" height="2.440000" uid="5fabd1fe.91e16bff"/>
+			<point snappedX="3.08117" snappedY="-0.03918" height="2.440000" uid="5fabd1fe.920653ff"/>
+			<point snappedX="3.08789" snappedY="1.05844" height="2.440000" uid="5fabd1fe.922317ff"/>
+			<point snappedX="-3.08789" snappedY="1.03425" height="2.440000" uid="5fabd1fe.923fabff"/>
+			<point snappedX="-3.08571" snappedY="-1.05781" height="2.440000" uid="5fabd1fe.925b83ff"/>
+			<point snappedX="2.26420" snappedY="-1.05843" height="2.440000" uid="5fabd1fe.92771bff"/>
+			<window point="4" type="3" u="0.21932" width="0.80000" depth="0.12000" height="1.20000" orientation="0" snappedType="3" snappedPosition="0.21932" snappedWidth="0.80000" snappedDepth="0.12000" snappedHeight="1.20000" snappedOrientation="0" insetX="0.00000" insetY="-0.06000" insetZ="-0.06000" symbolInstance="W-2-0"/>
+			<window point="4" type="3" u="0.64571" width="0.80000" depth="0.12000" height="1.20000" orientation="0" snappedType="3" snappedPosition="0.64571" snappedWidth="0.80000" snappedDepth="0.12000" snappedHeight="1.20000" snappedOrientation="0" insetX="0.00000" insetY="-0.06000" insetZ="-0.06000" symbolInstance="W-2-1"/>
+			<door point="2" type="0" u="0.49998" width="0.80000" depth="0.80000" height="2.04000" orientation="3" snappedType="0" snappedPosition="0.49998" snappedWidth="0.80000" snappedDepth="0.80000" snappedHeight="2.04000" snappedOrientation="3" insetX="0.00000" insetY="0.00000" insetZ="0.00000" twinWallItemUid="5fabd1a1.d0b427ff" symbolInstance="W-2-2"/>
+			<window point="2" type="3" u="0.79477" width="0.80000" depth="0.12000" height="1.20000" orientation="0" snappedType="3" snappedPosition="0.79477" snappedWidth="0.80000" snappedDepth="0.12000" snappedHeight="1.20000" snappedOrientation="0" insetX="0.00000" insetY="-0.06000" insetZ="-0.06000" twinWallItemUid="5fabd1ac.283793ff" symbolInstance="W-2-3"/>
+			<object symbolInstance="O-2-0"/>
+			<estimate>
+				<item id="O-2-0"/>
+			</estimate>
+			<mainDimension from="2" to="3" dir.x="-0.9999999729" dir.y="0.0002326891" value="6.1657342136" actualValue="6.1657342136" isSet="0"/>
+			<mainDimension from="2" to="4" dir.x="-0.0002326891" dir.y="-0.9999999729" value="2.1076641388" actualValue="2.1076641388" isSet="0"/>
+		</floorRoom>
+		<exploded>
+			<wall>
+				<point x="-1.143730" y="-2.228610" height="2.440000"/>
+				<point x="1.366159" y="-2.228590" height="2.440000"/>
+			</wall>
+			<wall>
+				<point x="1.366159" y="-2.228590" height="2.440000"/>
+				<point x="1.365670" y="-1.100331" height="2.440000"/>
+			</wall>
+			<wall>
+				<point x="1.365670" y="-1.100331" height="2.440000"/>
+				<point x="1.366109" y="1.213710" height="2.440000"/>
+			</wall>
+			<wall>
+				<point x="1.366109" y="1.213710" height="2.440000"/>
+				<point x="-1.143750" y="1.213690" height="2.440000"/>
+			</wall>
+			<wall>
+				<point x="-1.143750" y="1.213690" height="2.440000"/>
+				<point x="-1.143730" y="-2.228610" height="2.440000"/>
+			</wall>
+			<wall>
+				<point x="1.365670" y="-1.100331" height="2.440000"/>
+				<point x="7.541719" y="-1.099439" height="2.440000"/>
+			</wall>
+			<wall>
+				<point x="7.541719" y="-1.099439" height="2.440000"/>
+				<point x="7.541519" y="1.214100" height="2.440000"/>
+			</wall>
+			<wall>
+				<point x="7.541519" y="1.214100" height="2.440000"/>
+				<point x="1.366109" y="1.213710" height="2.440000"/>
+			</wall>
+			<wall>
+				<point x="6.718398" y="-2.186861" height="2.440000"/>
+				<point x="7.534909" y="-2.187051" height="2.440000"/>
+			</wall>
+			<wall>
+				<point x="7.534909" y="-2.187051" height="2.440000"/>
+				<point x="7.541719" y="-1.099439" height="2.440000"/>
+			</wall>
+			<wall>
+				<point x="1.366159" y="-2.228590" height="2.440000"/>
+				<point x="1.368035" y="-3.205679" height="2.440000"/>
+			</wall>
+			<wall>
+				<point x="1.368035" y="-3.205679" height="2.440000"/>
+				<point x="6.717948" y="-3.206301" height="2.440000"/>
+			</wall>
+			<wall>
+				<point x="6.717948" y="-3.206301" height="2.440000"/>
+				<point x="6.718398" y="-2.186861" height="2.440000"/>
+			</wall>
+			<door type="0" x1="1.365847" y1="0.130591" x2="1.365808" y2="0.930591" width="0.800000" depth="0.800000" height="2.040000" insetX="0.000000" insetY="0.000000" orientation="0" symbolInstance="W-0-0"/>
+			<door type="0" x1="4.053876" y1="-1.101517" x2="4.853873" y2="-1.099892" width="0.800000" depth="0.800000" height="2.040000" insetX="0.000000" insetY="0.000000" orientation="0" symbolInstance="W-1-0"/>
+			<window type="3" x1="2.236280" y1="-1.105208" x2="3.036277" y2="-1.103583" width="0.800000" depth="0.120000" height="1.200000" insetX="0.000000" insetY="-0.060000" orientation="0" symbolInstance="W-1-1"/>
+			<window type="3" x1="3.612892" y1="1.213852" x2="2.812892" y2="1.213801" width="0.800000" depth="0.120000" height="1.200000" insetX="0.000000" insetY="-0.060000" orientation="0" symbolInstance="W-1-2"/>
+			<window type="3" x1="6.872014" y1="1.214058" x2="6.072014" y2="1.214007" width="0.800000" depth="0.120000" height="1.200000" insetX="0.000000" insetY="-0.060000" orientation="0" symbolInstance="W-1-3"/>
+			<window type="3" x1="2.144180" y1="-3.205770" x2="2.944180" y2="-3.205862" width="0.800000" depth="0.120000" height="1.200000" insetX="0.000000" insetY="-0.060000" orientation="0" symbolInstance="W-2-0"/>
+			<window type="3" x1="4.421069" y1="-3.206034" x2="5.221069" y2="-3.206127" width="0.800000" depth="0.120000" height="1.200000" insetX="0.000000" insetY="-0.060000" orientation="0" symbolInstance="W-2-1"/>
+		</exploded>
+	</floor>
+	<interiorRoomPoints>
+		<floor uid="5fabd16d.28a027ff" floorType="0" rotation="0.00000" compassAngle="-1.000000" areaWithoutWalls="34.83253" areaWithInteriorWallsOnly="34.92302" areaWithWalls="35.20142">
+			<symbolInstance id="floor" uid="5fabd16d.28a027ff" parentUid="" symbol="floor" isEstimated="0">
+				<values>
+					<value key="exteriorWallWidth">0.010000</value>
+					<value key="interiorWallWidth">0.010000</value>
+				</values>
+			</symbolInstance>
+			<symbolInstance id="W-0-0" uid="5fabd178.23fd93ff" parentUid="" symbol="doorglass" isEstimated="0">
+				<values>
+					<value key="symbolfilePrefix">doors</value>
+				</values>
+			</symbolInstance>
+			<symbolInstance id="W-1-0" uid="5fabd1a1.d0b427ff" parentUid="" symbol="doorglass" isEstimated="0">
+				<values>
+					<value key="symbolfilePrefix">doors</value>
+				</values>
+			</symbolInstance>
+			<symbolInstance id="W-1-1" uid="5fabd1ac.283793ff" parentUid="" symbol="windowfrench" isEstimated="0">
+				<values>
+					<value key="symbolfilePrefix">doors</value>
+					<value key="wallItemDistanceToFloor">1.0</value>
+				</values>
+			</symbolInstance>
+			<symbolInstance id="W-1-2" uid="5fabd1b1.e51ddfff" parentUid="" symbol="windowfrench" isEstimated="0">
+				<values>
+					<value key="symbolfilePrefix">doors</value>
+					<value key="wallItemDistanceToFloor">1.0</value>
+				</values>
+			</symbolInstance>
+			<symbolInstance id="W-1-3" uid="5fabd1b7.1d7d4bff" parentUid="" symbol="windowfrench" isEstimated="0">
+				<values>
+					<value key="symbolfilePrefix">doors</value>
+					<value key="wallItemDistanceToFloor">1.0</value>
+				</values>
+			</symbolInstance>
+			<symbolInstance id="W-1-4" uid="5fb29069.c90cffff" parentUid="" symbol="doorglass" isEstimated="0">
+				<values>
+					<value key="symbolfilePrefix">doors</value>
+				</values>
+			</symbolInstance>
+			<symbolInstance id="O-1-0" uid="5fad1204.8a0e93ff" parentUid="" symbol="4882b532-57a3-4fe2-8e72-ea551faad910" isEstimated="1">
+				<values>
+					<value key="boxCoverage">1</value>
+					<value key="boxType">m2</value>
+					<value key="estimatorPosition">0.000000</value>
+					<value key="price">30</value>
+					<value key="pricingModel">surface</value>
+					<value key="sharedDoor">1</value>
+					<value key="sku">03.01.0000</value>
+					<value key="surfaceReference">compute</value>
+					<value key="surfaceReferenceGround">1</value>
+					<value key="surfaceUnit">m2</value>
+					<value key="symbolfilePrefix">demoRemodeling</value>
+					<value key="trade">tiling</value>
+				</values>
+			</symbolInstance>
+			<symbolInstance id="O-1-1" uid="5fad1902.dfe1ebff" parentUid="" symbol="4ccae791-c889-4ce3-9bff-3c7d2f548cb2" isEstimated="1">
+				<linkedTo uid="5fabd18d.761037ff"/>
+				<linkedTo uid="5fabd18d.7656dfff"/>
+				<linkedTo uid="5fabd18d.768ed7ff"/>
+				<linkedTo uid="5fabd18d.76cdffff"/>
+				<values>
+					<value key="boxCoverage">1</value>
+					<value key="boxType">m2</value>
+					<value key="distanceUnit">m</value>
+					<value key="estimatorPosition">1.000000</value>
+					<value key="price">30</value>
+					<value key="pricingModel">surface</value>
+					<value key="rollUnit">m</value>
+					<value key="sharedDoor">1</value>
+					<value key="sku">03.02.0000</value>
+					<value key="surfaceReference">compute</value>
+					<value key="surfaceReferenceCeiling">0</value>
+					<value key="surfaceReferenceGround">0</value>
+					<value key="surfaceReferenceWalls">1</value>
+					<value key="surfaceUnit">m2</value>
+					<value key="symbolfilePrefix">demoRemodeling</value>
+					<value key="totaldistance">0.00</value>
+					<value key="totalprice">1.055,61 €</value>
+					<value key="totalsurface">35.2</value>
+					<value key="totalvolume">34.7</value>
+					<value key="trade">tiling</value>
+					<value key="volumeUnit">m3</value>
+				</values>
+			</symbolInstance>
+			<symbolInstance id="W-2-0" uid="5fabd204.b418c7ff" parentUid="" symbol="windowfrench" isEstimated="0">
+				<values>
+					<value key="symbolfilePrefix">doors</value>
+					<value key="wallItemDistanceToFloor">1.0</value>
+				</values>
+			</symbolInstance>
+			<symbolInstance id="W-2-1" uid="5fabd209.e5fd27ff" parentUid="" symbol="windowfrench" isEstimated="0">
+				<values>
+					<value key="symbolfilePrefix">doors</value>
+					<value key="wallItemDistanceToFloor">1.0</value>
+				</values>
+			</symbolInstance>
+			<symbolInstance id="W-2-2" uid="5fb29069.c90d9bff" parentUid="" symbol="doorglass" isEstimated="0">
+				<values>
+					<value key="symbolfilePrefix">doors</value>
+				</values>
+			</symbolInstance>
+			<symbolInstance id="W-2-3" uid="5fb29069.c90df7ff" parentUid="" symbol="windowfrench" isEstimated="0">
+				<values>
+					<value key="symbolfilePrefix">doors</value>
+					<value key="wallItemDistanceToFloor">1.0</value>
+				</values>
+			</symbolInstance>
+			<symbolInstance id="O-2-0" uid="5fad1257.aa3a3bff" parentUid="" symbol="92b929bc-bcd8-4adc-b96b-0c80f4aebcf9" isEstimated="1">
+				<values>
+					<value key="boxType">m2</value>
+					<value key="estimatorPosition">0.000000</value>
+					<value key="price">25</value>
+					<value key="pricingModel">surface</value>
+					<value key="sharedDoor">1</value>
+					<value key="sku">01.03.0003</value>
+					<value key="surfaceReference">compute</value>
+					<value key="surfaceReferenceGround">1</value>
+					<value key="surfaceUnit">m2</value>
+					<value key="symbolfilePrefix">demoRemodeling</value>
+					<value key="trade">flooring</value>
+				</values>
+			</symbolInstance>
+			<floorRoom type="Shared Office" uid="5fabd167.9e95fbff" x="0.11120" y="-0.50745" rotation="0.00000" wasModified="1" linkedRoom0="-1" linkedRoom1="-1" area="8.58032" perimeter="11.86435">
+				<point snappedX="-1.24994" snappedY="-1.71616" height="2.440000" uid="5fabd16d.28e1f7ff"/>
+				<point snappedX="1.24995" snappedY="-1.71614" height="2.440000" uid="5fabd16d.294d93ff"/>
+				<point snappedX="1.24991" snappedY="1.71616" height="2.440000" uid="5fabd16d.29a577ff"/>
+				<point snappedX="-1.24995" snappedY="1.71614" height="2.440000" uid="5fabd16d.2a1423ff"/>
+				<door point="1" type="0" u="0.80243" width="0.80000" depth="0.80000" height="2.04000" orientation="0" snappedType="0" snappedPosition="0.80243" snappedWidth="0.80000" snappedDepth="0.80000" snappedHeight="2.04000" snappedOrientation="0" insetX="0.00000" insetY="0.00000" insetZ="0.00000" twinWallItemUid="5fb29069.c90cffff" symbolInstance="W-0-0"/>
+				<estimate/>
+				<mainDimension from="0" to="1" dir.x="-1.0000000000" dir.y="-0.0000080004" value="2.4998900001" actualValue="2.4998900001" isSet="0"/>
+				<mainDimension from="1" to="2" dir.x="0.0000080004" dir.y="-1.0000000000" value="3.4323000003" actualValue="3.4323000003" isSet="0"/>
+			</floorRoom>
+			<floorRoom type="Vestibule" uid="5fabd182.3a79dbff" x="4.45360" y="0.05688" rotation="0.00000" wasModified="1" linkedRoom0="-1" linkedRoom1="-1" area="14.20527" perimeter="16.93967">
+				<point snappedX="-3.08293" snappedY="-1.15221" height="2.440000" uid="5fabd18d.761037ff"/>
+				<point snappedX="3.08312" snappedY="-1.15133" height="2.440000" uid="5fabd18d.7656dfff"/>
+				<point snappedX="3.08292" snappedY="1.15221" height="2.440000" uid="5fabd18d.768ed7ff"/>
+				<point snappedX="-3.08312" snappedY="1.15182" height="2.440000" uid="5fabd18d.76cdffff"/>
+				<door point="0" type="0" u="0.50003" width="0.80000" depth="0.80000" height="2.04000" orientation="0" snappedType="0" snappedPosition="0.50003" snappedWidth="0.80000" snappedDepth="0.80000" snappedHeight="2.04000" snappedOrientation="0" insetX="0.00000" insetY="0.00000" insetZ="0.00000" twinWallItemUid="5fb29069.c90d9bff" symbolInstance="W-1-0"/>
+				<window point="0" type="3" u="0.20525" width="0.80000" depth="0.12000" height="1.20000" orientation="0" snappedType="3" snappedPosition="0.20525" snappedWidth="0.80000" snappedDepth="0.12000" snappedHeight="1.20000" snappedOrientation="0" insetX="0.00000" insetY="-0.06000" insetZ="-0.06000" twinWallItemUid="5fb29069.c90df7ff" symbolInstance="W-1-1"/>
+				<window point="2" type="3" u="0.70120" width="0.80000" depth="0.12000" height="1.20000" orientation="0" snappedType="3" snappedPosition="0.70120" snappedWidth="0.80000" snappedDepth="0.12000" snappedHeight="1.20000" snappedOrientation="0" insetX="0.00000" insetY="-0.06000" insetZ="-0.06000" symbolInstance="W-1-2"/>
+				<window point="2" type="3" u="0.17264" width="0.80000" depth="0.12000" height="1.20000" orientation="0" snappedType="3" snappedPosition="0.17264" snappedWidth="0.80000" snappedDepth="0.12000" snappedHeight="1.20000" snappedOrientation="0" insetX="0.00000" insetY="-0.06000" insetZ="-0.06000" symbolInstance="W-1-3"/>
+				<door point="3" type="0" u="0.29432" width="0.80000" depth="0.80000" height="2.04000" orientation="3" snappedType="0" snappedPosition="0.29432" snappedWidth="0.80000" snappedDepth="0.80000" snappedHeight="2.04000" snappedOrientation="3" insetX="0.00000" insetY="0.00000" insetZ="0.00000" twinWallItemUid="5fabd178.23fd93ff" symbolInstance="W-1-4"/>
+				<object symbolInstance="O-1-0"/>
+				<object symbolInstance="O-1-1"/>
+				<estimate>
+					<item id="O-1-1"/>
+					<item id="O-1-0"/>
+				</estimate>
+				<mainDimension from="0" to="1" dir.x="-0.9999999896" dir.y="-0.0001443388" value="6.1661825543" actualValue="6.1661825543" isSet="0"/>
+				<mainDimension from="1" to="2" dir.x="0.0001443388" dir.y="-0.9999999896" value="2.3040400034" actualValue="2.3040400034" isSet="0"/>
+			</floorRoom>
+			<floorRoom type="Shared Office" uid="5fabd1da.296453ff" x="4.45373" y="-2.14788" rotation="0.00000" wasModified="0" linkedRoom0="-1" linkedRoom1="-1" area="12.06895" perimeter="16.51139">
+				<point snappedX="2.25967" snappedY="-0.03398" height="2.440000" uid="5fabd1fe.91e16bff"/>
+				<point snappedX="3.07621" snappedY="-0.03417" height="2.440000" uid="5fabd1fe.920653ff"/>
+				<point snappedX="3.08287" snappedY="1.05343" height="2.440000" uid="5fabd1fe.922317ff"/>
+				<point snappedX="-3.08287" snappedY="1.02927" height="2.440000" uid="5fabd1fe.923fabff"/>
+				<point snappedX="-3.08070" snappedY="-1.05281" height="2.440000" uid="5fabd1fe.925b83ff"/>
+				<point snappedX="2.25922" snappedY="-1.05342" height="2.440000" uid="5fabd1fe.92771bff"/>
+				<window point="4" type="3" u="0.21932" width="0.80000" depth="0.12000" height="1.20000" orientation="0" snappedType="3" snappedPosition="0.21932" snappedWidth="0.80000" snappedDepth="0.12000" snappedHeight="1.20000" snappedOrientation="0" insetX="0.00000" insetY="-0.06000" insetZ="-0.06000" symbolInstance="W-2-0"/>
+				<window point="4" type="3" u="0.64571" width="0.80000" depth="0.12000" height="1.20000" orientation="0" snappedType="3" snappedPosition="0.64571" snappedWidth="0.80000" snappedDepth="0.12000" snappedHeight="1.20000" snappedOrientation="0" insetX="0.00000" insetY="-0.06000" insetZ="-0.06000" symbolInstance="W-2-1"/>
+				<door point="2" type="0" u="0.49997" width="0.80000" depth="0.80000" height="2.04000" orientation="3" snappedType="0" snappedPosition="0.49997" snappedWidth="0.80000" snappedDepth="0.80000" snappedHeight="2.04000" snappedOrientation="3" insetX="0.00000" insetY="0.00000" insetZ="0.00000" twinWallItemUid="5fabd1a1.d0b427ff" symbolInstance="W-2-2"/>
+				<window point="2" type="3" u="0.79476" width="0.80000" depth="0.12000" height="1.20000" orientation="0" snappedType="3" snappedPosition="0.79476" snappedWidth="0.80000" snappedDepth="0.12000" snappedHeight="1.20000" snappedOrientation="0" insetX="0.00000" insetY="-0.06000" insetZ="-0.06000" twinWallItemUid="5fabd1ac.283793ff" symbolInstance="W-2-3"/>
+				<object symbolInstance="O-2-0"/>
+				<estimate>
+					<item id="O-2-0"/>
+				</estimate>
+				<mainDimension from="2" to="3" dir.x="-0.9999999729" dir.y="0.0002326891" value="6.1657342136" actualValue="6.1657342136" isSet="0"/>
+				<mainDimension from="2" to="4" dir.x="-0.0002326891" dir.y="-0.9999999729" value="2.1076641388" actualValue="2.1076641388" isSet="0"/>
+			</floorRoom>
+			<exploded>
+				<wall>
+					<point x="-1.143730" y="-2.228610" height="2.440000"/>
+					<point x="1.366159" y="-2.228590" height="2.440000"/>
+				</wall>
+				<wall>
+					<point x="1.366159" y="-2.228590" height="2.440000"/>
+					<point x="1.365670" y="-1.100331" height="2.440000"/>
+				</wall>
+				<wall>
+					<point x="1.365670" y="-1.100331" height="2.440000"/>
+					<point x="1.366109" y="1.213710" height="2.440000"/>
+				</wall>
+				<wall>
+					<point x="1.366109" y="1.213710" height="2.440000"/>
+					<point x="-1.143750" y="1.213690" height="2.440000"/>
+				</wall>
+				<wall>
+					<point x="-1.143750" y="1.213690" height="2.440000"/>
+					<point x="-1.143730" y="-2.228610" height="2.440000"/>
+				</wall>
+				<wall>
+					<point x="1.365670" y="-1.100331" height="2.440000"/>
+					<point x="7.541719" y="-1.099439" height="2.440000"/>
+				</wall>
+				<wall>
+					<point x="7.541719" y="-1.099439" height="2.440000"/>
+					<point x="7.541519" y="1.214100" height="2.440000"/>
+				</wall>
+				<wall>
+					<point x="7.541519" y="1.214100" height="2.440000"/>
+					<point x="1.366109" y="1.213710" height="2.440000"/>
+				</wall>
+				<wall>
+					<point x="6.718398" y="-2.186861" height="2.440000"/>
+					<point x="7.534909" y="-2.187051" height="2.440000"/>
+				</wall>
+				<wall>
+					<point x="7.534909" y="-2.187051" height="2.440000"/>
+					<point x="7.541719" y="-1.099439" height="2.440000"/>
+				</wall>
+				<wall>
+					<point x="1.366159" y="-2.228590" height="2.440000"/>
+					<point x="1.368035" y="-3.205679" height="2.440000"/>
+				</wall>
+				<wall>
+					<point x="1.368035" y="-3.205679" height="2.440000"/>
+					<point x="6.717948" y="-3.206301" height="2.440000"/>
+				</wall>
+				<wall>
+					<point x="6.717948" y="-3.206301" height="2.440000"/>
+					<point x="6.718398" y="-2.186861" height="2.440000"/>
+				</wall>
+				<door type="0" x1="1.365847" y1="0.130591" x2="1.365808" y2="0.930591" width="0.800000" depth="0.800000" height="2.040000" insetX="0.000000" insetY="0.000000" orientation="0" symbolInstance="W-0-0"/>
+				<door type="0" x1="4.053887" y1="-1.101517" x2="4.853884" y2="-1.099892" width="0.800000" depth="0.800000" height="2.040000" insetX="0.000000" insetY="0.000000" orientation="0" symbolInstance="W-1-0"/>
+				<window type="3" x1="2.236298" y1="-1.105208" x2="3.036294" y2="-1.103583" width="0.800000" depth="0.120000" height="1.200000" insetX="0.000000" insetY="-0.060000" orientation="0" symbolInstance="W-1-1"/>
+				<window type="3" x1="3.612892" y1="1.213852" x2="2.812892" y2="1.213801" width="0.800000" depth="0.120000" height="1.200000" insetX="0.000000" insetY="-0.060000" orientation="0" symbolInstance="W-1-2"/>
+				<window type="3" x1="6.872014" y1="1.214058" x2="6.072014" y2="1.214007" width="0.800000" depth="0.120000" height="1.200000" insetX="0.000000" insetY="-0.060000" orientation="0" symbolInstance="W-1-3"/>
+				<window type="3" x1="2.144180" y1="-3.205770" x2="2.944180" y2="-3.205862" width="0.800000" depth="0.120000" height="1.200000" insetX="0.000000" insetY="-0.060000" orientation="0" symbolInstance="W-2-0"/>
+				<window type="3" x1="4.421069" y1="-3.206034" x2="5.221069" y2="-3.206127" width="0.800000" depth="0.120000" height="1.200000" insetX="0.000000" insetY="-0.060000" orientation="0" symbolInstance="W-2-1"/>
+			</exploded>
+		</floor>
+	</interiorRoomPoints>
+</plan>
