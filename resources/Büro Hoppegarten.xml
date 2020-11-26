@@ -325,7 +325,7 @@
 					<value key="volumeUnit">m3</value>
 				</values>
 			</symbolInstance>
-			<symbolInstance id="W-2-0" uid="5fabd204.b418c7ff" parentUid="" symbol="windowfrench" isEstimated="0">
+			<symbolInstance id="W-2-0" uid="5fabd204.b418c7f f" parentUid="" symbol="windowfrench" isEstimated="0">
 				<values>
 					<value key="symbolfilePrefix">doors</value>
 					<value key="wallItemDistanceToFloor">1.0</value>

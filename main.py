@@ -2,12 +2,13 @@
 import csvImport
 import gui
 import xmlParser
-from magicXMLImport import import_data, create_rooms
+from magicXMLImport import import_data, create_rooms, create_positions
 
 
-def convert_to_xml(gui, api=None, path=None):
+def convert_to_xml(gui=None, api=None, path=None, data=None):
     """
 
+    :param data:
     :param gui: GUI instance where it gets the path or xml string
     :param api: Boolean checker for import with API or from csv file
     :param path: If import from csv file this is the path
@@ -23,10 +24,17 @@ def convert_to_xml(gui, api=None, path=None):
         9: "Raumhöhe "
     }
     if api:
-        #data = import_data(path=path)
-        data = import_data(data=gui.xml)
-        rooms = create_rooms(data)
-        xmlParser.write_data_to_xml(rooms, gui.export_path.get())
+
+        data = import_data(data=data)
+
+        # save_to_file(gui, "Büro Hoppegarten")
+        positionen = create_positions(data)
+        xmlParser.write_data_to_xml_schrift(positionen, "resources/AUFMASS-2020-11-26.xml")
+        # Normal
+        # data = import_data(path=path)
+        # data = import_data(data=gui.xml)
+        # rooms = create_rooms(data)
+        # xmlParser.write_data_to_xml(rooms, gui.export_path.get())
     else:
         data = csvImport.import_data(gui.import_path.get())
         data_subsection_raume = csvImport.get_subsection('ATTRIBUTE DER RÄUME', data)

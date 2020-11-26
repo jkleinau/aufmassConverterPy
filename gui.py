@@ -13,7 +13,7 @@ class GUI:
         id = [plan['id'] for plan in self.selection if plan['name'] == self.import_path.get().split('/')[-1]]
         self.xml = self.magic_plan_api.get_project_plan(id[0])
         #main.save_to_file(self, self.import_path.get().split('/')[-1])
-        main.convert_to_xml(self, api=self.api_import_checker)
+        main.convert_to_xml(gui=self, api=self.api_import_checker)
         tkinter.messagebox.showinfo("Convert", "Die Datei wurde erfolgreich umgewandelt.")
 
     def button_action_import(self):

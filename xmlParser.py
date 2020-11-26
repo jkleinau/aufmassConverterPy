@@ -4,6 +4,20 @@ from component import Component
 from room import Room
 
 
+def write_data_to_xml_schrift(positions, path):
+    project = ET.Element('SCHRIFTSTUECKE', attrib={"xmlns": "urn:in-software-com:IN-SCHRIFTSTUECKE"})
+    schriftstueck = ET.SubElement(project, "SCHRIFTSTUECK")
+    kopf = ET.SubElement(schriftstueck, "KOPF")
+    positionen = ET.SubElement(schriftstueck, 'POSITIONEN')
+
+    for position in positions:
+        position.write_to_xml(positionen)
+
+    mydata = ET.tostring(project, encoding='ISO-8859-1')
+    myfile = open(path, "wb")
+    myfile.write(mydata)
+
+
 def write_data_to_xml(rooms, path):
     project = ET.Element('PROJEKT', attrib={"xmlns": "urn:in-software-com:IN-AUFMASS"})
     position = ET.SubElement(project, 'POSITION', attrib={"ID": "1.01"})
