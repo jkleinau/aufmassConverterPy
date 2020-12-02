@@ -4,6 +4,7 @@ import numpy as np
 from component import Component
 from position import Position
 from room import Room
+import uuid
 
 
 def get_translation(tag):
@@ -75,62 +76,106 @@ def import_data(path=None, data=None):
     return data
 
 
+def build_data(data):
+    positions = create_positions(data['positions'])
+    rooms = create_rooms(data['rooms'], level=data['level'], positions=positions)
+    rooms = link_position_to_component(rooms)
+    return rooms
+
+
+def link_position_to_component(rooms):
+    for room in rooms:
+        for pos in room.positions.values():
+            for i, link in enumerate(pos.links):
+                lind_id = "{}:{}".format(link, pos.links[(i + 1) % len(pos.links)])
+                if lind_id in room.components.keys():
+                    pos.aufmass_zeilen.append(room.components[lind_id].to_aufmass_zeile())
+    return rooms
+
+
 def create_positions(data):
-    positions = list()
-    artikel = dict()
-    for position in data['positions']:
+    positions = dict()
+
+    for position in data:
+        links = [link.attrib['uid'] for link in position if link.tag == 'linkedTo']
+        symbol = position.attrib['symbol']
+        pos_id = [position.attrib['id']]
+        uid = [position.attrib['uid']]
         values = [elem for elem in position if elem.tag == 'values'][0]
         artikel_nr = [elem for elem in values if elem.attrib['key'] == 'sku'][0].text
-        pricingModel = [elem for elem in values if elem.attrib['key'] == 'pricingModel'][0].text
+        pricing_model = [elem for elem in values if elem.attrib['key'] == 'pricingModel'][0].text
 
-        if pricingModel == 'item':
-            if artikel_nr in artikel.keys():
-                artikel[artikel_nr] += 1
+        if pricing_model == 'item':
+            if symbol in positions.keys():
+                positions[symbol].menge += 1
+                positions[symbol].pos_id.extend(pos_id)
+                positions[symbol].uid.extend(uid)
             else:
-                artikel[artikel_nr] = 1
-            print(str(position.attrib['id']) + ' item')
-        if pricingModel == 'surface':
+                positions[symbol] = Position(menge=1, artikel_nr=artikel_nr, pos_id=pos_id, uid=uid, symbol=symbol,
+                                             links=links)
+
+        if pricing_model == 'surface':
             menge = [elem for elem in values if elem.attrib['key'] == 'totalsurface'][0].text
-            positions.append(Position(menge=menge, artikel_nr=artikel_nr))
-            print(str(position.attrib['id']) + ' surface')
-    for art in artikel.keys():
-        positions.append(Position(menge=artikel[art], artikel_nr=art))
+            positions[symbol] = Position(menge=menge, artikel_nr=artikel_nr, pos_id=pos_id, uid=uid, symbol=symbol,
+                                         links=links)
+
     return positions
 
 
-def create_rooms(data):
+def create_rooms(data, level='0', positions=None):
     rooms = list()
-    for room in data['rooms']:
+    for room in data:
         tags = dict()
         tags['Bodenfläche'] = room.attrib['area']
         tags['Umfang'] = room.attrib['perimeter']
-        temp_room = Room(get_translation(room.attrib['type']), data['level'], tags, room.attrib['x'], room.attrib['y'])
+
+        temp_room = Room(get_translation(room.attrib['type']), level, tags, room.attrib['x'], room.attrib['y'])
+
         points = [datapoint for datapoint in room if datapoint.tag == 'point']
+
+        estimate = [est for est in room if est.tag == 'estimate'][0]
+        temp_positions = dict()
+        for item in estimate:
+            for pos in positions:
+                if item.attrib['id'] in positions[pos].pos_id:
+                    if pos not in temp_positions:
+                        temp_positions[pos] = positions[pos]
+
         components = [datapoint for datapoint in room if datapoint.tag == 'door' or datapoint.tag == 'window']
         components = create_components(components, temp_room)
+
         walls = create_walls(points, temp_room)
+
+        temp_room.positions = temp_positions
         temp_room.components = walls
-        temp_room.components.extend(components)
+        temp_room.components.update(components)
         temp_room.create_sums()
         rooms.append(temp_room)
     return rooms
 
 
 def create_components(data, room):
-    components = list()
+    components = dict()
     for component in data:
-        components.append(
-            Component(component.attrib['width'], component.attrib['height'], get_translation(component.tag), room))
+        try:
+            uid = component.attrib['uid']
+        except:
+            uid = uuid.uuid1()
+        components[uid] = Component(component.attrib['width'], component.attrib['height'],
+                                    get_translation(component.tag), room,
+                                    uid=uid)
     return components
 
 
 def create_walls(points, room, tag='Wand'):
-    walls = list()
+    walls = dict()
     for i, point in enumerate(points):
-        walls.append(Component(distance(point, points[(i + 1) % len(points)]),
+        uid = "{}:{}".format(point.attrib['uid'], points[(i + 1) % len(points)].attrib['uid'])
+        walls[uid] = Component(distance(point, points[(i + 1) % len(points)]),
                                (float(point.attrib['height']) / 2 + float(
                                    points[(i + 1) % len(points)].attrib['height']) / 2),
-                               tag, room, vector_points(point, points[(i + 1) % len(points)])))
+                               tag, room, vector_points(point, points[(i + 1) % len(points)]),
+                               uid=uid)
     return walls
 
 

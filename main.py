@@ -2,7 +2,7 @@
 import csvImport
 import gui
 import xmlParser
-from magicXMLImport import import_data, create_rooms, create_positions
+from magicXMLImport import import_data, create_rooms, create_positions, build_data
 
 
 def convert_to_xml(gui=None, api=None, path=None, data=None):
@@ -27,9 +27,10 @@ def convert_to_xml(gui=None, api=None, path=None, data=None):
 
         data = import_data(data=data)
 
-        # save_to_file(gui, "Büro Hoppegarten")
-        positionen = create_positions(data)
-        xmlParser.write_data_to_xml_schrift(positionen, "resources/AUFMASS-2020-11-26.xml")
+        #save_to_file(gui, "Büro Hoppegarten")
+        rooms = build_data(data)
+        xmlParser.write_data_to_xml_schrift(rooms, "resources/AUFMASS-2020-11-26.xml")
+
         # Normal
         # data = import_data(path=path)
         # data = import_data(data=gui.xml)
