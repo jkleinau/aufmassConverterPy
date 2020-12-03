@@ -86,6 +86,8 @@ def build_data(data):
 def link_position_to_component(rooms):
     for room in rooms:
         for pos in room.positions.values():
+            if float(pos.menge) == round(float(room.data['Bodenfläche']), 1):
+                pos.aufmass_zeilen.append(room.data_to_aufmasszeile('Bodenfläche'))
             for i, link in enumerate(pos.links):
                 lind_id = "{}:{}".format(link, pos.links[(i + 1) % len(pos.links)])
                 if lind_id in room.components.keys():

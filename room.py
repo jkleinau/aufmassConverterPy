@@ -22,6 +22,10 @@ class Room:
         self.y = y
         self.x = x
 
+    def data_to_aufmasszeile(self, tag):
+        return AufmassZeile(stichwort=self.level + ", " + self.name, text=tag + ", " + self.name,
+                            aufmass=str(self.data[tag]).split()[0])
+
     def write_to_xml(self, root):
         for tag in self.data:
             AufmassZeile(stichwort=self.level + ", " + self.name, text=tag + ", " + self.name,

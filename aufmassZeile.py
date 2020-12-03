@@ -16,5 +16,8 @@ class AufmassZeile():
         text = ET.SubElement(aufmasszeile, 'TEXT')
         text.text = self.text
 
-        aufmass = ET.SubElement(aufmasszeile, 'AUFMASS')
+        anzahl = ET.SubElement(aufmasszeile, 'ANZAHL')
+        anzahl.text = ' '
+
+        aufmass = ET.SubElement(aufmasszeile, 'LAENGE')
         aufmass.text = self.aufmass

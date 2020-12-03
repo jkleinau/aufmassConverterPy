@@ -52,4 +52,10 @@ def save_to_file(gui, name):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    gui = gui.GUI()
+    data = ""
+    with open('resources/Büro Hoppegarten.xml', 'r') as f:
+        for line in f:
+            data += line
+    convert_to_xml(data=data, api=True)
+
+    #gui = gui.GUI()

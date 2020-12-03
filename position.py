@@ -21,12 +21,6 @@ class Position:
     def write_to_xml(self, root):
         material_position = ET.SubElement(root, 'MATERIALPOSITION')
 
-        menge = ET.SubElement(material_position, 'MENGE')
-        menge.text = str(self.menge)
-
-        artikel_nr = ET.SubElement(material_position, 'ARTIKELNUMMER')
-        artikel_nr.text = str(self.artikel_nr)
-
         if self.positions_nr:
             positions_nr = ET.SubElement(material_position, 'POSITIONSNUMMER')
             positions_nr.text = str(self.positions_nr)
@@ -38,3 +32,9 @@ class Position:
 
             for aufmass_zeile in self.aufmass_zeilen:
                 aufmass_zeile.write_to_xml(aufmass)
+
+        menge = ET.SubElement(material_position, 'MENGE')
+        menge.text = str(self.menge)
+
+        artikel_nr = ET.SubElement(material_position, 'ARTIKELNUMMER')
+        artikel_nr.text = str(self.artikel_nr)
