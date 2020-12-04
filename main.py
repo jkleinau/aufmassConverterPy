@@ -24,18 +24,11 @@ def convert_to_xml(gui=None, api=None, path=None, data=None):
         9: "Raumhöhe "
     }
     if api:
-
-        data = import_data(data=data)
-
-        #save_to_file(gui, "Büro Hoppegarten")
+        data = import_data(data=gui.xml)
         rooms = build_data(data)
-        xmlParser.write_data_to_xml_schrift(rooms, "resources/AUFMASS-2020-11-26.xml")
+        xmlParser.write_data_to_xml_schrift(rooms, gui.export_path.get())
 
-        # Normal
-        # data = import_data(path=path)
-        # data = import_data(data=gui.xml)
-        # rooms = create_rooms(data)
-        # xmlParser.write_data_to_xml(rooms, gui.export_path.get())
+
     else:
         data = csvImport.import_data(gui.import_path.get())
         data_subsection_raume = csvImport.get_subsection('ATTRIBUTE DER RÄUME', data)
@@ -52,10 +45,10 @@ def save_to_file(gui, name):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    data = ""
-    with open('resources/Büro Hoppegarten.xml', 'r') as f:
-        for line in f:
-            data += line
-    convert_to_xml(data=data, api=True)
+    # data = ""
+    # with open('resources/Büro Hoppegarten.xml', 'r') as f:
+    #     for line in f:
+    #         data += line
+    # convert_to_xml(data=data, api=True)
 
-    #gui = gui.GUI()
+    gui = gui.GUI()

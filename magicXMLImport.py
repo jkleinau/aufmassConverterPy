@@ -2,6 +2,7 @@ import math
 import xml.etree.ElementTree as ET
 import numpy as np
 from component import Component
+from polyLine import PolyLine
 from position import Position
 from room import Room
 import uuid
@@ -73,22 +74,37 @@ def import_data(path=None, data=None):
     data['rooms'] = [elem for elem in floor if elem.tag == 'floorRoom']
     data['positions'] = [elem for elem in floor if
                          elem.tag == 'symbolInstance' and elem.attrib['id'].split('-')[0] == 'O']
+    data['poly'] = [elem for elem in floor if
+                    elem.tag == 'symbolInstance' and elem.attrib['id'].split('-')[0] == 'F']
     return data
 
 
 def build_data(data):
     positions = create_positions(data['positions'])
+    poly_lines = create_polylines(data['poly'])
     rooms = create_rooms(data['rooms'], level=data['level'], positions=positions)
-    rooms = link_position_to_component(rooms)
+    rooms = link_position_to_component(rooms, poly=poly_lines)
     return rooms
 
 
-def link_position_to_component(rooms):
+def create_polylines(data):
+    poly_lines = dict()
+    for poly in data:
+        polylineData = [elem for elem in poly if elem.tag == 'polylineData'][0]
+        points = [(point.attrib['x'], point.attrib['y']) for point in polylineData]
+        poly_lines[poly.attrib['uid']] = PolyLine(uid=poly.attrib['uid'], poly_id=poly.attrib['id'],
+                                                  symbol=poly.attrib['symbol'], points=points)
+    return poly_lines
+
+
+def link_position_to_component(rooms, poly=None):
     for room in rooms:
         for pos in room.positions.values():
             if float(pos.menge) == round(float(room.data['Bodenfläche']), 1):
                 pos.aufmass_zeilen.append(room.data_to_aufmasszeile('Bodenfläche'))
             for i, link in enumerate(pos.links):
+                if link in poly:
+                    pos.aufmass_zeilen.append(poly[link].to_aufmass_zeile())
                 lind_id = "{}:{}".format(link, pos.links[(i + 1) % len(pos.links)])
                 if lind_id in room.components.keys():
                     pos.aufmass_zeilen.append(room.components[lind_id].to_aufmass_zeile())
