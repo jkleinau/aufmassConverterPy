@@ -14,11 +14,13 @@ class Component:
         self.breite = breite
         self.hoehe = hoehe
 
+    def __str__(self):
+        return f"{self.typ} {self.orga_number+1}"
+
     def write_to_xml(self, root):
         self.to_aufmass_zeile().write_to_xml(root)
 
     def to_aufmass_zeile(self):
         return AufmassZeile(stichwort=f"{self.room.level}, {self.room.name}, {self.typ}",
-                            text="Oberfläche, {}, {} {}".format(self.room.name, self.typ,
-                                                                self.orga_number) if self.show_id else "Oberfläche, " + self.room.name + ", " + self.typ,
+                            text=f"Oberfläche, {self.room.name}, {self}" if self.show_id else f"Oberfläche, {self.room.name}, { self.typ}",
                             aufmass="{:.2f}*{:.2f}".format(float(self.breite), float(self.hoehe)))

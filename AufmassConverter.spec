@@ -3,11 +3,11 @@
 block_cipher = None
 
 
-a = Analysis(['main.pyw'],
+a = Analysis(['main.py'],
              pathex=['C:\\Users\\BSU Holding 02\\PycharmProjects\\aufmassConverterPy'],
              binaries=[],
              datas=[],
-             hiddenimports=[],
+             hiddenimports=['numpy'],
              hookspath=[],
              runtime_hooks=[],
              excludes=[],
