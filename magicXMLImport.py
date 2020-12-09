@@ -105,14 +105,18 @@ def link_position_to_component(rooms, poly=None):
             if float(pos.menge) == round(float(room.data['Bodenfläche']), 1):
                 pos.aufmass_zeilen.append(room.data_to_aufmasszeile('Bodenfläche'))
             for i, link in enumerate(pos.links):
+                walls = [wall for wall in room.components.values() if wall.typ == 'Wand']
+
+                if i < len(walls):
+                    link_id = "{}:{}".format(link, pos.links[(i + 1) % len(walls)])
+                    if link_id in room.components.keys():
+                        pos.aufmass_zeilen.append(room.components[link_id].to_aufmass_zeile())
+
                 if link in poly:
-                    walls = [wall for wall in room.components.values() if wall.typ == 'Wand']
-                    wallIndex_corrected = str((int(poly[link].wallIndex) + (len(walls) - 1)) % len(walls))
-                    component = [wall for wall in walls if str(wall.orga_number) == wallIndex_corrected]
+                    wall_index_corrected = str((int(poly[link].wallIndex) + (len(walls) - 1)) % len(walls))
+                    component = [wall for wall in walls if str(wall.orga_number) == wall_index_corrected]
                     pos.aufmass_zeilen.append(poly[link].to_aufmass_zeile(component=component[0]))
-                lind_id = "{}:{}".format(link, pos.links[(i + 1) % len(pos.links)])
-                if lind_id in room.components.keys():
-                    pos.aufmass_zeilen.append(room.components[lind_id].to_aufmass_zeile())
+                    pos.aufmass_zeilen.remove(component[0].to_aufmass_zeile())
     return rooms
 
 
@@ -178,14 +182,14 @@ def create_rooms(data, level='0', positions=None):
 
 def create_components(data, room):
     components = dict()
-    for component in data:
+    for i,component in enumerate(data):
         try:
             uid = component.attrib['uid']
         except:
             uid = uuid.uuid1()
         components[uid] = Component(component.attrib['width'], component.attrib['height'],
                                     get_translation(component.tag), room,
-                                    uid=uid)
+                                    uid=uid, orga_number=i)
     return components
 
 

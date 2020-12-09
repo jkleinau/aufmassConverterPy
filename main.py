@@ -5,13 +5,13 @@ import xmlParser
 from magicXMLImport import import_data, create_rooms, create_positions, build_data
 
 
-def convert_to_xml(gui=None, api=None, path=None, data=None):
+def convert_to_xml(gui=None, api=None, export_path=None, param_data=None):
     """
 
-    :param data:
+    :param param_data:
     :param gui: GUI instance where it gets the path or xml string
     :param api: Boolean checker for import with API or from csv file
-    :param path: If import from csv file this is the path
+    :param export_path: If import from csv file this is the path
     """
     header_raueme = {
         1: "Bodenoberfläche",
@@ -24,15 +24,15 @@ def convert_to_xml(gui=None, api=None, path=None, data=None):
         9: "Raumhöhe "
     }
     if api:
-        data = import_data(data=gui.xml)
+        data = import_data(data=param_data)
         rooms = build_data(data)
-        xmlParser.write_data_to_xml_schrift(rooms, gui.export_path.get())
+        xmlParser.write_data_to_xml_schrift(rooms, export_path)
 
 
     else:
-        data = csvImport.import_data(gui.import_path.get())
-        data_subsection_raume = csvImport.get_subsection('ATTRIBUTE DER RÄUME', data)
-        data_subsection_waende = csvImport.get_subsection('Wandeigenschaften', data)
+        param_data = csvImport.import_data(gui.import_path.get())
+        data_subsection_raume = csvImport.get_subsection('ATTRIBUTE DER RÄUME', param_data)
+        data_subsection_waende = csvImport.get_subsection('Wandeigenschaften', param_data)
         rooms = xmlParser.create_data(data_subsection_raume, data_subsection_waende, header_raueme)
         xmlParser.write_data_to_xml(rooms, gui.export_path.get())
 
@@ -49,6 +49,6 @@ if __name__ == '__main__':
     # with open('resources/Büro Hoppegarten.xml', 'r') as f:
     #     for line in f:
     #         data += line
-    # convert_to_xml(data=data, api=True)
+    # convert_to_xml(param_data=data, api=True)
 
     gui = gui.GUI()

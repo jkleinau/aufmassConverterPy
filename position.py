@@ -18,6 +18,9 @@ class Position:
         if links is None:
             self.links = dict()
 
+    def __str__(self):
+        return f"Position {self.artikel_nr}, mit {len(self.aufmass_zeilen)} Aufmasszeilen"
+
     def write_to_xml(self, root):
         material_position = ET.SubElement(root, 'MATERIALPOSITION')
 

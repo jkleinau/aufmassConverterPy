@@ -7,6 +7,14 @@ class AufmassZeile():
         self.stichwort = stichwort
         self.aufmass = aufmass
 
+    def __str__(self):
+        return f"{self.text}, {self.aufmass}"
+
+    def __eq__(self, other):
+        if not isinstance(other, AufmassZeile):
+            return NotImplemented
+        return self.aufmass == other.aufmass and self.text == other.text
+
     def write_to_xml(self, root):
         aufmasszeile = ET.SubElement(root, 'AUFMASSZEILE')
 

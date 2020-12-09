@@ -24,8 +24,11 @@ class PolyLine:
             stichwort=f"Polylinie in {component.room}" if component is not None else "Polyline")
 
     def create_poly(self):
-        self.breite = distance_num(self.points[0][0], self.points[1][0], self.points[0][1], self.points[1][0])
-        self.hoehe = distance_num(self.points[1][0], self.points[2][0], self.points[1][1], self.points[2][0])
+        self.breite = distance_num(self.points[1][0], self.points[2][0], self.points[1][1], self.points[2][1])
+        self.hoehe = distance_num(self.points[0][0], self.points[1][0], self.points[0][1], self.points[1][1])
+
+    def __str__(self):
+        return f'Benutzerdefinierter Bereich: {self.breite}*{self.hoehe}'
 
 
 def distance_num(x1, x2, y1, y2):
