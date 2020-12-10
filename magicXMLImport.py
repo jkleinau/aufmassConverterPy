@@ -141,7 +141,10 @@ def create_positions(data):
                 positions[symbol] = Position(menge=1, artikel_nr=artikel_nr, pos_id=pos_id, uid=uid, symbol=symbol,
                                              links=links)
         if pricing_model == 'surface':
-            menge = [elem for elem in values if elem.attrib['key'] == 'totalsurface'][0].text
+            try:
+                menge = [elem for elem in values if elem.attrib['key'] == 'totalsurface'][0].text
+            except:
+                menge = '1'
             positions[symbol] = Position(menge=menge, artikel_nr=artikel_nr, pos_id=pos_id, uid=uid, symbol=symbol,
                                          links=links)
 
