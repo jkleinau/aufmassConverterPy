@@ -5,7 +5,7 @@ import xmlParser
 from magicXMLImport import import_data, create_rooms, create_positions, build_data
 
 
-def convert_to_xml(gui=None, api=None, export_path=None, param_data=None):
+def convert_to_xml(api=None, export_path=None, param_data=None):
     """
 
     :param param_data:
@@ -28,13 +28,8 @@ def convert_to_xml(gui=None, api=None, export_path=None, param_data=None):
         rooms = build_data(data)
         xmlParser.write_data_to_xml_schrift(rooms, export_path)
 
-
     else:
-        param_data = csvImport.import_data(gui.import_path.get())
-        data_subsection_raume = csvImport.get_subsection('ATTRIBUTE DER RÄUME', param_data)
-        data_subsection_waende = csvImport.get_subsection('Wandeigenschaften', param_data)
-        rooms = xmlParser.create_data(data_subsection_raume, data_subsection_waende, header_raueme)
-        xmlParser.write_data_to_xml(rooms, gui.export_path.get())
+        return None
 
 
 def save_to_file(gui, name):

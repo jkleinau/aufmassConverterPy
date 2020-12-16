@@ -185,7 +185,7 @@ def create_rooms(data, level='0', positions=None):
 
 def create_components(data, room):
     components = dict()
-    for i,component in enumerate(data):
+    for i, component in enumerate(data):
         try:
             uid = component.attrib['uid']
         except:
