@@ -1,33 +1,39 @@
+from aufmassZeile import AufmassZeile
 from component import *
 
 
 class Room:
 
-    def __init__(self, name, level, data, x, y, components=None):
+    def __init__(self, name, level, data, x, y, components=None, uid=None, positions=None):
+
+        if positions is None:
+            positions = dict()
+        self.positions = positions
+
+        self.uid = uid
 
         if components is None:
-            components = list()
+            components = dict()
         self.components = components
+
         self.level = level
         self.data = data
         self.name = name
         self.y = y
         self.x = x
 
+    def __str__(self):
+        return f"{self.level}, {self.name}"
+
+    def data_to_aufmasszeile(self, tag):
+        return AufmassZeile(stichwort=self.level + ", " + self.name, text=tag + ", " + self.name,
+                            aufmass=str(self.data[tag]).split()[0])
+
     def write_to_xml(self, root):
         for tag in self.data:
-            aufmasszeile = ET.SubElement(root, 'AUFMASSZEILE')
-
-            stichwort = ET.SubElement(aufmasszeile, 'STICHWORT')
-            stichwort.text = self.level + ", " + self.name
-
-            text = ET.SubElement(aufmasszeile, 'TEXT')
-            text.text = tag + ", " + self.name
-
-            aufmass = ET.SubElement(aufmasszeile, 'AUFMASS')
-            if self.data[tag]:
-                aufmass.text = str(self.data[tag]).split()[0]
-        for component in self.components:
+            AufmassZeile(stichwort=self.level + ", " + self.name, text=tag + ", " + self.name,
+                         aufmass=str(self.data[tag]).split()[0]).write_to_xml(root)
+        for component in self.components.values():
             component.write_to_xml(root)
 
     def create_sums(self):
@@ -35,7 +41,7 @@ class Room:
         self.data['Wandfläche'] = self.create_wall_area()
 
     def create_wall_area(self):
-        walls = [component for component in self.components if component.typ == 'Wand']
+        walls = [component for component in self.components.values() if component.typ == 'Wand']
         breite = float()
         laenge = float()
         for i, line in enumerate(walls):

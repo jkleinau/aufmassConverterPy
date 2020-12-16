@@ -10,10 +10,10 @@ from magicPlanAPI import MagicPlanAPI
 
 class GUI:
     def button_action_convert(self):
-        id = [plan['id'] for plan in self.selection if plan['name'] == self.import_path.get().split('/')[-1]]
-        self.xml = self.magic_plan_api.get_project_plan(id[0])
-        #main.save_to_file(self, self.import_path.get().split('/')[-1])
-        main.convert_to_xml(self, api=self.api_import_checker)
+        magic_id = [plan['id'] for plan in self.selection if plan['name'] == self.import_path.get().split('/')[-1]]
+        self.xml = self.magic_plan_api.get_project_plan(magic_id[0])
+        # main.save_to_file(self, self.import_path.get().split('/')[-1])
+        main.convert_to_xml(param_data=self.xml, api=self.api_import_checker, export_path=str(self.export_path.get()))
         tkinter.messagebox.showinfo("Convert", "Die Datei wurde erfolgreich umgewandelt.")
 
     def button_action_import(self):
@@ -36,6 +36,8 @@ class GUI:
         self.import_path = StringVar()
         self.export_path = StringVar()
         self.username = StringVar()
+        #self.fenster.iconbitmap("resources/holding_favicon_300x300_cpz_icon.ico")
+
         import_textfield = Entry(self.fenster, textvariable=self.import_path, bd=2)
         export_textfield = Entry(self.fenster, textvariable=self.export_path, bd=2)
 
@@ -75,6 +77,7 @@ class GUI:
     def setup_login(self):
         self.login = Tk()
         self.login.title("Login")
+        #self.login.iconbitmap("resources/holding_favicon_300x300_cpz_icon.ico")
         self.login.resizable = False
 
         # username label and text entry box
