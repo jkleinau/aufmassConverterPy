@@ -1,4 +1,5 @@
 import requests
+import pandas as pd
 
 
 class MagicPlanAPI:
@@ -32,7 +33,10 @@ class MagicPlanAPI:
         r = requests.get("https://cloud.magic-plan.com/api/v2/plans/get/" + id, headers=self.headers)
         return r.json()['data']['plan_detail']['magicplan_format_xml']
 
-    def get_projects(self):
+    def get_users(self):
+        return requests.get('https://cloud.magic-plan.com/api/v2/workgroups/users', headers=self.headers).json()
+
+    def get_projects(self, as_json=False):
         payload = {
             'page': '1',
             'sort': 'Plans.name',
@@ -41,6 +45,11 @@ class MagicPlanAPI:
         r = requests.get('https://cloud.magic-plan.com/api/v2/workgroups/plans', params=payload,
                          headers=self.headers)
         data = r.json()
+        # return data as json for later use
+        if as_json:
+            return data['data']['plans']
+
+        # convert data to dict
         plans = list()
         for plan in data['data']['plans']:
             plans.append({

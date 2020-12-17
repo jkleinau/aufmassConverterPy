@@ -1060,25 +1060,9 @@
    'c:\\users\\bsu holding '
    '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\__init__.py',
    'PYMODULE'),
-  ('pkg_resources._vendor.packaging.utils',
+  ('pkg_resources._vendor.appdirs',
    'c:\\users\\bsu holding '
-   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\utils.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.packaging.specifiers',
-   'c:\\users\\bsu holding '
-   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\specifiers.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.packaging.__about__',
-   'c:\\users\\bsu holding '
-   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\__about__.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.packaging._compat',
-   'c:\\users\\bsu holding '
-   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\_compat.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.packaging.tags',
-   'c:\\users\\bsu holding '
-   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\tags.py',
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\appdirs.py',
    'PYMODULE'),
   ('pkg_resources._vendor.pyparsing',
    'c:\\users\\bsu holding '
@@ -1088,37 +1072,53 @@
    'c:\\users\\bsu holding '
    '02\\appdata\\local\\programs\\python\\python39\\lib\\uuid.py',
    'PYMODULE'),
-  ('pkg_resources._vendor.packaging.markers',
-   'c:\\users\\bsu holding '
-   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\markers.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor',
-   'c:\\users\\bsu holding '
-   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\__init__.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.packaging._structures',
-   'c:\\users\\bsu holding '
-   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\_structures.py',
-   'PYMODULE'),
   ('pkg_resources._vendor.packaging.version',
    'c:\\users\\bsu holding '
    '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\version.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.six',
-   'c:\\users\\bsu holding '
-   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\six.py',
-   'PYMODULE'),
-  ('pkg_resources._vendor.packaging.requirements',
-   'c:\\users\\bsu holding '
-   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\requirements.py',
    'PYMODULE'),
   ('pkg_resources._vendor.packaging',
    'c:\\users\\bsu holding '
    '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\__init__.py',
    'PYMODULE'),
-  ('pkg_resources._vendor.appdirs',
+  ('pkg_resources._vendor',
    'c:\\users\\bsu holding '
-   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\appdirs.py',
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\__init__.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.six',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\six.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging._compat',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\_compat.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.tags',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\tags.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging._structures',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\_structures.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.utils',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\utils.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.requirements',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\requirements.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.specifiers',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\specifiers.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.__about__',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\__about__.py',
+   'PYMODULE'),
+  ('pkg_resources._vendor.packaging.markers',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pkg_resources\\_vendor\\packaging\\markers.py',
    'PYMODULE'),
   ('pkg_resources.extern',
    'c:\\users\\bsu holding '
@@ -1316,9 +1316,41 @@
    'c:\\users\\bsu holding '
    '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\__init__.py',
    'PYMODULE'),
-  ('setuptools._vendor.packaging._compat',
+  ('setuptools._vendor',
    'c:\\users\\bsu holding '
-   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\packaging\\_compat.py',
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging.utils',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\packaging\\utils.py',
+   'PYMODULE'),
+  ('setuptools._vendor.ordered_set',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\ordered_set.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging.tags',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\packaging\\tags.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging.specifiers',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\packaging\\specifiers.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\packaging\\__init__.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging.requirements',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\packaging\\requirements.py',
+   'PYMODULE'),
+  ('setuptools._vendor.packaging.markers',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\packaging\\markers.py',
+   'PYMODULE'),
+  ('setuptools._vendor.six',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\six.py',
    'PYMODULE'),
   ('setuptools._vendor.packaging.__about__',
    'c:\\users\\bsu holding '
@@ -1328,49 +1360,17 @@
    'c:\\users\\bsu holding '
    '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\packaging\\version.py',
    'PYMODULE'),
-  ('setuptools._vendor.packaging.markers',
+  ('setuptools._vendor.packaging._compat',
    'c:\\users\\bsu holding '
-   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\packaging\\markers.py',
-   'PYMODULE'),
-  ('setuptools._vendor.packaging.tags',
-   'c:\\users\\bsu holding '
-   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\packaging\\tags.py',
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\packaging\\_compat.py',
    'PYMODULE'),
   ('setuptools._vendor.packaging._structures',
    'c:\\users\\bsu holding '
    '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\packaging\\_structures.py',
    'PYMODULE'),
-  ('setuptools._vendor.ordered_set',
-   'c:\\users\\bsu holding '
-   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\ordered_set.py',
-   'PYMODULE'),
   ('setuptools._vendor.pyparsing',
    'c:\\users\\bsu holding '
    '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\pyparsing.py',
-   'PYMODULE'),
-  ('setuptools._vendor',
-   'c:\\users\\bsu holding '
-   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\__init__.py',
-   'PYMODULE'),
-  ('setuptools._vendor.six',
-   'c:\\users\\bsu holding '
-   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\six.py',
-   'PYMODULE'),
-  ('setuptools._vendor.packaging.specifiers',
-   'c:\\users\\bsu holding '
-   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\packaging\\specifiers.py',
-   'PYMODULE'),
-  ('setuptools._vendor.packaging.requirements',
-   'c:\\users\\bsu holding '
-   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\packaging\\requirements.py',
-   'PYMODULE'),
-  ('setuptools._vendor.packaging',
-   'c:\\users\\bsu holding '
-   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\packaging\\__init__.py',
-   'PYMODULE'),
-  ('setuptools._vendor.packaging.utils',
-   'c:\\users\\bsu holding '
-   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\setuptools\\_vendor\\packaging\\utils.py',
    'PYMODULE'),
   ('setuptools.msvc',
    'c:\\users\\bsu holding '
@@ -2083,12 +2083,9 @@
    'C:\\Users\\BSU Holding '
    '02\\PycharmProjects\\aufmassConverterPy\\component.py',
    'PYMODULE'),
-  ('xmlParser',
+  ('dataCentre',
    'C:\\Users\\BSU Holding '
-   '02\\PycharmProjects\\aufmassConverterPy\\xmlParser.py',
-   'PYMODULE'),
-  ('gui',
-   'C:\\Users\\BSU Holding 02\\PycharmProjects\\aufmassConverterPy\\gui.py',
+   '02\\PycharmProjects\\aufmassConverterPy\\dataCentre.py',
    'PYMODULE'),
   ('magicPlanAPI',
    'C:\\Users\\BSU Holding '
@@ -2481,6 +2478,1017 @@
   ('urllib3._version',
    'c:\\users\\bsu holding '
    '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\urllib3\\_version.py',
+   'PYMODULE'),
+  ('pandas',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\__init__.py',
+   'PYMODULE'),
+  ('pandas._libs.tslibs',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\_libs\\tslibs\\__init__.py',
+   'PYMODULE'),
+  ('pandas._libs.window',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\_libs\\window\\__init__.py',
+   'PYMODULE'),
+  ('pandas._version',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\_version.py',
+   'PYMODULE'),
+  ('pandas.arrays',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\arrays\\__init__.py',
+   'PYMODULE'),
+  ('pandas.core.arrays',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\arrays\\__init__.py',
+   'PYMODULE'),
+  ('pandas.core.arrays.timedeltas',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\arrays\\timedeltas.py',
+   'PYMODULE'),
+  ('pandas.io.formats.format',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\io\\formats\\format.py',
+   'PYMODULE'),
+  ('pandas.core.indexes.multi',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\indexes\\multi.py',
+   'PYMODULE'),
+  ('pandas.core.indexes',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\indexes\\__init__.py',
+   'PYMODULE'),
+  ('pandas.core.reshape.util',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\reshape\\util.py',
+   'PYMODULE'),
+  ('pandas.core.reshape',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\reshape\\__init__.py',
+   'PYMODULE'),
+  ('pandas.core.sorting',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\sorting.py',
+   'PYMODULE'),
+  ('pandas.core.missing',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\missing.py',
+   'PYMODULE'),
+  ('pandas.compat._optional',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\compat\\_optional.py',
+   'PYMODULE'),
+  ('pandas.compat',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\compat\\__init__.py',
+   'PYMODULE'),
+  ('pandas.core.indexes.numeric',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\indexes\\numeric.py',
+   'PYMODULE'),
+  ('pandas.core.ops',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\ops\\__init__.py',
+   'PYMODULE'),
+  ('pandas.core.ops.methods',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\ops\\methods.py',
+   'PYMODULE'),
+  ('pandas.core.ops.mask_ops',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\ops\\mask_ops.py',
+   'PYMODULE'),
+  ('pandas.core.ops.invalid',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\ops\\invalid.py',
+   'PYMODULE'),
+  ('pandas.core.ops.docstrings',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\ops\\docstrings.py',
+   'PYMODULE'),
+  ('pandas.core.ops.array_ops',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\ops\\array_ops.py',
+   'PYMODULE'),
+  ('pandas.core.computation.expressions',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\computation\\expressions.py',
+   'PYMODULE'),
+  ('pandas.core.computation',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\computation\\__init__.py',
+   'PYMODULE'),
+  ('pandas.core.computation.check',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\computation\\check.py',
+   'PYMODULE'),
+  ('pandas.core.ops.dispatch',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\ops\\dispatch.py',
+   'PYMODULE'),
+  ('pandas.core.ops.missing',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\ops\\missing.py',
+   'PYMODULE'),
+  ('pandas.core.ops.roperator',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\ops\\roperator.py',
+   'PYMODULE'),
+  ('pandas.core.indexes.frozen',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\indexes\\frozen.py',
+   'PYMODULE'),
+  ('pandas.core.indexes.base',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\indexes\\base.py',
+   'PYMODULE'),
+  ('pandas.core.reshape.merge',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\reshape\\merge.py',
+   'PYMODULE'),
+  ('pandas.core.internals',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\internals\\__init__.py',
+   'PYMODULE'),
+  ('pandas.core.internals.managers',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\internals\\managers.py',
+   'PYMODULE'),
+  ('pandas.core.internals.ops',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\internals\\ops.py',
+   'PYMODULE'),
+  ('pandas.util._validators',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\util\\_validators.py',
+   'PYMODULE'),
+  ('pandas.util',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\util\\__init__.py',
+   'PYMODULE'),
+  ('pandas.util.testing',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\util\\testing.py',
+   'PYMODULE'),
+  ('pandas._testing',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\_testing.py',
+   'PYMODULE'),
+  ('pandas._config.localization',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\_config\\localization.py',
+   'PYMODULE'),
+  ('pandas.core.util.hashing',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\util\\hashing.py',
+   'PYMODULE'),
+  ('pandas.core.util',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\util\\__init__.py',
+   'PYMODULE'),
+  ('pandas.core.internals.concat',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\internals\\concat.py',
+   'PYMODULE'),
+  ('pandas.core.internals.blocks',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\internals\\blocks.py',
+   'PYMODULE'),
+  ('pandas.core.array_algos.transforms',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\array_algos\\transforms.py',
+   'PYMODULE'),
+  ('pandas.core.array_algos',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\array_algos\\__init__.py',
+   'PYMODULE'),
+  ('pandas.core.array_algos.masked_reductions',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\array_algos\\masked_reductions.py',
+   'PYMODULE'),
+  ('pandas.core.frame',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\frame.py',
+   'PYMODULE'),
+  ('pandas.core.apply',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\apply.py',
+   'PYMODULE'),
+  ('pandas.core.reshape.reshape',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\reshape\\reshape.py',
+   'PYMODULE'),
+  ('pandas.core.reshape.pivot',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\reshape\\pivot.py',
+   'PYMODULE'),
+  ('pandas.core.computation.eval',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\computation\\eval.py',
+   'PYMODULE'),
+  ('pandas.core.computation.scope',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\computation\\scope.py',
+   'PYMODULE'),
+  ('pandas.core.computation.ops',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\computation\\ops.py',
+   'PYMODULE'),
+  ('pandas.core.computation.common',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\computation\\common.py',
+   'PYMODULE'),
+  ('pandas.compat.chainmap',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\compat\\chainmap.py',
+   'PYMODULE'),
+  ('pandas.core.computation.parsing',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\computation\\parsing.py',
+   'PYMODULE'),
+  ('pandas.core.computation.expr',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\computation\\expr.py',
+   'PYMODULE'),
+  ('pandas.core.computation.engines',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\computation\\engines.py',
+   'PYMODULE'),
+  ('pandas.core.computation.align',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\computation\\align.py',
+   'PYMODULE'),
+  ('pandas.io.parquet',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\io\\parquet.py',
+   'PYMODULE'),
+  ('pandas.core.arrays._arrow_utils',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\arrays\\_arrow_utils.py',
+   'PYMODULE'),
+  ('pandas.io.feather_format',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\io\\feather_format.py',
+   'PYMODULE'),
+  ('pandas.io.stata',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\io\\stata.py',
+   'PYMODULE'),
+  ('dateutil.relativedelta',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\dateutil\\relativedelta.py',
+   'PYMODULE'),
+  ('dateutil',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\dateutil\\__init__.py',
+   'PYMODULE'),
+  ('dateutil.rrule',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\dateutil\\rrule.py',
+   'PYMODULE'),
+  ('dateutil.parser',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\dateutil\\parser\\__init__.py',
+   'PYMODULE'),
+  ('dateutil.parser.isoparser',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\dateutil\\parser\\isoparser.py',
+   'PYMODULE'),
+  ('dateutil.parser._parser',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\dateutil\\parser\\_parser.py',
+   'PYMODULE'),
+  ('dateutil.tz',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\dateutil\\tz\\__init__.py',
+   'PYMODULE'),
+  ('dateutil.tz.tz',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\dateutil\\tz\\tz.py',
+   'PYMODULE'),
+  ('dateutil.zoneinfo',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\dateutil\\zoneinfo\\__init__.py',
+   'PYMODULE'),
+  ('dateutil.tz.win',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\dateutil\\tz\\win.py',
+   'PYMODULE'),
+  ('dateutil.tz._factories',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\dateutil\\tz\\_factories.py',
+   'PYMODULE'),
+  ('dateutil.tz._common',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\dateutil\\tz\\_common.py',
+   'PYMODULE'),
+  ('dateutil.easter',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\dateutil\\easter.py',
+   'PYMODULE'),
+  ('dateutil._version',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\dateutil\\_version.py',
+   'PYMODULE'),
+  ('dateutil._common',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\dateutil\\_common.py',
+   'PYMODULE'),
+  ('six',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\six.py',
+   'PYMODULE'),
+  ('pandas.io.gbq',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\io\\gbq.py',
+   'PYMODULE'),
+  ('pandas.io',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\io\\__init__.py',
+   'PYMODULE'),
+  ('pandas.io.clipboards',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\io\\clipboards.py',
+   'PYMODULE'),
+  ('pandas.io.parsers',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\io\\parsers.py',
+   'PYMODULE'),
+  ('pandas.io.date_converters',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\io\\date_converters.py',
+   'PYMODULE'),
+  ('pandas.core.tools.datetimes',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\tools\\datetimes.py',
+   'PYMODULE'),
+  ('pandas.core.tools.times',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\tools\\times.py',
+   'PYMODULE'),
+  ('pandas.core.tools',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\tools\\__init__.py',
+   'PYMODULE'),
+  ('pandas.io.clipboard',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\io\\clipboard\\__init__.py',
+   'PYMODULE'),
+  ('pandas.io.sql',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\io\\sql.py',
+   'PYMODULE'),
+  ('sqlite3',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\sqlite3\\__init__.py',
+   'PYMODULE'),
+  ('sqlite3.dump',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\sqlite3\\dump.py',
+   'PYMODULE'),
+  ('sqlite3.dbapi2',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\sqlite3\\dbapi2.py',
+   'PYMODULE'),
+  ('pandas.io.pytables',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\io\\pytables.py',
+   'PYMODULE'),
+  ('pandas.core.computation.pytables',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\computation\\pytables.py',
+   'PYMODULE'),
+  ('pandas.compat.pickle_compat',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\compat\\pickle_compat.py',
+   'PYMODULE'),
+  ('pandas.io.formats.style',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\io\\formats\\style.py',
+   'PYMODULE'),
+  ('pandas.io.formats.excel',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\io\\formats\\excel.py',
+   'PYMODULE'),
+  ('pandas.io.excel',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\io\\excel\\__init__.py',
+   'PYMODULE'),
+  ('pandas.io.excel._xlwt',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\io\\excel\\_xlwt.py',
+   'PYMODULE'),
+  ('pandas.io.excel._xlsxwriter',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\io\\excel\\_xlsxwriter.py',
+   'PYMODULE'),
+  ('pandas.io.excel._util',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\io\\excel\\_util.py',
+   'PYMODULE'),
+  ('pandas.io.excel._openpyxl',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\io\\excel\\_openpyxl.py',
+   'PYMODULE'),
+  ('pandas.io.excel._odswriter',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\io\\excel\\_odswriter.py',
+   'PYMODULE'),
+  ('pandas.io.excel._base',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\io\\excel\\_base.py',
+   'PYMODULE'),
+  ('pandas.io.excel._xlrd',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\io\\excel\\_xlrd.py',
+   'PYMODULE'),
+  ('pandas.io.excel._pyxlsb',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\io\\excel\\_pyxlsb.py',
+   'PYMODULE'),
+  ('pandas.io.excel._odfreader',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\io\\excel\\_odfreader.py',
+   'PYMODULE'),
+  ('pandas.io.formats.css',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\io\\formats\\css.py',
+   'PYMODULE'),
+  ('pandas.api.types',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\api\\types\\__init__.py',
+   'PYMODULE'),
+  ('pandas.core.dtypes.api',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\dtypes\\api.py',
+   'PYMODULE'),
+  ('pandas.core.groupby.generic',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\groupby\\generic.py',
+   'PYMODULE'),
+  ('pandas.core.reshape.tile',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\reshape\\tile.py',
+   'PYMODULE'),
+  ('pandas.core.util.numba_',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\util\\numba_.py',
+   'PYMODULE'),
+  ('pandas.core.groupby.groupby',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\groupby\\groupby.py',
+   'PYMODULE'),
+  ('pandas.core.window',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\window\\__init__.py',
+   'PYMODULE'),
+  ('pandas.core.window.rolling',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\window\\rolling.py',
+   'PYMODULE'),
+  ('pandas.core.window.numba_',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\window\\numba_.py',
+   'PYMODULE'),
+  ('pandas.core.window.indexers',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\window\\indexers.py',
+   'PYMODULE'),
+  ('pandas.core.window.common',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\window\\common.py',
+   'PYMODULE'),
+  ('pandas.core.window.expanding',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\window\\expanding.py',
+   'PYMODULE'),
+  ('pandas.core.window.ewm',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\window\\ewm.py',
+   'PYMODULE'),
+  ('pandas.core.resample',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\resample.py',
+   'PYMODULE'),
+  ('pandas.tseries.frequencies',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\tseries\\frequencies.py',
+   'PYMODULE'),
+  ('pandas.core.groupby.grouper',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\groupby\\grouper.py',
+   'PYMODULE'),
+  ('pandas.core.groupby.categorical',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\groupby\\categorical.py',
+   'PYMODULE'),
+  ('pandas.core.groupby.ops',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\groupby\\ops.py',
+   'PYMODULE'),
+  ('pandas.core.groupby.base',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\groupby\\base.py',
+   'PYMODULE'),
+  ('pandas.plotting',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\plotting\\__init__.py',
+   'PYMODULE'),
+  ('pandas.plotting._misc',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\plotting\\_misc.py',
+   'PYMODULE'),
+  ('pandas.plotting._core',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\plotting\\_core.py',
+   'PYMODULE'),
+  ('pandas.plotting._matplotlib',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\plotting\\_matplotlib\\__init__.py',
+   'PYMODULE'),
+  ('pandas.plotting._matplotlib.tools',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\plotting\\_matplotlib\\tools.py',
+   'PYMODULE'),
+  ('pandas.plotting._matplotlib.compat',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\plotting\\_matplotlib\\compat.py',
+   'PYMODULE'),
+  ('pandas.plotting._matplotlib.misc',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\plotting\\_matplotlib\\misc.py',
+   'PYMODULE'),
+  ('pandas.plotting._matplotlib.style',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\plotting\\_matplotlib\\style.py',
+   'PYMODULE'),
+  ('pandas.plotting._matplotlib.hist',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\plotting\\_matplotlib\\hist.py',
+   'PYMODULE'),
+  ('pandas.plotting._matplotlib.core',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\plotting\\_matplotlib\\core.py',
+   'PYMODULE'),
+  ('pandas.plotting._matplotlib.timeseries',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\plotting\\_matplotlib\\timeseries.py',
+   'PYMODULE'),
+  ('pandas.plotting._matplotlib.converter',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\plotting\\_matplotlib\\converter.py',
+   'PYMODULE'),
+  ('pandas.plotting._matplotlib.boxplot',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\plotting\\_matplotlib\\boxplot.py',
+   'PYMODULE'),
+  ('pandas.io.formats.info',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\io\\formats\\info.py',
+   'PYMODULE'),
+  ('pandas.io.formats.console',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\io\\formats\\console.py',
+   'PYMODULE'),
+  ('pandas.core.series',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\series.py',
+   'PYMODULE'),
+  ('pandas.core.indexes.accessors',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\indexes\\accessors.py',
+   'PYMODULE'),
+  ('pandas.core.dtypes.inference',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\dtypes\\inference.py',
+   'PYMODULE'),
+  ('dataclasses',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\dataclasses.py',
+   'PYMODULE'),
+  ('pandas.core.reshape.melt',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\reshape\\melt.py',
+   'PYMODULE'),
+  ('pandas.core.tools.numeric',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\tools\\numeric.py',
+   'PYMODULE'),
+  ('pandas.core.shared_docs',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\shared_docs.py',
+   'PYMODULE'),
+  ('pandas.core.internals.construction',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\internals\\construction.py',
+   'PYMODULE'),
+  ('pandas.core.indexing',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\indexing.py',
+   'PYMODULE'),
+  ('pandas.core.generic',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\generic.py',
+   'PYMODULE'),
+  ('pandas.io.formats.csvs',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\io\\formats\\csvs.py',
+   'PYMODULE'),
+  ('pandas.io.pickle',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\io\\pickle.py',
+   'PYMODULE'),
+  ('pandas.core.aggregation',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\aggregation.py',
+   'PYMODULE'),
+  ('pandas.core.groupby',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\groupby\\__init__.py',
+   'PYMODULE'),
+  ('pandas.core.indexes.interval',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\indexes\\interval.py',
+   'PYMODULE'),
+  ('pandas.core.indexes.extension',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\indexes\\extension.py',
+   'PYMODULE'),
+  ('pandas.util._exceptions',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\util\\_exceptions.py',
+   'PYMODULE'),
+  ('pandas.core.indexes.category',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\indexes\\category.py',
+   'PYMODULE'),
+  ('pandas.core.indexes.range',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\indexes\\range.py',
+   'PYMODULE'),
+  ('pandas.core.indexes.period',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\indexes\\period.py',
+   'PYMODULE'),
+  ('pandas.core.indexes.datetimelike',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\indexes\\datetimelike.py',
+   'PYMODULE'),
+  ('pandas.core.tools.timedeltas',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\tools\\timedeltas.py',
+   'PYMODULE'),
+  ('pandas.core.strings',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\strings.py',
+   'PYMODULE'),
+  ('pandas.core.indexers',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\indexers.py',
+   'PYMODULE'),
+  ('pandas.core.accessor',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\accessor.py',
+   'PYMODULE'),
+  ('pandas.core.dtypes.concat',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\dtypes\\concat.py',
+   'PYMODULE'),
+  ('pandas.core.dtypes',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\dtypes\\__init__.py',
+   'PYMODULE'),
+  ('pandas.core.dtypes.cast',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\dtypes\\cast.py',
+   'PYMODULE'),
+  ('pandas.util._decorators',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\util\\_decorators.py',
+   'PYMODULE'),
+  ('pandas.io.formats.html',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\io\\formats\\html.py',
+   'PYMODULE'),
+  ('pandas.io.formats.latex',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\io\\formats\\latex.py',
+   'PYMODULE'),
+  ('pandas.core.reshape.concat',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\reshape\\concat.py',
+   'PYMODULE'),
+  ('pandas.io.formats.printing',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\io\\formats\\printing.py',
+   'PYMODULE'),
+  ('pandas.io.common',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\io\\common.py',
+   'PYMODULE'),
+  ('pandas.core.indexes.timedeltas',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\indexes\\timedeltas.py',
+   'PYMODULE'),
+  ('pandas.core.indexes.datetimes',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\indexes\\datetimes.py',
+   'PYMODULE'),
+  ('pandas.core.indexes.api',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\indexes\\api.py',
+   'PYMODULE'),
+  ('pandas.core.base',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\base.py',
+   'PYMODULE'),
+  ('pandas.io.formats',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\io\\formats\\__init__.py',
+   'PYMODULE'),
+  ('pandas.errors',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\errors\\__init__.py',
+   'PYMODULE'),
+  ('pandas._typing',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\_typing.py',
+   'PYMODULE'),
+  ('pandas._config.config',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\_config\\config.py',
+   'PYMODULE'),
+  ('pandas.core.ops.common',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\ops\\common.py',
+   'PYMODULE'),
+  ('pandas.core.construction',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\construction.py',
+   'PYMODULE'),
+  ('pandas.core.dtypes.base',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\dtypes\\base.py',
+   'PYMODULE'),
+  ('pandas.core.common',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\common.py',
+   'PYMODULE'),
+  ('pandas.core.arrays._ranges',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\arrays\\_ranges.py',
+   'PYMODULE'),
+  ('pandas.core.algorithms',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\algorithms.py',
+   'PYMODULE'),
+  ('pandas.core.nanops',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\nanops.py',
+   'PYMODULE'),
+  ('pandas.core.dtypes.missing',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\dtypes\\missing.py',
+   'PYMODULE'),
+  ('pandas.core.dtypes.generic',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\dtypes\\generic.py',
+   'PYMODULE'),
+  ('pandas.core.dtypes.dtypes',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\dtypes\\dtypes.py',
+   'PYMODULE'),
+  ('pytz',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pytz\\__init__.py',
+   'PYMODULE'),
+  ('pytz.tzfile',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pytz\\tzfile.py',
+   'PYMODULE'),
+  ('pytz.tzinfo',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pytz\\tzinfo.py',
+   'PYMODULE'),
+  ('pytz.lazy',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pytz\\lazy.py',
+   'PYMODULE'),
+  ('pytz.exceptions',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pytz\\exceptions.py',
+   'PYMODULE'),
+  ('pandas.core.dtypes.common',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\dtypes\\common.py',
+   'PYMODULE'),
+  ('pandas.compat.numpy.function',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\compat\\numpy\\function.py',
+   'PYMODULE'),
+  ('pandas.core.arrays.string_',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\arrays\\string_.py',
+   'PYMODULE'),
+  ('pandas.core.arrays.period',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\arrays\\period.py',
+   'PYMODULE'),
+  ('pandas.core.arrays.numpy_',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\arrays\\numpy_.py',
+   'PYMODULE'),
+  ('pandas.core.arrays._mixins',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\arrays\\_mixins.py',
+   'PYMODULE'),
+  ('pandas.core.arrays.interval',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\arrays\\interval.py',
+   'PYMODULE'),
+  ('pandas.core.arrays.integer',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\arrays\\integer.py',
+   'PYMODULE'),
+  ('pandas.core.arrays.masked',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\arrays\\masked.py',
+   'PYMODULE'),
+  ('pandas.core.arrays.datetimes',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\arrays\\datetimes.py',
+   'PYMODULE'),
+  ('pandas.core.arrays.categorical',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\arrays\\categorical.py',
+   'PYMODULE'),
+  ('pandas.core.arrays.boolean',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\arrays\\boolean.py',
+   'PYMODULE'),
+  ('pandas.core.arrays.base',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\arrays\\base.py',
+   'PYMODULE'),
+  ('pandas.core.arrays.datetimelike',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\arrays\\datetimelike.py',
+   'PYMODULE'),
+  ('pandas.core',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\__init__.py',
+   'PYMODULE'),
+  ('pandas.testing',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\testing.py',
+   'PYMODULE'),
+  ('pandas.util._tester',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\util\\_tester.py',
+   'PYMODULE'),
+  ('pandas.io.json',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\io\\json\\__init__.py',
+   'PYMODULE'),
+  ('pandas.io.json._table_schema',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\io\\json\\_table_schema.py',
+   'PYMODULE'),
+  ('pandas.io.json._normalize',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\io\\json\\_normalize.py',
+   'PYMODULE'),
+  ('pandas.io.json._json',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\io\\json\\_json.py',
+   'PYMODULE'),
+  ('pandas.io.api',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\io\\api.py',
+   'PYMODULE'),
+  ('pandas.io.spss',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\io\\spss.py',
+   'PYMODULE'),
+  ('pandas.io.sas',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\io\\sas\\__init__.py',
+   'PYMODULE'),
+  ('pandas.io.sas.sasreader',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\io\\sas\\sasreader.py',
+   'PYMODULE'),
+  ('pandas.io.sas.sas7bdat',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\io\\sas\\sas7bdat.py',
+   'PYMODULE'),
+  ('pandas.io.sas.sas_constants',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\io\\sas\\sas_constants.py',
+   'PYMODULE'),
+  ('pandas.io.sas.sas_xport',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\io\\sas\\sas_xport.py',
+   'PYMODULE'),
+  ('pandas.io.orc',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\io\\orc.py',
+   'PYMODULE'),
+  ('pandas.io.html',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\io\\html.py',
+   'PYMODULE'),
+  ('pandas.util._print_versions',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\util\\_print_versions.py',
+   'PYMODULE'),
+  ('pandas.api',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\api\\__init__.py',
+   'PYMODULE'),
+  ('pandas.api.indexers',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\api\\indexers\\__init__.py',
+   'PYMODULE'),
+  ('pandas.api.extensions',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\api\\extensions\\__init__.py',
+   'PYMODULE'),
+  ('pandas.core.reshape.api',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\reshape\\api.py',
+   'PYMODULE'),
+  ('pandas.core.computation.api',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\computation\\api.py',
+   'PYMODULE'),
+  ('pandas.tseries.offsets',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\tseries\\offsets.py',
+   'PYMODULE'),
+  ('pandas.tseries',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\tseries\\__init__.py',
+   'PYMODULE'),
+  ('pandas.tseries.api',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\tseries\\api.py',
+   'PYMODULE'),
+  ('pandas.core.arrays.sparse',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\arrays\\sparse\\__init__.py',
+   'PYMODULE'),
+  ('pandas.core.arrays.sparse.dtype',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\arrays\\sparse\\dtype.py',
+   'PYMODULE'),
+  ('pandas.core.arrays.sparse.array',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\arrays\\sparse\\array.py',
+   'PYMODULE'),
+  ('pandas.core.arrays.sparse.accessor',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\arrays\\sparse\\accessor.py',
+   'PYMODULE'),
+  ('pandas.core.arrays.sparse.scipy_sparse',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\arrays\\sparse\\scipy_sparse.py',
+   'PYMODULE'),
+  ('pandas.core.api',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\api.py',
+   'PYMODULE'),
+  ('pandas.core.config_init',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\core\\config_init.py',
+   'PYMODULE'),
+  ('pandas._config',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\_config\\__init__.py',
+   'PYMODULE'),
+  ('pandas._config.display',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\_config\\display.py',
+   'PYMODULE'),
+  ('pandas._config.dates',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\_config\\dates.py',
+   'PYMODULE'),
+  ('pandas._libs',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\_libs\\__init__.py',
+   'PYMODULE'),
+  ('pandas.compat.numpy',
+   'c:\\users\\bsu holding '
+   '02\\appdata\\local\\programs\\python\\python39\\lib\\site-packages\\pandas\\compat\\numpy\\__init__.py',
+   'PYMODULE'),
+  ('xmlParser',
+   'C:\\Users\\BSU Holding '
+   '02\\PycharmProjects\\aufmassConverterPy\\xmlParser.py',
+   'PYMODULE'),
+  ('gui',
+   'C:\\Users\\BSU Holding 02\\PycharmProjects\\aufmassConverterPy\\gui.py',
    'PYMODULE'),
   ('main',
    'C:\\Users\\BSU Holding 02\\PycharmProjects\\aufmassConverterPy\\main.py',

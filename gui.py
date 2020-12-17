@@ -9,22 +9,6 @@ from magicPlanAPI import MagicPlanAPI
 
 
 class GUI:
-    def button_action_convert(self):
-        magic_id = [plan['id'] for plan in self.selection if plan['name'] == self.import_path.get().split('/')[-1]]
-        self.xml = self.magic_plan_api.get_project_plan(magic_id[0])
-        # main.save_to_file(self, self.import_path.get().split('/')[-1])
-        main.convert_to_xml(param_data=self.xml, api=self.api_import_checker, export_path=str(self.export_path.get()))
-        tkinter.messagebox.showinfo("Convert", "Die Datei wurde erfolgreich umgewandelt.")
-
-    def button_action_import(self):
-        name = tkinter.filedialog.askopenfile()
-        self.import_path.set(name.name)
-        self.api_import_checker = False
-
-    def button_action_export(self):
-        name = asksaveasfile(mode='w', initialfile="AUFMASS-" + str(datetime.now().date()) + ".xml",
-                             title="Save as")
-        self.export_path.set(name.name)
 
     def __init__(self):
         self.magic_plan_api = MagicPlanAPI()
@@ -36,7 +20,10 @@ class GUI:
         self.import_path = StringVar()
         self.export_path = StringVar()
         self.username = StringVar()
-        #self.fenster.iconbitmap("resources/holding_favicon_300x300_cpz_icon.ico")
+        self.fenster.protocol("WM_DELETE_WINDOW", self.on_closing)
+        self.icon_path = "resources/data/icon/holding_favicon_300x300_cpz_icon.ico"
+
+        self.fenster.iconbitmap(self.icon_path)
 
         import_textfield = Entry(self.fenster, textvariable=self.import_path, bd=2)
         export_textfield = Entry(self.fenster, textvariable=self.export_path, bd=2)
@@ -69,6 +56,28 @@ class GUI:
         user_label.place(x=510, y=160, width=95, height=30)
         self.fenster.mainloop()
 
+    def button_action_convert(self):
+        magic_id = [plan['id'] for plan in self.selection if plan['name'] == self.import_path.get().split('/')[-1]]
+        self.xml = self.magic_plan_api.get_project_plan(magic_id[0])
+        # main.save_to_file(self, self.import_path.get().split('/')[-1])
+        main.convert_to_xml(param_data=self.xml, api=self.api_import_checker, export_path=str(self.export_path.get()))
+        tkinter.messagebox.showinfo("Convert", "Die Datei wurde erfolgreich umgewandelt.")
+
+    def button_action_import(self):
+        name = tkinter.filedialog.askopenfile()
+        self.import_path.set(name.name)
+        self.api_import_checker = False
+
+    def button_action_export(self):
+        name = asksaveasfile(mode='w', initialfile="AUFMASS-" + str(datetime.now().date()) + ".xml",
+                             title="Save as")
+        self.export_path.set(name.name)
+
+    def on_closing(self):
+        if messagebox.askokcancel("Quit", "Do you want to quit?"):
+            main.dataCentre.save_data()
+            self.fenster.destroy()
+
     def login_check(self):
         user_label = Label(self.fenster, text=self.usernameEntry.get(), anchor=E)
         user_label.place(x=525, y=160, width=85, height=30)
@@ -77,7 +86,7 @@ class GUI:
     def setup_login(self):
         self.login = Tk()
         self.login.title("Login")
-        #self.login.iconbitmap("resources/holding_favicon_300x300_cpz_icon.ico")
+        self.login.iconbitmap(self.icon_path)
         self.login.resizable = False
 
         # username label and text entry box
@@ -100,6 +109,7 @@ class GUI:
         self.api_select = Tk()
         self.api_select.title("Select Projekt")
         self.api_select.geometry("450x550")
+        self.api_select.iconbitmap(self.icon_path)
 
         scrollbar = Scrollbar(self.api_select, orient=VERTICAL)
         self.listbox = Listbox(self.api_select, yscrollcommand=scrollbar.set, selectmode=BROWSE)
@@ -107,21 +117,24 @@ class GUI:
         self.listbox.config(font=20)
         browse_button = Button(self.api_select, text="Reload", command=lambda: self.reload_projects())
         select_button = Button(self.api_select, text="Select", command=lambda: self.select_project())
-        self.load_projects()
 
         scrollbar.place(x=430, y=50, width=20, height=500)
         self.listbox.place(x=0, y=50, width=430, height=500)
         browse_button.place(x=5, y=5, width=100, height=30)
         select_button.place(x=345, y=5, width=100, height=30)
 
+        self.load_projects()
+
     def button_action_import_api(self):
         self.setup_api_select()
 
     def load_projects(self):
+        self.listbox.delete(0, END)
+        self.selection = main.dataCentre.get_plans()
         if not self.selection:
             self.reload_projects()
         for project in self.selection:
-            self.listbox.insert(END, str(project['name']))
+            self.listbox.insert(END, str(self.selection[project]))
 
     def select_project(self):
         self.import_path.set("API/" + self.listbox.get(ANCHOR))
@@ -129,4 +142,5 @@ class GUI:
         self.api_import_checker = True
 
     def reload_projects(self):
-        self.selection = self.magic_plan_api.get_projects()
+        self.selection = main.dataCentre.reload_plans()
+        self.load_projects()

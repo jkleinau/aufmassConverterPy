@@ -1,10 +1,10 @@
-# This is a sample Python script.
 import csvImport
 import gui
 import xmlParser
-from magicXMLImport import import_data, create_rooms, create_positions, build_data
+from dataCentre import DataCentre
+from magicXMLImport import import_data, build_data
 
-
+dataCentre = DataCentre()
 def convert_to_xml(api=None, export_path=None, param_data=None):
     """
 
@@ -13,16 +13,7 @@ def convert_to_xml(api=None, export_path=None, param_data=None):
     :param api: Boolean checker for import with API or from csv file
     :param export_path: If import from csv file this is the path
     """
-    header_raueme = {
-        1: "Bodenoberfläche",
-        2: "Volumen",
-        3: "Boden Umfang",
-        4: "Decke Umfang",
-        5: "Wandfläche mit Öffnung",
-        7: "Umfang Türen",
-        8: "Fensterflächen",
-        9: "Raumhöhe "
-    }
+
     if api:
         data = import_data(data=param_data)
         rooms = build_data(data)

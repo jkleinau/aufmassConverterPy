@@ -8,64 +8,17 @@ from room import Room
 import uuid
 
 
-def get_translation(tag):
-    translations = {
-        'Kitchen': 'Küche',
-        'Dining Room': 'Esszimmer',
-        'Living Room': 'Wohnzimmer',
-        'Hall': 'Diele',
-        'Master Bedroom': 'Elternschlafzimmer',
-        'Bedroom': 'Schlafzimmer',
-        'Bathroom': 'Badezimmer',
-        'Closet': 'Wandschrank',
-        'Study': 'Arbeitszimmer',
-        'Music Room': 'Musikzimmer',
-        'Balcony': 'Balkon',
-        'Garage': 'Garage',
-        'Corridor': 'Korridor',
-        'Laundry Room': 'Waschküche',
-        'Playroom': 'Spielzimmmer',
-        'Cellar': 'Keller',
-        'Workshop': 'Werkraum',
-        'Stairway': 'Treppenhaus',
-        'Furnace Room': 'Heizungsraum',
-        'Toilet': 'Toilette',
-        'Vestibule': 'Flur',
-        'Other': 'Sonstiges',
-        'Hatched Room': 'Durchreiche',
-        'Private Office': 'Arbeitszimmer',
-        'Shared Office': 'Großraumbüro',
-        'Open Space': 'Offener Raum',
-        'Meeting Room': 'Besprechungsraum',
-        'Conference Room': 'Konferenzraum',
-        'Reception': 'Empfang',
-        'Kitchenette': 'Kochnische',
-        'Cafeteria': 'Cafeteria',
-        'Lounge': 'Lounge',
-        'Waiting Room': 'Wartezimmer',
-        'Training Room': 'Schulungsraum',
-        'Maintenance Room': 'Wartungsraum',
-        'Storage': 'Lagerraum',
-        'Archives': 'Archiv',
-        'Photocopy Room': 'Kopierraum',
-        'Lab': 'Labor',
-        'Server Room': 'Server-Raum',
-        'Elevators': 'Aufzug',
-        'door': 'Tür',
-        'window': 'Fenster'
-    }
-    return translations[tag] if tag in translations.keys() else tag
-
-
 def import_data(path=None, data=None):
+    root = None
     if path:
         tree = ET.parse(path)
         root = tree.getroot()
     if data:
         root = ET.fromstring(data)
-    interiorRoomPoints = [elem for elem in root if elem.tag == 'interiorRoomPoints']
-    interiorRoomPoints = interiorRoomPoints[0]
-    floor = interiorRoomPoints[0]
+
+    interior_room_points = [elem for elem in root if elem.tag == 'interiorRoomPoints']
+    interior_room_points = interior_room_points[0]
+    floor = interior_room_points[0]
     data = dict()
     data['rooms'] = list()
     data['positions'] = list()
@@ -124,29 +77,33 @@ def create_positions(data):
     positions = dict()
 
     for position in data:
-        links = [link.attrib['uid'] for link in position if link.tag == 'linkedTo']
-        symbol = position.attrib['symbol']
-        pos_id = [position.attrib['id']]
-        uid = [position.attrib['uid']]
-        values = [elem for elem in position if elem.tag == 'values'][0]
-        artikel_nr = [elem for elem in values if elem.attrib['key'] == 'sku'][0].text
-        pricing_model = [elem for elem in values if elem.attrib['key'] == 'pricingModel'][0].text
+        try:
+            links = [link.attrib['uid'] for link in position if link.tag == 'linkedTo']
+            symbol = position.attrib['symbol']
+            pos_id = [position.attrib['id']]
+            uid = [position.attrib['uid']]
+            values = [elem for elem in position if elem.tag == 'values'][0]
+            artikel_nr = [elem for elem in values if elem.attrib['key'] == 'sku'][0].text
+            pricing_model = [elem for elem in values if elem.attrib['key'] == 'pricingModel'][0].text
 
-        if pricing_model == 'item':
-            if symbol in positions.keys():
-                positions[symbol].menge += 1
-                positions[symbol].pos_id.extend(pos_id)
-                positions[symbol].uid.extend(uid)
-            else:
-                positions[symbol] = Position(menge=1, artikel_nr=artikel_nr, pos_id=pos_id, uid=uid, symbol=symbol,
+            if pricing_model == 'item':
+                if symbol in positions.keys():
+                    positions[symbol].menge += 1
+                    positions[symbol].pos_id.extend(pos_id)
+                    positions[symbol].uid.extend(uid)
+                else:
+                    positions[symbol] = Position(menge=1, artikel_nr=artikel_nr, pos_id=pos_id, uid=uid, symbol=symbol,
+                                                 links=links)
+            if pricing_model == 'surface':
+                try:
+                    menge = [elem for elem in values if elem.attrib['key'] == 'totalsurface'][0].text
+                except:
+                    menge = '1'
+                positions[symbol] = Position(menge=menge, artikel_nr=artikel_nr, pos_id=pos_id, uid=uid, symbol=symbol,
                                              links=links)
-        if pricing_model == 'surface':
-            try:
-                menge = [elem for elem in values if elem.attrib['key'] == 'totalsurface'][0].text
-            except:
-                menge = '1'
-            positions[symbol] = Position(menge=menge, artikel_nr=artikel_nr, pos_id=pos_id, uid=uid, symbol=symbol,
-                                         links=links)
+        except:
+            print("Der Artikel konnte nicht korrekt eingelesen werden:\t" + str(position))
+            pass
 
     return positions
 
@@ -220,3 +177,52 @@ def vector_points(point1, point2):
     return np.asarray(
         [float(point2.attrib['snappedX']) - float(point1.attrib['snappedX']),
          float(point2.attrib['snappedY']) - float(point1.attrib['snappedY'])])
+
+
+def get_translation(tag):
+    translations = {
+        'Kitchen': 'Küche',
+        'Dining Room': 'Esszimmer',
+        'Living Room': 'Wohnzimmer',
+        'Hall': 'Diele',
+        'Master Bedroom': 'Elternschlafzimmer',
+        'Bedroom': 'Schlafzimmer',
+        'Bathroom': 'Badezimmer',
+        'Closet': 'Wandschrank',
+        'Study': 'Arbeitszimmer',
+        'Music Room': 'Musikzimmer',
+        'Balcony': 'Balkon',
+        'Garage': 'Garage',
+        'Corridor': 'Korridor',
+        'Laundry Room': 'Waschküche',
+        'Playroom': 'Spielzimmmer',
+        'Cellar': 'Keller',
+        'Workshop': 'Werkraum',
+        'Stairway': 'Treppenhaus',
+        'Furnace Room': 'Heizungsraum',
+        'Toilet': 'Toilette',
+        'Vestibule': 'Flur',
+        'Other': 'Sonstiges',
+        'Hatched Room': 'Durchreiche',
+        'Private Office': 'Arbeitszimmer',
+        'Shared Office': 'Großraumbüro',
+        'Open Space': 'Offener Raum',
+        'Meeting Room': 'Besprechungsraum',
+        'Conference Room': 'Konferenzraum',
+        'Reception': 'Empfang',
+        'Kitchenette': 'Kochnische',
+        'Cafeteria': 'Cafeteria',
+        'Lounge': 'Lounge',
+        'Waiting Room': 'Wartezimmer',
+        'Training Room': 'Schulungsraum',
+        'Maintenance Room': 'Wartungsraum',
+        'Storage': 'Lagerraum',
+        'Archives': 'Archiv',
+        'Photocopy Room': 'Kopierraum',
+        'Lab': 'Labor',
+        'Server Room': 'Server-Raum',
+        'Elevators': 'Aufzug',
+        'door': 'Tür',
+        'window': 'Fenster'
+    }
+    return translations[tag] if tag in translations.keys() else tag
