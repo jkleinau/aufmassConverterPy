@@ -57,7 +57,7 @@ class GUI:
         self.fenster.mainloop()
 
     def button_action_convert(self):
-        magic_id = [plan['id'] for plan in self.selection if plan['name'] == self.import_path.get().split('/')[-1]]
+        magic_id = [plan for plan in self.selection if self.selection[plan] == self.import_path.get().split('/')[-1]]
         self.xml = self.magic_plan_api.get_project_plan(magic_id[0])
         # main.save_to_file(self, self.import_path.get().split('/')[-1])
         main.convert_to_xml(param_data=self.xml, api=self.api_import_checker, export_path=str(self.export_path.get()))

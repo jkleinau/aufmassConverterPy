@@ -6,13 +6,14 @@
     "3":"5fca1a8d55717",
     "4":"5f9a7a90e40ea",
     "5":"5faa9b26ae954",
-    "6":"5fd21224c79a9",
-    "7":"5fcf55d8398c1",
-    "8":"5fd08f5b5c663",
-    "9":"5fca3637c0102",
-    "10":"5fd1cd9e99806",
-    "11":"5fabd222bec9f",
-    "12":"5fca2fe4e1edd"
+    "6":"5fdb68a667d22",
+    "7":"5fd21224c79a9",
+    "8":"5fcf55d8398c1",
+    "9":"5fd08f5b5c663",
+    "10":"5fca3637c0102",
+    "11":"5fd1cd9e99806",
+    "12":"5fabd222bec9f",
+    "13":"5fca2fe4e1edd"
   },
   "name":{
     "0":"wilhelmstra\u00dfe 4",
@@ -21,13 +22,14 @@
     "3":"Projekt 7",
     "4":"Projekt 4",
     "5":"Platz der Vereinten Nationen 7",
-    "6":"Konferenzraum Inform",
-    "7":"kestenzeile 13a",
-    "8":"Justus Wohnung",
-    "9":"Jolanta ",
-    "10":"holzmindener 1",
-    "11":"B\u00fcro Hoppegarten",
-    "12":"4.Og links"
+    "6":"Konferenzraum mit Mike",
+    "7":"Konferenzraum Inform",
+    "8":"kestenzeile 13a",
+    "9":"Justus Wohnung",
+    "10":"Jolanta ",
+    "11":"holzmindener 1",
+    "12":"B\u00fcro Hoppegarten",
+    "13":"4.Og links"
   },
   "address":{
     "0":{
@@ -89,11 +91,20 @@
       "street_number":"15",
       "postal_code":"15366",
       "city":"Hoppegarten",
-      "country":"Deutschland",
+      "country":"DE",
       "longitude":13.6408,
       "latitude":52.5136
     },
     "7":{
+      "street":"Gewerbestra\u00dfe",
+      "street_number":"15",
+      "postal_code":"15366",
+      "city":"Hoppegarten",
+      "country":"Deutschland",
+      "longitude":13.6408,
+      "latitude":52.5136
+    },
+    "8":{
       "street":null,
       "street_number":null,
       "postal_code":null,
@@ -102,7 +113,7 @@
       "longitude":null,
       "latitude":null
     },
-    "8":{
+    "9":{
       "street":"Frankfurter Allee 120",
       "street_number":null,
       "postal_code":"10365",
@@ -111,7 +122,7 @@
       "longitude":13.4767,
       "latitude":52.5131
     },
-    "9":{
+    "10":{
       "street":"Wartiner Stra\u00dfe",
       "street_number":"42",
       "postal_code":"13057",
@@ -120,7 +131,7 @@
       "longitude":13.5314,
       "latitude":52.5668
     },
-    "10":{
+    "11":{
       "street":null,
       "street_number":null,
       "postal_code":null,
@@ -129,7 +140,7 @@
       "longitude":null,
       "latitude":null
     },
-    "11":{
+    "12":{
       "street":"Gewerbestra\u00dfe",
       "street_number":"15",
       "postal_code":"15366",
@@ -138,7 +149,7 @@
       "longitude":13.6409,
       "latitude":52.5137
     },
-    "12":{
+    "13":{
       "street":"Wartiner Stra\u00dfe",
       "street_number":"44",
       "postal_code":"13057",
@@ -155,13 +166,14 @@
     "3":"2020-12-04T06:16:29+00:00",
     "4":"2020-10-29T04:17:20+00:00",
     "5":"2020-11-10T08:52:38+00:00",
-    "6":"2020-12-10T07:18:44+00:00",
-    "7":"2020-12-08T05:30:48+00:00",
-    "8":"2020-12-09T03:48:27+00:00",
-    "9":"2020-12-04T08:14:31+00:00",
-    "10":"2020-12-10T02:26:22+00:00",
-    "11":"2020-11-11T06:59:30+00:00",
-    "12":"2020-12-04T07:47:32+00:00"
+    "6":"2020-12-17T09:18:14+00:00",
+    "7":"2020-12-10T07:18:44+00:00",
+    "8":"2020-12-08T05:30:48+00:00",
+    "9":"2020-12-09T03:48:27+00:00",
+    "10":"2020-12-04T08:14:31+00:00",
+    "11":"2020-12-10T02:26:22+00:00",
+    "12":"2020-11-11T06:59:30+00:00",
+    "13":"2020-12-04T07:47:32+00:00"
   },
   "update_date":{
     "0":"2020-11-17T08:55:19+00:00",
@@ -170,13 +182,14 @@
     "3":"2020-12-04T06:16:33+00:00",
     "4":"2020-12-01T10:43:52+00:00",
     "5":"2020-12-14T01:59:06+00:00",
-    "6":"2020-12-14T06:58:18+00:00",
-    "7":"2020-12-09T07:14:01+00:00",
-    "8":"2020-12-16T18:25:56+00:00",
-    "9":"2020-12-09T03:03:05+00:00",
-    "10":"2020-12-10T02:26:34+00:00",
-    "11":"2020-12-10T04:07:47+00:00",
-    "12":"2020-12-04T07:47:37+00:00"
+    "6":"2020-12-17T09:52:25+00:00",
+    "7":"2020-12-14T06:58:18+00:00",
+    "8":"2020-12-09T07:14:01+00:00",
+    "9":"2020-12-16T18:25:56+00:00",
+    "10":"2020-12-09T03:03:05+00:00",
+    "11":"2020-12-10T02:26:34+00:00",
+    "12":"2020-12-10T04:07:47+00:00",
+    "13":"2020-12-04T07:47:37+00:00"
   },
   "thumbnail_url":{
     "0":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fb3d61345486\/plan.thumb",
@@ -185,13 +198,14 @@
     "3":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fca1a8d55717\/plan.thumb",
     "4":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5f9a7a90e40ea\/plan.thumb",
     "5":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5faa9b26ae954\/plan.thumb",
-    "6":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fd21224c79a9\/plan.thumb",
-    "7":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fcf55d8398c1\/plan.thumb",
-    "8":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fd08f5b5c663\/plan.thumb",
-    "9":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fca3637c0102\/plan.thumb",
-    "10":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fd1cd9e99806\/plan.thumb",
-    "11":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fabd222bec9f\/plan.thumb",
-    "12":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fca2fe4e1edd\/plan.thumb"
+    "6":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fdb68a667d22\/plan.thumb",
+    "7":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fd21224c79a9\/plan.thumb",
+    "8":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fcf55d8398c1\/plan.thumb",
+    "9":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fd08f5b5c663\/plan.thumb",
+    "10":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fca3637c0102\/plan.thumb",
+    "11":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fd1cd9e99806\/plan.thumb",
+    "12":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fabd222bec9f\/plan.thumb",
+    "13":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fca2fe4e1edd\/plan.thumb"
   },
   "public_url":{
     "0":null,
@@ -200,28 +214,30 @@
     "3":null,
     "4":"https:\/\/cloud.magicplan.app\/plan\/5f9a7a90e40ea",
     "5":null,
-    "6":"https:\/\/cloud.magicplan.app\/plan\/5fd21224c79a9",
-    "7":null,
+    "6":"https:\/\/cloud.magicplan.app\/plan\/5fdb68a667d22",
+    "7":"https:\/\/cloud.magicplan.app\/plan\/5fd21224c79a9",
     "8":null,
-    "9":"https:\/\/cloud.magicplan.app\/plan\/5fca3637c0102",
-    "10":null,
+    "9":null,
+    "10":"https:\/\/cloud.magicplan.app\/plan\/5fca3637c0102",
     "11":null,
-    "12":null
+    "12":null,
+    "13":null
   },
   "3d_url":{
-    "0":"https:\/\/3d.magicplan.app\/#embed\/?key=M2E5MDE4MDk1MTM1ODk5NmRjYWIyZmMzNmU3NmQzMTA3Yjc3NTczODE0ZmUxZTI5NzJiNDc3ZjQzNDc5MzZhZSJgFK%2Fead2NIkEsxvO1JTojRYMtBOZm3szVcTp6zGJ%2Bo%2BH%2B4%2BE0skcxQeqQ0XX12g%3D%3D",
-    "1":"https:\/\/3d.magicplan.app\/#embed\/?key=NTUwMmJkOGI5MmVjMTgyMzJiNTI3MTNkOGRmMzk4Y2M5YmQ3NzlhNjBmM2FiMmEwMmM3Y2EwY2EyNDFjMjQyZYYGZnz8v5k8IYDJTMxJtzdhMik3Ojcshb8JnO5UL9Se25pIaxU7Dq0oIHx6w9cTKQ%3D%3D",
-    "2":"https:\/\/3d.magicplan.app\/#embed\/?key=MGMwMWQ5OWQ4M2E4ZDIyZDViMjkxYTA1MTM3ZmM2MjMxODhlNjlhODEyYTNkZDY0MTFkMjU3NDNkMzJlZTVlYtcJOMP7ozATujMQ7iE8grWCIjMwxUQI%2FTMk6xaNUKZGlYKtDGlnXeoOdcGVEhOgug%3D%3D",
-    "3":"https:\/\/3d.magicplan.app\/#embed\/?key=NDZlN2UyMDVmODRjYTA2ZDNjNWIzNjVlYTRlZTBmMjY5Y2JlNzgyYzkxYjdmMzc1MzI2MWFmYWU5NzkzNDc1ZjR69YrxbjF7AvrT%2BmfgXsg2dItmUiPimXNfcHlsqrsGqYtDSks%2Fa82yrbT%2FVaKH9A%3D%3D",
-    "4":"https:\/\/3d.magicplan.app\/#embed\/?key=ODZlZTU2N2JmZjc4YWE0M2YwOTgyNTEyMmMyZmY2ZDg5NGRjNDUxOTMwYTZmMzY4MzRhMmVlMWIxOGFjYjNkZuLTtON13g9TZJkqOBcSZw9bBMN1NCjn8zvPyVvGwN3rchW5g64fCj%2BZYGKutqRjgQ%3D%3D",
-    "5":"https:\/\/3d.magicplan.app\/#embed\/?key=NTBhMTU5NjkxNDQyNGUzMjA3ZTcxYWMyYmIzYWFlYjAxNzI3NDBmNmFjMmViODVlZWFjYzhlMDUyMzQ2ZTVjZfO9uCrFWLhXRsv%2B3gGhEOpGoZN2ZFsxYpjAjRxH5oXjW0yGhNmVIgLxJAMNqddBeQ%3D%3D",
-    "6":"https:\/\/3d.magicplan.app\/#embed\/?key=OWVjOWIzYWNmOTY5ZmRmYmFiYjU1MWNkYTYwZWE2YzUxYjY3MGZkMmM0NTc5NmM2N2NjZTlhMTk2OTU3MjljN%2BwsFPiwz4fZ1mJVTu4SA33MLZ%2Fy8izHVAn2oP9Dx261UtY1aUmB26c4pS0t84bu5A%3D%3D",
-    "7":"https:\/\/3d.magicplan.app\/#embed\/?key=NDdhMWM5MTRlOTUyMDgzYmEwNDNjYTRlMjU3NDgwYTNhYjRiM2M3Y2ZjOGZlMDZkNTUzMTc0MDE3YzBkNWRkZXAsLj0Q9V2VUDfD26WY6GFEzqxwvGlBY1cOfITChiMGie2fwEQqjRysHIhlyoj1oA%3D%3D",
-    "8":"https:\/\/3d.magicplan.app\/#embed\/?key=M2NkYjNiODQ2YmU5MWViM2NjOWVkODYxMGQ0ZmQ1NWMzZTA5ZWEyNGY0MGY2ODFlOWI0ZGI5MWI5YjhhN2U2ZgTMsYYIemNgb%2BmvFi%2B2uNrYFDNfdguuaCYHVNBThTK%2F8EQcPdTh1pArMhRGB6xQBw%3D%3D",
-    "9":"https:\/\/3d.magicplan.app\/#embed\/?key=ZmUyYjdlNWNkYzMzNzE5MDhiYjQzYjJmZTI0MGY4YmMwMGQzMzE5YjM1MmY5YTQyYzViOWU3MTc0NDNkOTg3YoD3JtcVbJSHh9y7T59SoKnczAW4nrrT4RjTjuJBWWyhRe1jqoeeJauBK%2Brv1DnUrw%3D%3D",
-    "10":"https:\/\/3d.magicplan.app\/#embed\/?key=NTg1NDliYWE4ZGE1YTc4MzUzMWRiNTI1YzA0NTAxNzE4NGFlNDUwMzlkMzkyMjY3MmQ0OWQyYThlODE1Yzc1Y2%2FOn0yOoGjXSXRRI%2Fg1kTPIhk1rmBjdykCV04XS%2FvN9H%2BzIGKdCBHJqOFEJNyjSQg%3D%3D",
-    "11":"https:\/\/3d.magicplan.app\/#embed\/?key=NTk2MDI3NDhiZTkxOTdiZTRmODEwODJhOTA2NzVkY2E0Mjk0YWE0YmZmYzI5MjgxYTc1MmJmOTg5YzM5ZDI5NiKpubWQDDzBV2Q43%2B7GDxL4tFw8ZdOp9R3zt5xtPWoOkKhMWQ0O389ADm%2BXrC%2F4Tw%3D%3D",
-    "12":"https:\/\/3d.magicplan.app\/#embed\/?key=NjQ3ODhjYjhlYmQwNGJkNWNhYzgxZDg4YmI1OGI2ZTU0YjUwNTU2Y2E3ZjdhMGVmMDUwYjM5NmMxZjRhNDBlOW45L%2BngqSDXHjHFoKVkS7d9886S%2F8QmAzeLG3UF8PVkpVjpBg8iB5GewrWkAjRxKw%3D%3D"
+    "0":"https:\/\/3d.magicplan.app\/#embed\/?key=NjY1ZTA1YzM3NDNiNDBiNTc3ZmU5NzYxOGE5M2U4MDA4ZjA0ZjI0MDk1ZTdiMGFhNDljMjU3NTk3MTdiOTZhZrFUixo2QTr3yOhdvUXYASnbQgTF5bHNHBiM4fr3s7jjsbcT9fI%2BjtcoQR6h6IjuXw%3D%3D",
+    "1":"https:\/\/3d.magicplan.app\/#embed\/?key=NDY1NDlmZjRhYzQxN2RiOGRiN2I3ZmQxZmYxZmE2OWVhYzRkZDU1MDFiNGUyMWE1NmE0OTAzMjE0MGY3NDMzN%2B14fk0TwOXyhiJoDFMzn0yFilIu1siEzdSa8E5vidadUER91R0INTlvLfOVEI8AMw%3D%3D",
+    "2":"https:\/\/3d.magicplan.app\/#embed\/?key=NGEyOWJlY2ZmMTRlNmM4OGYwMjQzMGQ0ZmE0Y2Y5NjAwNGM2MTY0NDJjNWIxZjI2NjA2Nzg4MTIzOWQwMWNjYRqxPxdC%2FJxB25cVEA7KfzEBRGmpWuKCbgm8zX%2F3SWO1H8PZfoskIlUTGwNRrxxDWA%3D%3D",
+    "3":"https:\/\/3d.magicplan.app\/#embed\/?key=ZTk5ZWRkOGY0ZGM1MWI2YWQ3YjM5MmIxZmM0ZWJmYWE1YTZlMjg5ZDhkZTNmOTAxMDZhOWVjYzdmYzVlMjczNsCJxy0db4sCGjsoavSsNh5WnO1FGsWp9Yg%2BddCQIAxIzJMqnRzd09cM7qfjwZiquw%3D%3D",
+    "4":"https:\/\/3d.magicplan.app\/#embed\/?key=ODY1YzllMjVmZWU1MDNhMTE5Y2E3YzM2ZjIxZmUzN2RjODNjZDBiNzU5MWY0MWEyN2Q5MzFmMmViNDJmYzkxZs4Qao5XaA7o8YjFjhHKAjP1UAszBsgwcnFxTwN9qJQ000NNuhrsJP7Pbs0GRlpAMg%3D%3D",
+    "5":"https:\/\/3d.magicplan.app\/#embed\/?key=ZGI4MTBhZTc3NDJiZDdmYzllNzdkZDBhY2Q4ZGIyNWQxMDA0MGI4YTM4MGFhODEyMGQyOWQzMTcyNjM3ZDJmYzIMe3dlm2pLOvIyCvoZ4tj79DDvk0aTc0J91Lhog6ArUsWd%2B1UKQuY%2FnNw%2Fki1nEA%3D%3D",
+    "6":"https:\/\/3d.magicplan.app\/#embed\/?key=MzMyZWViZjMxZjg5MWY0ZWY2Njk2ODFmMzA3NGJhOGRmYzc1ZWZjNGUxZmJmZDhlMDNmYTAwNTFkZGFiZDg1Zur5yLOF9lalyhc4fOH4SGyYMY%2BhsduGt3JkOdpt7%2BPNj1XiKsPaQvwwfrHKi9wG2w%3D%3D",
+    "7":"https:\/\/3d.magicplan.app\/#embed\/?key=Y2ExMGM3OTYzYTY4Y2RjNzc4NzBjNDNhN2RjYThjYjMxYWVhZTdlNmFhNDk2NDVkNTNmYzBiZGI5NTc3MTU5YSWvhbOM71Xo3AuuYTVSBpsm4gPHBRoqBFL6d1ShpBS3Fafh5SpPztFypbrfwEx71A%3D%3D",
+    "8":"https:\/\/3d.magicplan.app\/#embed\/?key=MDZlMzgzNDkyNjhiOGY5ZjRjYzhiZTUzM2VjYjg0YzE1NjI2NTk2MGUwYTUwY2MzOTdlMmZhZDExMGE0ZDliOQEQHoSV3qdC%2FjF4VJHo6f52SxKUVl1cV1IszRKgUfw%2BPq8D5H9%2FeonrmAEsT1lt%2BA%3D%3D",
+    "9":"https:\/\/3d.magicplan.app\/#embed\/?key=MTBkYzNjYzY3NDg3ZTQwNTEwM2Y2YzU1ZGM2NDY4MjI5ZWIyZWMyNmYyZmEzMTgwNzcwN2IzODc2ZjFiMWRiNJi%2BmUFmSK6b34i2g9IGZKFvMqjCLMCHiAm1%2BLi%2F02%2BMbM6yehIAOsMCO8Ak15gjgA%3D%3D",
+    "10":"https:\/\/3d.magicplan.app\/#embed\/?key=YmYzYzRmNjY4NTYzZGNhNDM3ZmMyYWFkYmQ3ZTkyMzhhNjVhZTVhYjVhNzRkMDNkZGM1N2M5Zjk5ZGJjOTc3N2R%2FWeTzeZnbO6Nu2nNUTqjyhhrUsF1vhtJ0BdxPWT6MyTD1fnrCyI3iokv5LxgVVw%3D%3D",
+    "11":"https:\/\/3d.magicplan.app\/#embed\/?key=NTNhNjZlZWVkNGExNTQ0ZmJkMjRkMzhjNGNhYjQyYjA2MjdjMDUzMDYwNTQ4OGMzZGRhNTRhMGM4YTQwYWUwOV1saKpx1YpWt4JSqSFSXYLgutPRQhHWE3Kp63DZ2pSYQSf25NLXmEvOdqj5oYAdew%3D%3D",
+    "12":"https:\/\/3d.magicplan.app\/#embed\/?key=MTM5N2VhMjVmN2RlOTkzNzM5OWM4NTFjZWRkYjYzZWUwM2IwNTM2OTE3ZTViZGVjY2Q3MTMxZjU2OTIwZGE0NO3UDnW%2F0WJVmpK6HcVjuky7PySJBFdCODxpPhYc%2Fs2dohsFkzVS89eF18sXogetRA%3D%3D",
+    "13":"https:\/\/3d.magicplan.app\/#embed\/?key=MjQyNzYxNmFjYTg3NjM3YTRhOTEzYzZjYjRlMGM3ODgzYmVjNDY1N2Y4MWI3MTNiZDQ4YjQxZDIyZWU2NWEyONELJ5jB8Iy07%2F9YLpiekxR21Ihbs%2FAwF4GccSQooYJ9KdsmFuZRRYUQfLt0Ewyc%2FA%3D%3D"
   },
   "created_by":{
     "0":{
@@ -297,6 +313,12 @@
       "email":"matthias.herzog@bsu-projekt-service.de"
     },
     "12":{
+      "id":"8021a82a-c776-424b-a4e4-5b3741af6539",
+      "firstname":null,
+      "lastname":null,
+      "email":"matthias.herzog@bsu-projekt-service.de"
+    },
+    "13":{
       "id":"8021a82a-c776-424b-a4e4-5b3741af6539",
       "firstname":null,
       "lastname":null,

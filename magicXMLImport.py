@@ -28,7 +28,7 @@ def import_data(path=None, data=None):
     data['positions'] = [elem for elem in floor if
                          elem.tag == 'symbolInstance' and elem.attrib['id'].split('-')[0] == 'O']
     data['poly'] = [elem for elem in floor if
-                    elem.tag == 'symbolInstance' and elem.attrib['id'].split('-')[0] == 'F']
+                    elem.tag == 'symbolInstance' and elem.attrib['symbol'].split('-')[0] == 'editablepolyline']
     return data
 
 
@@ -44,11 +44,11 @@ def create_polylines(data):
     poly_lines = dict()
     for poly in data:
         values = [elem for elem in poly if elem.tag == 'values'][0]
-        wallIndex = [index for index in values if index.attrib['key'] == 'editablePolylineWallIndex'][0].text
-        polylineData = [elem for elem in poly if elem.tag == 'polylineData'][0]
-        points = [(point.attrib['x'], point.attrib['y']) for point in polylineData]
+        wall_index = [index for index in values if index.attrib['key'] == 'editablePolylineWallIndex'][0].text
+        polyline_data = [elem for elem in poly if elem.tag == 'polylineData'][0]
+        points = [(point.attrib['x'], point.attrib['y']) for point in polyline_data]
         poly_lines[poly.attrib['uid']] = PolyLine(uid=poly.attrib['uid'], poly_id=poly.attrib['id'],
-                                                  symbol=poly.attrib['symbol'], points=points, wallIndex=wallIndex)
+                                                  symbol=poly.attrib['symbol'], points=points, wallIndex=wall_index)
     return poly_lines
 
 
@@ -69,7 +69,10 @@ def link_position_to_component(rooms, poly=None):
                     wall_index_corrected = str((int(poly[link].wallIndex) + (len(walls) - 1)) % len(walls))
                     component = [wall for wall in walls if str(wall.orga_number) == wall_index_corrected]
                     pos.aufmass_zeilen.append(poly[link].to_aufmass_zeile(component=component[0]))
-                    pos.aufmass_zeilen.remove(component[0].to_aufmass_zeile())
+                    try:
+                        pos.aufmass_zeilen.remove(component[0].to_aufmass_zeile())
+                    except ValueError:
+                        pass
     return rooms
 
 
