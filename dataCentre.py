@@ -14,6 +14,16 @@ class DataCentre:
         self.load_data()
         self.magic_api = self.connect_to_api()
 
+    def get_search_plans(self, search=None):
+        if search is not None:
+            sub_data = self.data['plans'][self.data['plans']['name'].str.contains(search)]
+            plans = dict()
+            for index, plan in sub_data.iterrows():
+                plans[plan['id']] = plan['name']
+            return plans
+        else:
+            return self.get_plans()
+
     def load_data(self):
         for datasource in self.paths:
             try:

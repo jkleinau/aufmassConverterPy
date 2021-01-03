@@ -110,7 +110,11 @@ class GUI:
         self.api_select.title("Select Projekt")
         self.api_select.geometry("450x550")
         self.api_select.iconbitmap(self.icon_path)
+        self.search_term = StringVar()
 
+        # Initializing widgets
+        search_button = Button(self.api_select, text='Search', command=lambda: self.get_searched_list())
+        self.search_box = Entry(self.api_select, textvariable=self.search_term)
         scrollbar = Scrollbar(self.api_select, orient=VERTICAL)
         self.listbox = Listbox(self.api_select, yscrollcommand=scrollbar.set, selectmode=BROWSE)
         scrollbar.config(command=self.listbox.yview)
@@ -118,15 +122,32 @@ class GUI:
         browse_button = Button(self.api_select, text="Reload", command=lambda: self.reload_projects())
         select_button = Button(self.api_select, text="Select", command=lambda: self.select_project())
 
-        scrollbar.place(x=430, y=50, width=20, height=500)
-        self.listbox.place(x=0, y=50, width=430, height=500)
+        # self.api_select.bind('<Return>', self.get_searched_list())
+        # Place the all widgets
+        self.search_box.place(x=5, y=50, width=365, height=20)
+        scrollbar.place(x=430, y=70, width=20, height=480)
+        self.listbox.place(x=0, y=70, width=430, height=480)
         browse_button.place(x=5, y=5, width=100, height=30)
         select_button.place(x=345, y=5, width=100, height=30)
+        search_button.place(x=370, y=50, width=80, height=20)
 
         self.load_projects()
 
+    def get_searched_list(self):
+        self.search_term.set(self.search_box.get())
+        selection = main.dataCentre.get_search_plans(search=self.search_term.get())
+        self.listbox.delete(0, END)
+        self.show_plans(selection)
+
     def button_action_import_api(self):
         self.setup_api_select()
+
+    def show_plans(self, selection):
+        self.selection = selection
+        if not self.selection:
+            self.reload_projects()
+        for project in self.selection:
+            self.listbox.insert(END, str(self.selection[project]))
 
     def load_projects(self):
         self.listbox.delete(0, END)
