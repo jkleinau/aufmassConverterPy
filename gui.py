@@ -79,7 +79,7 @@ class GUI:
             self.fenster.destroy()
 
     def login_check(self):
-        user_label = Label(self.fenster, text=self.usernameEntry.get(), anchor=E)
+        user_label = Label(self.fenster, text=self.username_entry.get(), anchor=E)
         user_label.place(x=525, y=160, width=85, height=30)
         self.login.destroy()
 
@@ -92,8 +92,8 @@ class GUI:
         # username label and text entry box
         usernameLabel = Label(self.login, text="User Name:").grid(row=0, column=0, sticky=E, padx=5, pady=5)
 
-        self.usernameEntry = Entry(self.login, textvariable=self.username)
-        self.usernameEntry.grid(row=0, column=1, padx=5, pady=5)
+        self.username_entry = Entry(self.login, textvariable=self.username)
+        self.username_entry.grid(row=0, column=1, padx=5, pady=5)
 
         # password label and password entry box
         passwordLabel = Label(self.login, text="Password:").grid(row=1, column=0, sticky=E, padx=5, pady=5)
@@ -152,10 +152,7 @@ class GUI:
     def load_projects(self):
         self.listbox.delete(0, END)
         self.selection = main.dataCentre.get_plans()
-        if not self.selection:
-            self.reload_projects()
-        for project in self.selection:
-            self.listbox.insert(END, str(self.selection[project]))
+        self.show_plans(self.selection)
 
     def select_project(self):
         self.import_path.set("API/" + self.listbox.get(ANCHOR))

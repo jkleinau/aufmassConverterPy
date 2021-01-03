@@ -16,9 +16,10 @@ class DataCentre:
 
     def get_search_plans(self, search=None):
         if search is not None:
-            sub_data = self.data['plans'][self.data['plans']['name'].str.contains(search)]
+            # searching plans for search term with Case ('E' != 'e')
+            filtered_plans = self.data['plans'][self.data['plans']['name'].str.contains(search)]
             plans = dict()
-            for index, plan in sub_data.iterrows():
+            for index, plan in filtered_plans.iterrows():
                 plans[plan['id']] = plan['name']
             return plans
         else:
