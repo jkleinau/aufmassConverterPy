@@ -16,9 +16,12 @@ class DataCentre:
 
     def get_search_plans(self, search=None):
         if search is not None:
-            # searching plans for search term with Case ('E' != 'e')
+            # searching plans for search term with case sensitivity
+            mask = self.data['plans']['name'].str.contains(search)
             filtered_plans = self.data['plans'][self.data['plans']['name'].str.contains(search)]
             plans = dict()
+            if len(filtered_plans) == 0:
+                return dict()
             for index, plan in filtered_plans.iterrows():
                 plans[plan['id']] = plan['name']
             return plans
@@ -46,7 +49,7 @@ class DataCentre:
         for datasource in self.paths:
             with open(self.paths[datasource], 'w') as f:
                 f.write(self.data[datasource].to_json(indent=2))
-                print("{}\t Datei wurde geschrieben an \t{} geschrieben.".format(datasource, self.paths[datasource]))
+                print("{}\t -> \t{}".format(datasource, self.paths[datasource]))
 
     def connect_to_api(self):
         try:

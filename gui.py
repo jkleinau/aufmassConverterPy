@@ -12,7 +12,7 @@ class GUI:
 
     def __init__(self):
         self.magic_plan_api = MagicPlanAPI()
-        self.selection = dict()
+        self.plans = dict()
         self.fenster = Tk()
         self.api_import_checker = False
         self.xml = StringVar()
@@ -57,7 +57,7 @@ class GUI:
         self.fenster.mainloop()
 
     def button_action_convert(self):
-        magic_id = [plan for plan in self.selection if self.selection[plan] == self.import_path.get().split('/')[-1]]
+        magic_id = [plan for plan in self.plans if self.plans[plan] == self.import_path.get().split('/')[-1]]
         self.xml = self.magic_plan_api.get_project_plan(magic_id[0])
         # main.save_to_file(self, self.import_path.get().split('/')[-1])
         main.convert_to_xml(param_data=self.xml, api=self.api_import_checker, export_path=str(self.export_path.get()))
@@ -122,7 +122,7 @@ class GUI:
         browse_button = Button(self.api_select, text="Reload", command=lambda: self.reload_projects())
         select_button = Button(self.api_select, text="Select", command=lambda: self.select_project())
 
-        # self.api_select.bind('<Return>', self.get_searched_list())
+        # self.fenster.bind('<Return>', self.click())
         # Place the all widgets
         self.search_box.place(x=5, y=50, width=365, height=20)
         scrollbar.place(x=430, y=70, width=20, height=480)
@@ -131,7 +131,12 @@ class GUI:
         select_button.place(x=345, y=5, width=100, height=30)
         search_button.place(x=370, y=50, width=80, height=20)
 
+        self.search_box.bind('<Return>', self.click())
+
         self.load_projects()
+
+    def click(self):
+        print("You clicked")
 
     def get_searched_list(self):
         self.search_term.set(self.search_box.get())
@@ -142,17 +147,16 @@ class GUI:
     def button_action_import_api(self):
         self.setup_api_select()
 
-    def show_plans(self, selection):
-        self.selection = selection
-        if not self.selection:
-            self.reload_projects()
-        for project in self.selection:
-            self.listbox.insert(END, str(self.selection[project]))
+    def show_plans(self, plans):
+        self.plans = plans
+
+        for plan in self.plans:
+            self.listbox.insert(END, str(self.plans[plan]))
 
     def load_projects(self):
         self.listbox.delete(0, END)
-        self.selection = main.dataCentre.get_plans()
-        self.show_plans(self.selection)
+        self.plans = main.dataCentre.get_plans()
+        self.show_plans(self.plans)
 
     def select_project(self):
         self.import_path.set("API/" + self.listbox.get(ANCHOR))
@@ -160,5 +164,5 @@ class GUI:
         self.api_import_checker = True
 
     def reload_projects(self):
-        self.selection = main.dataCentre.reload_plans()
+        self.plans = main.dataCentre.reload_plans()
         self.load_projects()
