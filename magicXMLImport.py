@@ -182,6 +182,19 @@ def vector_points(point1, point2):
          float(point2.attrib['snappedY']) - float(point1.attrib['snappedY'])])
 
 
+def get_file_urls(xml, filetype=None):
+    root = ET.fromstring(xml)
+    files = dict()
+    for node in root:
+        if node.tag == 'file':
+            if filetype:
+                if node.attrib['type'] == filetype:
+                    files[node.attrib['name']] = node.attrib['url']
+            else:
+                files[node.attrib['name']] = node.attrib['url']
+    return files
+
+
 def get_translation(tag):
     translations = {
         'Kitchen': 'Küche',

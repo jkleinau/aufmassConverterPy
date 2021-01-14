@@ -5,7 +5,7 @@ from tkinter import messagebox
 from tkinter.filedialog import asksaveasfile
 
 import main
-from magicPlanAPI import MagicPlanAPI
+from magicPlanAPI import MagicPlanAPI, write_file_from_url
 
 
 class GUI:
@@ -60,6 +60,13 @@ class GUI:
         magic_id = [plan for plan in self.plans if self.plans[plan] == self.import_path.get().split('/')[-1]]
         self.xml = self.magic_plan_api.get_project_plan(magic_id[0])
         # main.save_to_file(self, self.import_path.get().split('/')[-1])
+
+        # saving Report to file
+        files = self.magic_plan_api.get_files_by_plan(magic_id, filetype='pdf')
+        if len(files) == 1:
+            directory = self.export_path.get().removesuffix(self.export_path.get().split('/')[-1])
+            write_file_from_url(list(files.values())[-1], str(directory) + list(files.keys())[-1])
+
         main.convert_to_xml(param_data=self.xml, api=self.api_import_checker, export_path=str(self.export_path.get()))
         tkinter.messagebox.showinfo("Convert", "Die Datei wurde erfolgreich umgewandelt.")
 
