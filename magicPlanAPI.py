@@ -1,4 +1,11 @@
 import requests
+from magicXMLImport import get_file_urls
+
+
+def write_file_from_url(url, path):
+    r = requests.get(url)
+    with open(f'{path}', 'wb')as f:
+        f.write(r.content)
 
 
 class MagicPlanAPI:
@@ -18,21 +25,29 @@ class MagicPlanAPI:
             'key': private_key
         }
 
-    def link_account(self):
-        payload = {
-            'customer': self.customerID,
-            'key': self.private_key,
-            'email': self.user_email,
-            'password': self.user_pw,
-            'ref': self.ref
-        }
-        r = requests.post('https://cloud.sensopia.com/newuser.php', params=payload)
+    def get_files_by_plan(self, plan_id, filetype=None, since=None):
+        payload = dict()
+        payload['content-type'] = 'application/x-www-form-urlencoded'
+        payload['planid'] = plan_id
+        payload['customer'] = self.headers['customer']
+        payload['key'] = self.headers['key']
 
-    def get_project_plan(self, id):
-        r = requests.get("https://cloud.magic-plan.com/api/v2/plans/get/" + id, headers=self.headers)
+        if filetype:
+            payload['filetype'] = filetype
+        if since:
+            payload['since'] = since
+
+        r = requests.post('https://cloud.sensopia.com/listfiles.php', payload)
+        return get_file_urls(r.text, filetype=filetype)
+
+    def get_project_plan(self, plan_id):
+        r = requests.get("https://cloud.magic-plan.com/api/v2/plans/get/" + plan_id, headers=self.headers)
         return r.json()['data']['plan_detail']['magicplan_format_xml']
 
-    def get_projects(self):
+    def get_users(self):
+        return requests.get('https://cloud.magic-plan.com/api/v2/workgroups/users', headers=self.headers).json()
+
+    def get_projects(self, as_json=False):
         payload = {
             'page': '1',
             'sort': 'Plans.name',
@@ -41,6 +56,11 @@ class MagicPlanAPI:
         r = requests.get('https://cloud.magic-plan.com/api/v2/workgroups/plans', params=payload,
                          headers=self.headers)
         data = r.json()
+        # return data as json for later use
+        if as_json:
+            return data['data']['plans']
+
+        # convert data to dict
         plans = list()
         for plan in data['data']['plans']:
             plans.append({

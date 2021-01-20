@@ -1,11 +1,11 @@
-# This is a sample Python script.
 import csvImport
 import gui
 import xmlParser
-from magicXMLImport import import_data, create_rooms, create_positions, build_data
+from dataCentre import DataCentre
+from magicXMLImport import import_data, build_data
 
-
-def convert_to_xml(gui=None, api=None, export_path=None, param_data=None):
+dataCentre = DataCentre()
+def convert_to_xml(api=None, export_path=None, param_data=None):
     """
 
     :param param_data:
@@ -13,28 +13,14 @@ def convert_to_xml(gui=None, api=None, export_path=None, param_data=None):
     :param api: Boolean checker for import with API or from csv file
     :param export_path: If import from csv file this is the path
     """
-    header_raueme = {
-        1: "Bodenoberfläche",
-        2: "Volumen",
-        3: "Boden Umfang",
-        4: "Decke Umfang",
-        5: "Wandfläche mit Öffnung",
-        7: "Umfang Türen",
-        8: "Fensterflächen",
-        9: "Raumhöhe "
-    }
+
     if api:
         data = import_data(data=param_data)
         rooms = build_data(data)
         xmlParser.write_data_to_xml_schrift(rooms, export_path)
 
-
     else:
-        param_data = csvImport.import_data(gui.import_path.get())
-        data_subsection_raume = csvImport.get_subsection('ATTRIBUTE DER RÄUME', param_data)
-        data_subsection_waende = csvImport.get_subsection('Wandeigenschaften', param_data)
-        rooms = xmlParser.create_data(data_subsection_raume, data_subsection_waende, header_raueme)
-        xmlParser.write_data_to_xml(rooms, gui.export_path.get())
+        return None
 
 
 def save_to_file(gui, name):
