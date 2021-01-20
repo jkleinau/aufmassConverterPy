@@ -1,6 +1,5 @@
 import requests
 from magicXMLImport import get_file_urls
-import pandas as pd
 
 
 def write_file_from_url(url, path):
@@ -25,16 +24,6 @@ class MagicPlanAPI:
             'customer': customerID,
             'key': private_key
         }
-
-    def link_account(self):
-        payload = {
-            'customer': self.customerID,
-            'key': self.private_key,
-            'email': self.user_email,
-            'password': self.user_pw,
-            'ref': self.ref
-        }
-        r = requests.post('https://cloud.sensopia.com/newuser.php', params=payload)
 
     def get_files_by_plan(self, plan_id, filetype=None, since=None):
         payload = dict()

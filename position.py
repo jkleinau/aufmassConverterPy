@@ -4,7 +4,8 @@ from aufmassZeile import *
 
 class Position:
     def __init__(self, menge=None, artikel_nr=None, positions_nr=None, pos_id=None, uid=None, symbol=None,
-                 aufmass_zeilen=None, links=None):
+                 aufmass_zeilen=None, links=None, ceiling = None):
+        self.ceiling = ceiling
         self.symbol = symbol
         self.pos_id = pos_id
         self.uid = uid

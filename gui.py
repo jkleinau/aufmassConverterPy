@@ -76,7 +76,11 @@ class GUI:
         self.api_import_checker = False
 
     def button_action_export(self):
-        name = asksaveasfile(mode='w', initialfile="AUFMASS-" + str(datetime.now().date()) + ".xml",
+        if self.import_path.get() != '':
+            name = asksaveasfile(mode='w', initialfile=f"{self.import_path.get().split('/')[-1]} Aufmass.xml",
+                                 title="Save as")
+        else:
+            name = asksaveasfile(mode='w', initialfile="AUFMASS-" + str(datetime.now().date()) + ".xml",
                              title="Save as")
         self.export_path.set(name.name)
 
@@ -138,12 +142,7 @@ class GUI:
         select_button.place(x=345, y=5, width=100, height=30)
         search_button.place(x=370, y=50, width=80, height=20)
 
-        self.search_box.bind('<Return>', self.click())
-
         self.load_projects()
-
-    def click(self):
-        print("You clicked")
 
     def get_searched_list(self):
         self.search_term.set(self.search_box.get())

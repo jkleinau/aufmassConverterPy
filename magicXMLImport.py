@@ -55,19 +55,23 @@ def create_polylines(data):
 def link_position_to_component(rooms, poly=None):
     for room in rooms:
         for pos in room.positions.values():
-            if float(pos.menge) == round(float(room.data['Bodenfläche']), 1):
+            if float(pos.menge) == round(float(room.data['Bodenfläche']), 1) or float(pos.menge) == round(float(room.data['Bodenfläche']), 1)/2:
                 pos.aufmass_zeilen.append(room.data_to_aufmasszeile('Bodenfläche'))
+
+            if pos.ceiling == '1':
+                pos.aufmass_zeilen.append(room.data_to_aufmasszeile('Deckenfläche'))
+            walls = [wall for wall in room.components.values() if wall.typ == 'Wand']
             for i, link in enumerate(pos.links):
-                walls = [wall for wall in room.components.values() if wall.typ == 'Wand']
 
                 if i < len(walls):
-                    link_id = "{}:{}".format(link, pos.links[(i + 1) % len(walls)])
+                    link_id = "{}".format(link)
+                    # link_id = "{}:{}".format(link, pos.links[(i + 1) % len(walls)])
                     if link_id in room.components.keys():
                         pos.aufmass_zeilen.append(room.components[link_id].to_aufmass_zeile())
 
                 if link in poly:
-                    wall_index_corrected = str((int(poly[link].wallIndex) + (len(walls) - 1)) % len(walls))
-                    component = [wall for wall in walls if str(wall.orga_number) == wall_index_corrected]
+                    # wall_index_corrected = str((int(poly[link].wallIndex) + (len(walls) - 1)) % len(walls))
+                    component = [wall for wall in walls if str(wall.orga_number) == poly[link].wallIndex]
                     pos.aufmass_zeilen.append(poly[link].to_aufmass_zeile(component=component[0]))
                     try:
                         pos.aufmass_zeilen.remove(component[0].to_aufmass_zeile())
@@ -102,8 +106,12 @@ def create_positions(data):
                     menge = [elem for elem in values if elem.attrib['key'] == 'totalsurface'][0].text
                 except:
                     menge = '1'
+                try:
+                    ceiling = [elem for elem in values if elem.attrib['key'] == 'surfaceReferenceCeiling'][0].text
+                except:
+                    ceiling = '0'
                 positions[symbol] = Position(menge=menge, artikel_nr=artikel_nr, pos_id=pos_id, uid=uid, symbol=symbol,
-                                             links=links)
+                                             links=links, ceiling=ceiling)
         except:
             print("Der Artikel konnte nicht korrekt eingelesen werden:\t" + str(position))
             pass
@@ -122,7 +130,10 @@ def create_rooms(data, level='0', positions=None):
 
         points = [datapoint for datapoint in room if datapoint.tag == 'point']
 
-        estimate = [est for est in room if est.tag == 'estimate'][0]
+        try:
+            estimate = [est for est in room if est.tag == 'estimate'][0]
+        except:
+            pass
         temp_positions = dict()
         for item in estimate:
             for pos in positions:
@@ -159,7 +170,8 @@ def create_components(data, room):
 def create_walls(points, room, tag='Wand'):
     walls = dict()
     for i, point in enumerate(points):
-        uid = "{}:{}".format(point.attrib['uid'], points[(i + 1) % len(points)].attrib['uid'])
+        uid = "{}".format(point.attrib['uid'])
+        # uid = "{}:{}".format(point.attrib['uid'], points[(i + 1) % len(points)].attrib['uid'])
         walls[uid] = Component(distance(point, points[(i + 1) % len(points)]),
                                (float(point.attrib['height']) / 2 + float(
                                    points[(i + 1) % len(points)].attrib['height']) / 2),
