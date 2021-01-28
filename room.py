@@ -4,9 +4,9 @@ from component import *
 
 class Room:
 
-    def __init__(self, name: str, level: str, data: dict[str, str], x: str, y: str,
-                 components: dict[str, Component] = None, uid: str = None,
-                 positions: dict[str, Position] = None) -> Room:
+    def __init__(self, name, level, data, x, y,
+                 components=None, uid=None,
+                 positions=None):
 
         if positions is None:
             positions = dict()
@@ -27,7 +27,7 @@ class Room:
     def __str__(self):
         return f"{self.level}, {self.name}"
 
-    def data_to_aufmasszeile(self, tag: str) -> aufmassZeile.AufmassZeile:
+    def data_to_aufmasszeile(self, tag: str):
         """
         Turns a Datapoint by a given tag into an Aufmasszeile
         :param tag: tag for corresponding Datapoint
@@ -36,7 +36,7 @@ class Room:
         return AufmassZeile(stichwort=self.level + ", " + self.name, text=tag + ", " + self.name,
                             aufmass=str(self.data[tag]).split()[0])
 
-    def write_to_xml(self, root: xml.etree.ElementTree.Element) -> None:
+    def write_to_xml(self, root) :
         """
         Writes the whole room with each Datapoint to a given root Element.
         Calls write_to_xml() on all components

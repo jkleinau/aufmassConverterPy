@@ -6,8 +6,8 @@ from component import Component
 
 class PolyLine:
 
-    def __init__(self, poly_id: str = None, uid: str = None, symbol: str = None, points: List[Tuple[str, str]] = None,
-                 wallIndex: str = None) -> None:
+    def __init__(self, poly_id=None, uid=None, symbol=None, points=None,
+                 wallIndex=None):
         """
             Constructor
         :param poly_id: ID for Polyline
@@ -26,7 +26,7 @@ class PolyLine:
         if points is None:
             self.points = list()
 
-    def to_aufmass_zeile(self, component: Component = None) -> AufmassZeile:
+    def to_aufmass_zeile(self, component=None):
         """
         Turns Polyline to Aufmasszeile
         :param component: corresponding component to the Polyline

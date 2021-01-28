@@ -74,7 +74,7 @@ class DataCentre:
                 f.write(self.data[datasource].to_json(indent=2))
                 print("{}\t -> \t{}".format(datasource, self.paths[datasource]))
 
-    def connect_to_api(self) -> magicPlanAPI.MagicPlanAPI:
+    def connect_to_api(self):
         """
         Initiates magicplanAPI instance with credentials if defined
         :return: MagicPlanAPI instance

@@ -2,8 +2,8 @@ from aufmassZeile import AufmassZeile
 
 
 class Component:
-    def __init__(self, breite: float, hoehe: float, typ: str, room: room.Room, vector: str = None, uid: str = None,
-                 orga_number: int = None, show_id: bool = False) -> component.Component:
+    def __init__(self, breite, hoehe, typ, room, vector=None, uid=None,
+                 orga_number=None, show_id=False):
         self.orga_number = orga_number
         self.show_id = show_id
         self.uid = uid
@@ -16,14 +16,14 @@ class Component:
     def __str__(self):
         return f"{self.typ} {self.orga_number + 1}"
 
-    def write_to_xml(self, root: xml.etree.ElementTree.Element) -> None:
+    def write_to_xml(self, root):
         """
         Writes Component as a Aufmasszeile to a Root XML ELement
         :param root: Root XML Element
         """
         self.to_aufmass_zeile().write_to_xml(root)
 
-    def to_aufmass_zeile(self) -> aufmassZeile.AufmassZeile:
+    def to_aufmass_zeile(self):
         """
         creates Aufmasszeile for the Component
         :return: Aufmasszeile
