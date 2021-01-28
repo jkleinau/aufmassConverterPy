@@ -3,8 +3,8 @@ from aufmassZeile import *
 
 
 class Position:
-    def __init__(self, menge=None, artikel_nr=None, positions_nr=None, pos_id=None, uid=None, symbol=None,
-                 aufmass_zeilen=None, links=None, ceiling = None):
+    def __init__(self, menge: str = None, artikel_nr: str = None, positions_nr: str = None, pos_id: str = None, uid: str = None, symbol: str = None,
+                 aufmass_zeilen: list[AufmassZeile] = None, links: dict[str,str] = None, ceiling: str = None) -> Position:
         self.ceiling = ceiling
         self.symbol = symbol
         self.pos_id = pos_id
@@ -22,7 +22,11 @@ class Position:
     def __str__(self):
         return f"Position {self.artikel_nr}, mit {len(self.aufmass_zeilen)} Aufmasszeilen"
 
-    def write_to_xml(self, root):
+    def write_to_xml(self, root: xml.etree.ElementTree.Element) -> None:
+        """
+        Writes the Position to the given root Element in XML
+        :param root: Root Element
+        """
         material_position = ET.SubElement(root, 'MATERIALPOSITION')
 
         if self.positions_nr:

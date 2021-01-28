@@ -2,7 +2,7 @@ import xml.etree.ElementTree as ET
 
 
 class AufmassZeile():
-    def __init__(self, stichwort=None, text=None, aufmass=None):
+    def __init__(self, stichwort: str = None, text: str = None, aufmass: str = None) -> AufmassZeile:
         self.text = text
         self.stichwort = stichwort
         self.aufmass = aufmass
@@ -15,7 +15,11 @@ class AufmassZeile():
             return NotImplemented
         return self.aufmass == other.aufmass and self.text == other.text
 
-    def write_to_xml(self, root):
+    def write_to_xml(self, root: xml.etree.ElementTree.Element) -> None:
+        """
+        Writes Aufmasszeile to root XML Element
+        :param root: Root XML Element
+        """
         aufmasszeile = ET.SubElement(root, 'AUFMASSZEILE')
 
         stichwort = ET.SubElement(aufmasszeile, 'STICHWORT')

@@ -195,6 +195,12 @@ def vector_points(point1, point2):
 
 
 def get_file_urls(xml, filetype=None):
+    """
+    returns a dict with files for a magicplan plan like dict['name':'url']
+    :param xml: XML with file list
+    :param filetype: type as 'pdf'
+    :return: dict with files
+    """
     root = ET.fromstring(xml)
     files = dict()
     for node in root:
