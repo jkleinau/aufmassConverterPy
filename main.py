@@ -1,4 +1,3 @@
-import csvImport
 import gui
 import xmlParser
 from dataCentre import DataCentre

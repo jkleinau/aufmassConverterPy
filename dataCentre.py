@@ -17,7 +17,7 @@ class DataCentre:
         self.load_data()
         self.magic_api = self.connect_to_api()
 
-    def get_search_plans(self, search: str = None) -> dict[str, str]:
+    def get_search_plans(self, search):
         """
         Returns all plans which match the search term
         If no search term is provided all the plans get returned

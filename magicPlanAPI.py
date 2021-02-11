@@ -28,7 +28,7 @@ class MagicPlanAPI:
             'key': private_key
         }
 
-    def get_files_by_plan(self, plan_id: str, filetype: str = None, since: str = None) -> dict[str, str]:
+    def get_files_by_plan(self, plan_id, filetype=None, since=None):
         """
         Get the corresponding files for a plan by id and filter with filetype and since
         :param plan_id: Plan ID

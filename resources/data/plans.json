@@ -1,63 +1,35 @@
 {
   "id":{
     "0":"5fb3d61345486",
-    "1":"5ff2d31b02863",
-    "2":"5fda37e519fdb",
-    "3":"5fd7763b219a5",
-    "4":"5fca1a8d55717",
-    "5":"5fde1ba489d22",
-    "6":"5fde1a8e5de2a",
-    "7":"5f9a7a90e40ea",
-    "8":"5fdc78abcc811",
-    "9":"5fe61952caaed",
-    "10":"5fe2042a4531e",
-    "11":"5fe18a518ff94",
-    "12":"5fe0906d5952a",
-    "13":"5fe085ec118e8",
-    "14":"5fe08026a71c0",
-    "15":"5fe0802668ecd",
-    "16":"5fe080262d9ff",
-    "17":"5faa9b26ae954",
-    "18":"5fdb68a667d22",
-    "19":"5fd21224c79a9",
-    "20":"5fcf55d8398c1",
-    "21":"5fd08f5b5c663",
-    "22":"5fca3637c0102",
-    "23":"5fd1cd9e99806",
-    "24":"5ff36dd5570b9",
-    "25":"5fabd222bec9f",
-    "26":"5fca2fe4e1edd",
-    "27":"5fdb77e22bdc2"
+    "1":"5fda37e519fdb",
+    "2":"5fd7763b219a5",
+    "3":"5fca1a8d55717",
+    "4":"5f9a7a90e40ea",
+    "5":"5faa9b26ae954",
+    "6":"5fdb68a667d22",
+    "7":"5fd21224c79a9",
+    "8":"5fcf55d8398c1",
+    "9":"5fd08f5b5c663",
+    "10":"5fca3637c0102",
+    "11":"5fd1cd9e99806",
+    "12":"5fabd222bec9f",
+    "13":"5fca2fe4e1edd"
   },
   "name":{
     "0":"wilhelmstra\u00dfe 4",
-    "1":"Soldiner Stra\u00dfe 40",
-    "2":"Projekt 9",
-    "3":"Projekt 8",
-    "4":"Projekt 7",
-    "5":"Projekt 6",
-    "6":"Projekt 5",
-    "7":"Projekt 4",
-    "8":"Projekt 3",
-    "9":"Projekt 17",
-    "10":"Projekt 16",
-    "11":"Projekt 15",
-    "12":"Projekt 14",
-    "13":"Projekt 13",
-    "14":"Projekt 12",
-    "15":"Projekt 11",
-    "16":"Projekt 10",
-    "17":"Platz der Vereinten Nationen 7",
-    "18":"Konferenzraum mit Mike",
-    "19":"Konferenzraum Inform",
-    "20":"kestenzeile 13a",
-    "21":"Justus Wohnung",
-    "22":"Jolanta ",
-    "23":"holzmindener 1",
-    "24":"Fahrstuhl ",
-    "25":"B\u00fcro Hoppegarten",
-    "26":"4.Og links",
-    "27":"20064786"
+    "1":"Projekt 9",
+    "2":"Projekt 8",
+    "3":"Projekt 7",
+    "4":"Projekt 4",
+    "5":"Platz der Vereinten Nationen 7",
+    "6":"Konferenzraum mit Mike",
+    "7":"Konferenzraum Inform",
+    "8":"kestenzeile 13a",
+    "9":"Justus Wohnung",
+    "10":"Jolanta ",
+    "11":"holzmindener 1",
+    "12":"B\u00fcro Hoppegarten",
+    "13":"4.Og links"
   },
   "address":{
     "0":{
@@ -70,15 +42,6 @@
       "latitude":null
     },
     "1":{
-      "street":null,
-      "street_number":null,
-      "postal_code":null,
-      "city":null,
-      "country":"DE",
-      "longitude":null,
-      "latitude":null
-    },
-    "2":{
       "street":"Parchimer Allee",
       "street_number":"85",
       "postal_code":"12359",
@@ -87,7 +50,7 @@
       "longitude":13.4471,
       "latitude":52.4455
     },
-    "3":{
+    "2":{
       "street":"Ritterstra\u00dfe",
       "street_number":"46",
       "postal_code":"10969",
@@ -95,6 +58,15 @@
       "country":"Deutschland",
       "longitude":13.4019,
       "latitude":52.5041
+    },
+    "3":{
+      "street":null,
+      "street_number":null,
+      "postal_code":null,
+      "city":null,
+      "country":"DE",
+      "longitude":null,
+      "latitude":null
     },
     "4":{
       "street":null,
@@ -115,22 +87,22 @@
       "latitude":null
     },
     "6":{
-      "street":"Karl G\u00f6tz Str 4",
-      "street_number":null,
-      "postal_code":"10767",
-      "city":"Berlin",
-      "country":"Deutschland",
-      "longitude":null,
-      "latitude":null
+      "street":"Gewerbestra\u00dfe",
+      "street_number":"15",
+      "postal_code":"15366",
+      "city":"Hoppegarten",
+      "country":"DE",
+      "longitude":13.6408,
+      "latitude":52.5136
     },
     "7":{
-      "street":null,
-      "street_number":null,
-      "postal_code":null,
-      "city":null,
-      "country":"DE",
-      "longitude":null,
-      "latitude":null
+      "street":"Gewerbestra\u00dfe",
+      "street_number":"15",
+      "postal_code":"15366",
+      "city":"Hoppegarten",
+      "country":"Deutschland",
+      "longitude":13.6408,
+      "latitude":52.5136
     },
     "8":{
       "street":null,
@@ -142,114 +114,6 @@
       "latitude":null
     },
     "9":{
-      "street":null,
-      "street_number":null,
-      "postal_code":null,
-      "city":null,
-      "country":"DE",
-      "longitude":null,
-      "latitude":null
-    },
-    "10":{
-      "street":"6. OG Kuschmann",
-      "street_number":"Fritz Erler Allee 124a",
-      "postal_code":"12359 ",
-      "city":"Berlin ",
-      "country":"Deutschland",
-      "longitude":null,
-      "latitude":null
-    },
-    "11":{
-      "street":"Michael Bohnen Ring 14",
-      "street_number":null,
-      "postal_code":null,
-      "city":null,
-      "country":"DE",
-      "longitude":null,
-      "latitude":null
-    },
-    "12":{
-      "street":"Teikeweg 21",
-      "street_number":null,
-      "postal_code":null,
-      "city":null,
-      "country":"DE",
-      "longitude":null,
-      "latitude":null
-    },
-    "13":{
-      "street":"Kurf\u00fcrstenstra\u00dfe 30-32",
-      "street_number":null,
-      "postal_code":null,
-      "city":null,
-      "country":"DE",
-      "longitude":null,
-      "latitude":null
-    },
-    "14":{
-      "street":"3. OG Puzankova",
-      "street_number":"Hundekehlestr 8",
-      "postal_code":null,
-      "city":null,
-      "country":"DE",
-      "longitude":null,
-      "latitude":null
-    },
-    "15":{
-      "street":"Fahrenheitstr 3",
-      "street_number":null,
-      "postal_code":"12207 ",
-      "city":"Berlin",
-      "country":"Deutschland ",
-      "longitude":null,
-      "latitude":null
-    },
-    "16":{
-      "street":null,
-      "street_number":null,
-      "postal_code":null,
-      "city":null,
-      "country":"DE",
-      "longitude":null,
-      "latitude":null
-    },
-    "17":{
-      "street":null,
-      "street_number":null,
-      "postal_code":null,
-      "city":null,
-      "country":"DE",
-      "longitude":null,
-      "latitude":null
-    },
-    "18":{
-      "street":"Gewerbestra\u00dfe",
-      "street_number":"15",
-      "postal_code":"15366",
-      "city":"Hoppegarten",
-      "country":"Deutschland",
-      "longitude":13.6408,
-      "latitude":52.5136
-    },
-    "19":{
-      "street":"Gewerbestra\u00dfe",
-      "street_number":"15",
-      "postal_code":"15366",
-      "city":"Hoppegarten",
-      "country":"Deutschland",
-      "longitude":13.6408,
-      "latitude":52.5136
-    },
-    "20":{
-      "street":null,
-      "street_number":null,
-      "postal_code":null,
-      "city":null,
-      "country":"DE",
-      "longitude":null,
-      "latitude":null
-    },
-    "21":{
       "street":"Frankfurter Allee 120",
       "street_number":null,
       "postal_code":"10365",
@@ -258,7 +122,7 @@
       "longitude":13.4767,
       "latitude":52.5131
     },
-    "22":{
+    "10":{
       "street":"Wartiner Stra\u00dfe",
       "street_number":"42",
       "postal_code":"13057",
@@ -267,7 +131,7 @@
       "longitude":13.5314,
       "latitude":52.5668
     },
-    "23":{
+    "11":{
       "street":null,
       "street_number":null,
       "postal_code":null,
@@ -276,16 +140,7 @@
       "longitude":null,
       "latitude":null
     },
-    "24":{
-      "street":null,
-      "street_number":null,
-      "postal_code":null,
-      "city":null,
-      "country":"DE",
-      "longitude":null,
-      "latitude":null
-    },
-    "25":{
+    "12":{
       "street":"Gewerbestra\u00dfe",
       "street_number":"15",
       "postal_code":"15366",
@@ -294,7 +149,7 @@
       "longitude":13.6409,
       "latitude":52.5137
     },
-    "26":{
+    "13":{
       "street":"Wartiner Stra\u00dfe",
       "street_number":"44",
       "postal_code":"13057",
@@ -302,166 +157,87 @@
       "country":"Deutschland",
       "longitude":13.5313,
       "latitude":52.567
-    },
-    "27":{
-      "street":"M\u00dcLLERSTR",
-      "street_number":null,
-      "postal_code":"13573",
-      "city":"Berlin",
-      "country":"DE",
-      "longitude":null,
-      "latitude":null
     }
   },
   "creation_date":{
     "0":"2020-11-17T08:54:27+00:00",
-    "1":"2021-01-04T03:34:35+00:00",
-    "2":"2020-12-16T11:37:57+00:00",
-    "3":"2020-12-14T09:27:07+00:00",
-    "4":"2020-12-04T06:16:29+00:00",
-    "5":"2020-12-19T10:26:28+00:00",
-    "6":"2020-12-19T10:21:50+00:00",
-    "7":"2020-10-29T04:17:20+00:00",
-    "8":"2020-12-18T04:38:51+00:00",
-    "9":"2020-12-25T11:54:42+00:00",
-    "10":"2020-12-22T09:35:22+00:00",
-    "11":"2020-12-22T00:55:29+00:00",
-    "12":"2020-12-21T07:09:17+00:00",
-    "13":"2020-12-21T06:24:28+00:00",
-    "14":"2020-12-21T05:59:50+00:00",
-    "15":"2020-12-21T05:59:50+00:00",
-    "16":"2020-12-21T05:59:50+00:00",
-    "17":"2020-11-10T08:52:38+00:00",
-    "18":"2020-12-17T09:18:14+00:00",
-    "19":"2020-12-10T07:18:44+00:00",
-    "20":"2020-12-08T05:30:48+00:00",
-    "21":"2020-12-09T03:48:27+00:00",
-    "22":"2020-12-04T08:14:31+00:00",
-    "23":"2020-12-10T02:26:22+00:00",
-    "24":"2021-01-04T14:34:45+00:00",
-    "25":"2020-11-11T06:59:30+00:00",
-    "26":"2020-12-04T07:47:32+00:00",
-    "27":"2020-12-17T10:23:14+00:00"
+    "1":"2020-12-16T11:37:57+00:00",
+    "2":"2020-12-14T09:27:07+00:00",
+    "3":"2020-12-04T06:16:29+00:00",
+    "4":"2020-10-29T04:17:20+00:00",
+    "5":"2020-11-10T08:52:38+00:00",
+    "6":"2020-12-17T09:18:14+00:00",
+    "7":"2020-12-10T07:18:44+00:00",
+    "8":"2020-12-08T05:30:48+00:00",
+    "9":"2020-12-09T03:48:27+00:00",
+    "10":"2020-12-04T08:14:31+00:00",
+    "11":"2020-12-10T02:26:22+00:00",
+    "12":"2020-11-11T06:59:30+00:00",
+    "13":"2020-12-04T07:47:32+00:00"
   },
   "update_date":{
     "0":"2020-11-17T08:55:19+00:00",
-    "1":"2021-01-04T03:35:57+00:00",
-    "2":"2020-12-16T11:53:50+00:00",
-    "3":"2020-12-14T09:27:11+00:00",
-    "4":"2020-12-04T06:16:33+00:00",
-    "5":"2020-12-19T10:26:33+00:00",
-    "6":"2020-12-19T10:21:54+00:00",
-    "7":"2020-12-01T10:43:52+00:00",
-    "8":"2020-12-18T04:39:06+00:00",
-    "9":"2020-12-25T11:54:48+00:00",
-    "10":"2020-12-22T09:35:24+00:00",
-    "11":"2020-12-22T00:55:45+00:00",
-    "12":"2020-12-21T07:09:20+00:00",
-    "13":"2020-12-22T04:49:26+00:00",
-    "14":"2020-12-22T03:49:30+00:00",
-    "15":"2020-12-21T05:59:55+00:00",
-    "16":"2020-12-21T06:00:06+00:00",
-    "17":"2020-12-14T01:59:06+00:00",
-    "18":"2021-01-08T04:19:52+00:00",
-    "19":"2020-12-14T06:58:18+00:00",
-    "20":"2020-12-09T07:14:01+00:00",
-    "21":"2021-01-09T16:19:09+00:00",
-    "22":"2020-12-09T03:03:05+00:00",
-    "23":"2020-12-10T02:26:34+00:00",
-    "24":"2021-01-04T14:34:50+00:00",
-    "25":"2020-12-10T04:07:47+00:00",
-    "26":"2020-12-04T07:47:37+00:00",
-    "27":"2020-12-17T10:23:16+00:00"
+    "1":"2020-12-16T11:53:50+00:00",
+    "2":"2020-12-14T09:27:11+00:00",
+    "3":"2020-12-04T06:16:33+00:00",
+    "4":"2020-12-01T10:43:52+00:00",
+    "5":"2020-12-14T01:59:06+00:00",
+    "6":"2020-12-17T09:52:25+00:00",
+    "7":"2020-12-14T06:58:18+00:00",
+    "8":"2020-12-09T07:14:01+00:00",
+    "9":"2020-12-16T18:25:56+00:00",
+    "10":"2020-12-09T03:03:05+00:00",
+    "11":"2020-12-10T02:26:34+00:00",
+    "12":"2020-12-10T04:07:47+00:00",
+    "13":"2020-12-04T07:47:37+00:00"
   },
   "thumbnail_url":{
     "0":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fb3d61345486\/plan.thumb",
-    "1":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5ff2d31b02863\/plan.thumb",
-    "2":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fda37e519fdb\/plan.thumb",
-    "3":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fd7763b219a5\/plan.thumb",
-    "4":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fca1a8d55717\/plan.thumb",
-    "5":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fde1ba489d22\/plan.thumb",
-    "6":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fde1a8e5de2a\/plan.thumb",
-    "7":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5f9a7a90e40ea\/plan.thumb",
-    "8":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fdc78abcc811\/plan.thumb",
-    "9":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fe61952caaed\/plan.thumb",
-    "10":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fe2042a4531e\/plan.thumb",
-    "11":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fe18a518ff94\/plan.thumb",
-    "12":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fe0906d5952a\/plan.thumb",
-    "13":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fe085ec118e8\/plan.thumb",
-    "14":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fe08026a71c0\/plan.thumb",
-    "15":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fe0802668ecd\/plan.thumb",
-    "16":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fe080262d9ff\/plan.thumb",
-    "17":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5faa9b26ae954\/plan.thumb",
-    "18":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fdb68a667d22\/plan.thumb",
-    "19":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fd21224c79a9\/plan.thumb",
-    "20":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fcf55d8398c1\/plan.thumb",
-    "21":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fd08f5b5c663\/plan.thumb",
-    "22":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fca3637c0102\/plan.thumb",
-    "23":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fd1cd9e99806\/plan.thumb",
-    "24":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5ff36dd5570b9\/plan.thumb",
-    "25":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fabd222bec9f\/plan.thumb",
-    "26":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fca2fe4e1edd\/plan.thumb",
-    "27":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fdb77e22bdc2\/plan.thumb"
+    "1":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fda37e519fdb\/plan.thumb",
+    "2":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fd7763b219a5\/plan.thumb",
+    "3":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fca1a8d55717\/plan.thumb",
+    "4":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5f9a7a90e40ea\/plan.thumb",
+    "5":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5faa9b26ae954\/plan.thumb",
+    "6":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fdb68a667d22\/plan.thumb",
+    "7":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fd21224c79a9\/plan.thumb",
+    "8":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fcf55d8398c1\/plan.thumb",
+    "9":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fd08f5b5c663\/plan.thumb",
+    "10":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fca3637c0102\/plan.thumb",
+    "11":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fd1cd9e99806\/plan.thumb",
+    "12":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fabd222bec9f\/plan.thumb",
+    "13":"https:\/\/s3.amazonaws.com\/prod.plans.sensopia.com\/5fca2fe4e1edd\/plan.thumb"
   },
   "public_url":{
     "0":null,
     "1":null,
     "2":null,
     "3":null,
-    "4":null,
+    "4":"https:\/\/cloud.magicplan.app\/plan\/5f9a7a90e40ea",
     "5":null,
-    "6":null,
-    "7":"https:\/\/cloud.magicplan.app\/plan\/5f9a7a90e40ea",
+    "6":"https:\/\/cloud.magicplan.app\/plan\/5fdb68a667d22",
+    "7":"https:\/\/cloud.magicplan.app\/plan\/5fd21224c79a9",
     "8":null,
     "9":null,
-    "10":null,
+    "10":"https:\/\/cloud.magicplan.app\/plan\/5fca3637c0102",
     "11":null,
     "12":null,
-    "13":null,
-    "14":null,
-    "15":null,
-    "16":null,
-    "17":null,
-    "18":"https:\/\/cloud.magicplan.app\/plan\/5fdb68a667d22",
-    "19":"https:\/\/cloud.magicplan.app\/plan\/5fd21224c79a9",
-    "20":null,
-    "21":"https:\/\/cloud.magicplan.app\/plan\/5fd08f5b5c663",
-    "22":"https:\/\/cloud.magicplan.app\/plan\/5fca3637c0102",
-    "23":null,
-    "24":null,
-    "25":null,
-    "26":null,
-    "27":null
+    "13":null
   },
   "3d_url":{
-    "0":"https:\/\/3d.magicplan.app\/#embed\/?key=NzcwZmFjMmMzMWNjMjVjY2U5ZGUzZDgyZTNlZWYyYTVlODU3NzI0NDE0MDU5NDFjMmI1NmZiY2Y5NzNhYmZlZoYo3PJwKLuk%2Bd26zhNxJvI%2BQxRgXM3j8LIrsszz%2BBu3JcBqriKk5vWqNOLtG4x79A%3D%3D",
-    "1":"https:\/\/3d.magicplan.app\/#embed\/?key=NTNiYTEwNjA1ZmU2MTBiMzFjNjY0OTJhYTNhMTJlNzQ2MTc4MGExNTgyOWQ1ZjBiMTY1N2Q4ZjAyNWRiM2FhMkL43YZ6ejH7DJQIpQVs7D7%2FI%2BmEvR0MFV1quVhj4S1VeFE94LwEo9GWzgOq2j4KWQ%3D%3D",
-    "2":"https:\/\/3d.magicplan.app\/#embed\/?key=YjQzNDE1NzE3YTc4YWE1MzM2ZjAwZjg2M2IzZWE3YWEwYzdmNjAyM2U5M2NmMDNhYjdmNjBlNjhlZThjYjYzYUz0VidoJX7vrEq58wpRzsf%2BiW7okc8lrw0u9fV1rbGu1CAsf34vr9CoyWQoJgg7OQ%3D%3D",
-    "3":"https:\/\/3d.magicplan.app\/#embed\/?key=ZjQ1MmQwY2U1NWFhODBjNGFlMDc5ZDFkNjk2Y2ZhOGRlYTFkNDVmNWVjMzY1NTIwNTA0MGUzOGQ3YzlhZjE1Zcg79JkihFP4U26nwPHtT6zuvevAp4oKFcWboYoQmFEOip9FznwcRTGL1kzBYB1x4g%3D%3D",
-    "4":"https:\/\/3d.magicplan.app\/#embed\/?key=MWI1NWNlOWFkZWJjMWVjMWQyYzg2NjlhZWMxNWU3YzM0YWUzYmY5N2Y1MTRlMmFmMjdmMTJhZDg5NGYyMGFmYauK14UP6lp5HCw4JOjZNzwcs%2Fo0AqVHQe3XxrhGZBLiKXV%2FMxFcKHACgyNTbYJusg%3D%3D",
-    "5":"https:\/\/3d.magicplan.app\/#embed\/?key=YjYwNTZhYjI1YWJjYjE4MDljMThjY2ZiN2JiNWNjMmM5ZTNmNDRjYjU0NTI3MmEzNjBkNGE0OGExNGQ5ZTYyMrW0TrfKql3fxepj%2BT2WEeP7zrDrBYi1bPCggkXGtH8HVhHFc3Z1Q%2FA3D%2FNYeCY7Zg%3D%3D",
-    "6":"https:\/\/3d.magicplan.app\/#embed\/?key=NDRjOGIxYWNmMzcwYWY0OTQ4M2U4Njc5MzBlYTZmYjJiNzk3MzY5YjU5OGQzODUxMDA5MGEyOWEyNGNkNDY4N50I%2BhWNez4WIi8f0R%2B74NWIRM4gdE2MkzB9Sal1I7pPMHp0SlJ500bkbfPrUgoaBQ%3D%3D",
-    "7":"https:\/\/3d.magicplan.app\/#embed\/?key=NzBlMjZlOThiYmM5YjM5ZjY3NWRiYTgxYmI3ZTI5YjdmZTQyNWZiNDYxNGJiZDdmZDkzZjczZmI1MWNiOTViYp3zL2WMgRCoH1huF%2Bmr9Z%2FKdvl8XgmTNnN5WJ1h74bkWP0DMyirBfFa1TfQTuAhMA%3D%3D",
-    "8":"https:\/\/3d.magicplan.app\/#embed\/?key=YmM3ODhjMWI3NWM1Njc2ZWM4NDgwNDJhYjk1OWFiOWFkNmU1ZTQ2MDNlODA3Y2Y1NmFjZWY3YjA5ZWJmNDA3Y0SVriHpT8ErjwvQ898cdu3pTOhLfhVE3MgP%2BsIFnTFqt4iFy0deAyBwuUDwfqDFHQ%3D%3D",
-    "9":"https:\/\/3d.magicplan.app\/#embed\/?key=NTE1MjgyOTE0NTU4NWJkMjY5ZTU0YmMxMmNjYTYzYjhjM2YzOTYwZWNkNTMzNWQwYzc2ODE5ZjA1NGJkOTcyZKK%2F9bT9gz%2Bt6KRg31ioFx9nbFlOWS8PHwNPrq%2BWCKPucT3phvZIWH7QG2U2FnxPqw%3D%3D",
-    "10":"https:\/\/3d.magicplan.app\/#embed\/?key=YWVkZjRiYjI2OWZiZjNhNTY2MTFhZDZmMTViY2Q3YzRhZWQwZDE0MGUyNjM1NGY4MDVhMzY5YWFlYWNiZDIxMDebeFfS3gFiDMlB%2BqoJ2Mn9%2FD4YQCFKe17gVHgOuc6xmxHfxeuLgJbSsH5ejoG%2BSg%3D%3D",
-    "11":"https:\/\/3d.magicplan.app\/#embed\/?key=N2E4MmVhMTE5MzA1MzRlOGJlZDJhMzUzZmZkZjk1NjZmOTQwMTQ5Nzc4NzUyNDFmMTNkMDlmNzNiOWM3MGQwNvl7SWGU02hzKlG1CiMHAsWeRjZ10cA6%2BIJPwp3hhBT3idUbQwzFzXPAuhdK6ndkqg%3D%3D",
-    "12":"https:\/\/3d.magicplan.app\/#embed\/?key=NWI4MGU4YzY5YjM3MDBjZjQ4YmUzM2I1YjFiMThhY2U3NWM1OWU4ZDE0NGI1YzE2ZDY1YWM0ZTM5MzcyMmVkYpehHYnZ8qrmTh0J850DuKu9H8Utr61wGC6iEOfx2PhEC2w0cIhgTI8TJBDaPBjjGA%3D%3D",
-    "13":"https:\/\/3d.magicplan.app\/#embed\/?key=MDgwYTM3Mzk1NjIyZGJkZjdjMjJhYzhjNjFiZDUxNGVhYTFiOGQ5MmMzNWI3MjMxNzVmMzI1ZTZlMDBlNzQwOQ6DOmNbsa2k0BPrjHnkso8NUaNwQMTQ%2BQ3SxuRvTW6mj3%2B2VVWf4UEWMZFoFPqBLg%3D%3D",
-    "14":"https:\/\/3d.magicplan.app\/#embed\/?key=NDI5OTQ5ZWYzMjg3NzlhMGUyZTA3MjVlYThkNTcyZGNhMjBiMzc2YTM4MjA0Njk2Yzk5Y2I4OTU5NWQ1N2UxOal0laHHXjJGr2K1zWOJ3fYL2YQ7Q7AXu7oX5ko67oK1UuV4%2FGWvEA%2BlayUoU%2FHMJQ%3D%3D",
-    "15":"https:\/\/3d.magicplan.app\/#embed\/?key=YmFjNmViODA5NTQzZDVlNjU0MzE1YmFjYzM0MDQ2YzA1NTFiOGE5ODk1NDQ2ZjQ1ZTViZGFhYmI3ZmEzNzI0OTaLk0B9zzO8PeX0jITzPrDqK1Y5MN%2BIhVQ9xQsjLQ6N9Fxd8%2F8TXQ%2BNgE69rTqj5w%3D%3D",
-    "16":"https:\/\/3d.magicplan.app\/#embed\/?key=ZmNiZGZiY2QyNmU3ZDU2NmE2MzE0YmJiMTE4Mjc4YWU3MTFlNmZhZTUxZmQyMzM3Nzc0YTU1MTliOGUyMWJjZuxdwVDfu6ap6pairZlaq2hDVhd%2FSMmfxtBJkRytl%2BuCBFVGsNX2gu6tAKz3hXfsPA%3D%3D",
-    "17":"https:\/\/3d.magicplan.app\/#embed\/?key=OGNiYTQ3ZWI0ZDk1Y2ZjMWRkNTY1OTVlYTIzM2I1NWU2YjFlMGE3MDkyZTU2MmRjZmQ4ODkyZjJhZmI0YTU1Nl5kXEj8QMeb9vJwppox99byIxs5m6BrXrBp8zoAPQ7f8f5dQBUBMJ%2Bg2e2fRlENOg%3D%3D",
-    "18":"https:\/\/3d.magicplan.app\/#embed\/?key=MGVmY2E3N2E2N2M2NWNjZWNkNWYzZTQ4NzIzZjczN2RmOGQ0NDBlYWI3ZGYyZjQxMTNmODg0ZmMwZjljM2VhNuYBnF1i3kjsHfWqa1kQt8SmJTH3EqSUayt0L1jPx4clO3s0AzyFN%2BYe%2FVYXaGyFWA%3D%3D",
-    "19":"https:\/\/3d.magicplan.app\/#embed\/?key=NzFlOTQwNmM1NjljM2IwMTZmNzMzZTAyZDE1NzY3ZjA1NGMyNDAyYmY0MjJhMzlmZjU2NGEyNzFkOGZiODgzYXEe%2FhZULEbXFcNCUIDWSYwISRQxKd3WhxX4ey1G256NAmMGfGhhcXC1B%2BpBP3SSlQ%3D%3D",
-    "20":"https:\/\/3d.magicplan.app\/#embed\/?key=YTMxZTgwNDA0MzE1OWNkYTRmY2I0ZTUyMDMwY2I2YmNhMjczOTEwYTlmMDJkZjAwMjY5ZDY3NzMwZGJjOTI4NWD%2F1epF3WQlnFRdmvNBPKeL%2B8aop9cqWeZY0nO8ZZ9buMnLNWNIj7vmA1sLfu5ReA%3D%3D",
-    "21":"https:\/\/3d.magicplan.app\/#embed\/?key=MmM0NWRkZTU3MDkzOTE0NjFmNjIzYWRmYTdmMDU1ZDVhYTUyOGY5MGQwZTcyMmQ0YTUxODZiYzJkMzFkMDA3NF%2BzBxjia4IXLpY7HiBkXs2T4ouJ%2BG1k7m4QZX1Ggr0bce5TbJBidmNmBtgluWJq5A%3D%3D",
-    "22":"https:\/\/3d.magicplan.app\/#embed\/?key=MDJkNWE3OTg0N2VjYjc2MWM4ZDc3NTRmNDAwYTJlMTU3NmJiMThjYmVjN2RkMTdkZTFiZTJlYzVlNWJkZTEwYhIvtUlpzry5VjjMk%2BW2sxjPD43OnxPhKkRxr4O5hGZkOIuZKqo338D7NPYocpTIYA%3D%3D",
-    "23":"https:\/\/3d.magicplan.app\/#embed\/?key=MTI4YTIwNDFiOTM1YTg5MWVmMTJjNzRmY2JhY2MzOWY4NmQ4MmFlOWYzYmRiNzkzZmJlMDdiNDc0OWIxNzE4Zp0dj%2FmpQ60NL9EQdsvsJ4KXRLIQpoQsX1lgT%2BvZXMsfHweNIa%2FipglE2CK4581lfQ%3D%3D",
-    "24":"https:\/\/3d.magicplan.app\/#embed\/?key=MDA1ZTQ1NGMyMTY0NzBkYzAzOTVlOTdmNDVlZjk2YTYxNDc4NDM0NjY0NjAyNDU5NDE0ZDQxNTQzODZkOGQ2OIesKcNOQVxWqZ%2BzuS04FBYUS0pySgc7zlLD1LenxRvusg4SQNebkYlzfbnbHOIhqQ%3D%3D",
-    "25":"https:\/\/3d.magicplan.app\/#embed\/?key=MzUyNWYyMTQ3ZTdiN2UzZmY3Y2ZlMzY5NDM0NWQyYmM4NDAwOGQ2ZDY4ODBiNDRlNjY3MTNlYjYzNTcwYTI4ZBqpkKQdMPERdC%2BLnGozVDpLBI0YX8B0gr3IWortLlMrV7FGhWwWnRkfbkZMnd%2Bg0A%3D%3D",
-    "26":"https:\/\/3d.magicplan.app\/#embed\/?key=NDliMzU2YjVjZmE0NDQ3MzdhYWYyZjNmNmNlYzczZmM5ZjNmM2E0OGEwYjg0YjM1YzkwNGNlMDM3ODk0NmM3ON8A4%2BHj%2BrINnh%2FxO5Jj3ebYHdx36DzYkhGQ%2FMEdqMl%2BembYFaa0kZHfAbIKLZB%2Bog%3D%3D",
-    "27":"https:\/\/3d.magicplan.app\/#embed\/?key=ODlkMzczOWNkYmM3ZTJiODJkNzkyY2QzMTJjNDYyZGMwMTRjNzhlNzhkNjllODAzMTU0OGFlZjEzNGU2ZmM1Y1eHQnkthnniWkPmi%2FqkP9%2BVb9qUmZWl8IMm1itnTrQ3F8QKxv%2BRh2n3hwPHLt5SUQ%3D%3D"
+    "0":"https:\/\/3d.magicplan.app\/#embed\/?key=NjY1ZTA1YzM3NDNiNDBiNTc3ZmU5NzYxOGE5M2U4MDA4ZjA0ZjI0MDk1ZTdiMGFhNDljMjU3NTk3MTdiOTZhZrFUixo2QTr3yOhdvUXYASnbQgTF5bHNHBiM4fr3s7jjsbcT9fI%2BjtcoQR6h6IjuXw%3D%3D",
+    "1":"https:\/\/3d.magicplan.app\/#embed\/?key=NDY1NDlmZjRhYzQxN2RiOGRiN2I3ZmQxZmYxZmE2OWVhYzRkZDU1MDFiNGUyMWE1NmE0OTAzMjE0MGY3NDMzN%2B14fk0TwOXyhiJoDFMzn0yFilIu1siEzdSa8E5vidadUER91R0INTlvLfOVEI8AMw%3D%3D",
+    "2":"https:\/\/3d.magicplan.app\/#embed\/?key=NGEyOWJlY2ZmMTRlNmM4OGYwMjQzMGQ0ZmE0Y2Y5NjAwNGM2MTY0NDJjNWIxZjI2NjA2Nzg4MTIzOWQwMWNjYRqxPxdC%2FJxB25cVEA7KfzEBRGmpWuKCbgm8zX%2F3SWO1H8PZfoskIlUTGwNRrxxDWA%3D%3D",
+    "3":"https:\/\/3d.magicplan.app\/#embed\/?key=ZTk5ZWRkOGY0ZGM1MWI2YWQ3YjM5MmIxZmM0ZWJmYWE1YTZlMjg5ZDhkZTNmOTAxMDZhOWVjYzdmYzVlMjczNsCJxy0db4sCGjsoavSsNh5WnO1FGsWp9Yg%2BddCQIAxIzJMqnRzd09cM7qfjwZiquw%3D%3D",
+    "4":"https:\/\/3d.magicplan.app\/#embed\/?key=ODY1YzllMjVmZWU1MDNhMTE5Y2E3YzM2ZjIxZmUzN2RjODNjZDBiNzU5MWY0MWEyN2Q5MzFmMmViNDJmYzkxZs4Qao5XaA7o8YjFjhHKAjP1UAszBsgwcnFxTwN9qJQ000NNuhrsJP7Pbs0GRlpAMg%3D%3D",
+    "5":"https:\/\/3d.magicplan.app\/#embed\/?key=ZGI4MTBhZTc3NDJiZDdmYzllNzdkZDBhY2Q4ZGIyNWQxMDA0MGI4YTM4MGFhODEyMGQyOWQzMTcyNjM3ZDJmYzIMe3dlm2pLOvIyCvoZ4tj79DDvk0aTc0J91Lhog6ArUsWd%2B1UKQuY%2FnNw%2Fki1nEA%3D%3D",
+    "6":"https:\/\/3d.magicplan.app\/#embed\/?key=MzMyZWViZjMxZjg5MWY0ZWY2Njk2ODFmMzA3NGJhOGRmYzc1ZWZjNGUxZmJmZDhlMDNmYTAwNTFkZGFiZDg1Zur5yLOF9lalyhc4fOH4SGyYMY%2BhsduGt3JkOdpt7%2BPNj1XiKsPaQvwwfrHKi9wG2w%3D%3D",
+    "7":"https:\/\/3d.magicplan.app\/#embed\/?key=Y2ExMGM3OTYzYTY4Y2RjNzc4NzBjNDNhN2RjYThjYjMxYWVhZTdlNmFhNDk2NDVkNTNmYzBiZGI5NTc3MTU5YSWvhbOM71Xo3AuuYTVSBpsm4gPHBRoqBFL6d1ShpBS3Fafh5SpPztFypbrfwEx71A%3D%3D",
+    "8":"https:\/\/3d.magicplan.app\/#embed\/?key=MDZlMzgzNDkyNjhiOGY5ZjRjYzhiZTUzM2VjYjg0YzE1NjI2NTk2MGUwYTUwY2MzOTdlMmZhZDExMGE0ZDliOQEQHoSV3qdC%2FjF4VJHo6f52SxKUVl1cV1IszRKgUfw%2BPq8D5H9%2FeonrmAEsT1lt%2BA%3D%3D",
+    "9":"https:\/\/3d.magicplan.app\/#embed\/?key=MTBkYzNjYzY3NDg3ZTQwNTEwM2Y2YzU1ZGM2NDY4MjI5ZWIyZWMyNmYyZmEzMTgwNzcwN2IzODc2ZjFiMWRiNJi%2BmUFmSK6b34i2g9IGZKFvMqjCLMCHiAm1%2BLi%2F02%2BMbM6yehIAOsMCO8Ak15gjgA%3D%3D",
+    "10":"https:\/\/3d.magicplan.app\/#embed\/?key=YmYzYzRmNjY4NTYzZGNhNDM3ZmMyYWFkYmQ3ZTkyMzhhNjVhZTVhYjVhNzRkMDNkZGM1N2M5Zjk5ZGJjOTc3N2R%2FWeTzeZnbO6Nu2nNUTqjyhhrUsF1vhtJ0BdxPWT6MyTD1fnrCyI3iokv5LxgVVw%3D%3D",
+    "11":"https:\/\/3d.magicplan.app\/#embed\/?key=NTNhNjZlZWVkNGExNTQ0ZmJkMjRkMzhjNGNhYjQyYjA2MjdjMDUzMDYwNTQ4OGMzZGRhNTRhMGM4YTQwYWUwOV1saKpx1YpWt4JSqSFSXYLgutPRQhHWE3Kp63DZ2pSYQSf25NLXmEvOdqj5oYAdew%3D%3D",
+    "12":"https:\/\/3d.magicplan.app\/#embed\/?key=MTM5N2VhMjVmN2RlOTkzNzM5OWM4NTFjZWRkYjYzZWUwM2IwNTM2OTE3ZTViZGVjY2Q3MTMxZjU2OTIwZGE0NO3UDnW%2F0WJVmpK6HcVjuky7PySJBFdCODxpPhYc%2Fs2dohsFkzVS89eF18sXogetRA%3D%3D",
+    "13":"https:\/\/3d.magicplan.app\/#embed\/?key=MjQyNzYxNmFjYTg3NjM3YTRhOTEzYzZjYjRlMGM3ODgzYmVjNDY1N2Y4MWI3MTNiZDQ4YjQxZDIyZWU2NWEyONELJ5jB8Iy07%2F9YLpiekxR21Ihbs%2FAwF4GccSQooYJ9KdsmFuZRRYUQfLt0Ewyc%2FA%3D%3D"
   },
   "created_by":{
     "0":{
@@ -543,90 +319,6 @@
       "email":"matthias.herzog@bsu-projekt-service.de"
     },
     "13":{
-      "id":"8021a82a-c776-424b-a4e4-5b3741af6539",
-      "firstname":null,
-      "lastname":null,
-      "email":"matthias.herzog@bsu-projekt-service.de"
-    },
-    "14":{
-      "id":"8021a82a-c776-424b-a4e4-5b3741af6539",
-      "firstname":null,
-      "lastname":null,
-      "email":"matthias.herzog@bsu-projekt-service.de"
-    },
-    "15":{
-      "id":"8021a82a-c776-424b-a4e4-5b3741af6539",
-      "firstname":null,
-      "lastname":null,
-      "email":"matthias.herzog@bsu-projekt-service.de"
-    },
-    "16":{
-      "id":"8021a82a-c776-424b-a4e4-5b3741af6539",
-      "firstname":null,
-      "lastname":null,
-      "email":"matthias.herzog@bsu-projekt-service.de"
-    },
-    "17":{
-      "id":"8021a82a-c776-424b-a4e4-5b3741af6539",
-      "firstname":null,
-      "lastname":null,
-      "email":"matthias.herzog@bsu-projekt-service.de"
-    },
-    "18":{
-      "id":"8021a82a-c776-424b-a4e4-5b3741af6539",
-      "firstname":null,
-      "lastname":null,
-      "email":"matthias.herzog@bsu-projekt-service.de"
-    },
-    "19":{
-      "id":"8021a82a-c776-424b-a4e4-5b3741af6539",
-      "firstname":null,
-      "lastname":null,
-      "email":"matthias.herzog@bsu-projekt-service.de"
-    },
-    "20":{
-      "id":"8021a82a-c776-424b-a4e4-5b3741af6539",
-      "firstname":null,
-      "lastname":null,
-      "email":"matthias.herzog@bsu-projekt-service.de"
-    },
-    "21":{
-      "id":"8021a82a-c776-424b-a4e4-5b3741af6539",
-      "firstname":null,
-      "lastname":null,
-      "email":"matthias.herzog@bsu-projekt-service.de"
-    },
-    "22":{
-      "id":"8021a82a-c776-424b-a4e4-5b3741af6539",
-      "firstname":null,
-      "lastname":null,
-      "email":"matthias.herzog@bsu-projekt-service.de"
-    },
-    "23":{
-      "id":"8021a82a-c776-424b-a4e4-5b3741af6539",
-      "firstname":null,
-      "lastname":null,
-      "email":"matthias.herzog@bsu-projekt-service.de"
-    },
-    "24":{
-      "id":"8021a82a-c776-424b-a4e4-5b3741af6539",
-      "firstname":null,
-      "lastname":null,
-      "email":"matthias.herzog@bsu-projekt-service.de"
-    },
-    "25":{
-      "id":"8021a82a-c776-424b-a4e4-5b3741af6539",
-      "firstname":null,
-      "lastname":null,
-      "email":"matthias.herzog@bsu-projekt-service.de"
-    },
-    "26":{
-      "id":"8021a82a-c776-424b-a4e4-5b3741af6539",
-      "firstname":null,
-      "lastname":null,
-      "email":"matthias.herzog@bsu-projekt-service.de"
-    },
-    "27":{
       "id":"8021a82a-c776-424b-a4e4-5b3741af6539",
       "firstname":null,
       "lastname":null,

@@ -3,14 +3,17 @@ from datetime import datetime
 from tkinter import *
 from tkinter import messagebox
 from tkinter.filedialog import asksaveasfile
+import re
 
 import main
 from magicPlanAPI import MagicPlanAPI, write_file_from_url
+import threading
 
 
-class GUI:
+class GUI(threading.Thread):
 
     def __init__(self):
+        super().__init__()
         self.magic_plan_api = MagicPlanAPI()
         self.plans = dict()
         self.fenster = Tk()
@@ -24,6 +27,7 @@ class GUI:
         self.icon_path = "resources/data/icon/holding_favicon_300x300_cpz_icon.ico"
 
         self.fenster.iconbitmap(self.icon_path)
+        self.download_files = dict()
 
         import_textfield = Entry(self.fenster, textvariable=self.import_path, bd=2)
         export_textfield = Entry(self.fenster, textvariable=self.export_path, bd=2)
@@ -31,6 +35,10 @@ class GUI:
         account_label = Label(self.fenster, text="Account: ", anchor=E)
         user_label = Label(self.fenster, text="matthias.herzog", anchor=E)
 
+        download_files_button = Button(self.fenster, text="Dowload files",
+                                       command=lambda: self.setup_show_files())
+        account_button = Button(self.fenster, text="Change Accounts",
+                                command=lambda: self.button_action_import())
         import_button = Button(self.fenster, text="Import",
                                command=lambda: self.button_action_import())
         import_button_api = Button(self.fenster, text="Import from API",
@@ -46,15 +54,48 @@ class GUI:
 
         import_button_api.place(x=15, y=160, width=100, height=30)
         import_button.place(x=15, y=15, width=100, height=50)
+        download_files_button.place(x=470, y=25, width=100, height=30)
+        account_button.place(x=470, y=85, width=100, height=30)
 
         export_button.place(x=15, y=75, width=100, height=50)
-        import_textfield.place(x=130, y=25, width=465, height=30)
-        export_textfield.place(x=130, y=85, width=465, height=30)
+        import_textfield.place(x=130, y=25, width=315, height=30)
+        export_textfield.place(x=130, y=85, width=315, height=30)
         convert_button.place(x=255, y=160, width=100, height=30)
         # login_button.place(x=360, y=160, width=100, height=30)
         account_label.place(x=400, y=160, width=120, height=30)
         user_label.place(x=510, y=160, width=95, height=30)
         self.fenster.mainloop()
+
+    def setup_show_files(self):
+        self.show_files = Tk()
+        self.show_files.title("Select Files")
+        self.show_files.geometry("300x350")
+        self.show_files.iconbitmap(self.icon_path)
+
+        self.file_listbox = Listbox(self.show_files, selectmode='multiple')
+        self.file_listbox.place(x=5, y=5, width=290, height=300)
+
+        select = Button(self.show_files, text="Select", command=lambda: self.select_file())
+        select.place(x=5, y=310, width=290, height=30)
+
+        self.load_files()
+
+    def load_files(self):
+        if self.import_path.get() == "":
+            messagebox.showinfo(title="Error", message="No project has been selected")
+            self.show_files.destroy()
+            return
+        magic_id = [plan for plan in self.plans if self.plans[plan] == self.import_path.get().split('/')[-1]]
+        self.files = self.magic_plan_api.get_files_by_plan(magic_id[0])
+        self.files_list = list(self.files)
+        for name in self.files_list:
+            self.file_listbox.insert(END, str(name))
+
+    def select_file(self):
+        select = self.file_listbox.curselection()
+        for index in select:
+            self.download_files[self.files_list[int(index)]] = self.files[self.files_list[int(index)]]
+        self.show_files.destroy()
 
     def button_action_convert(self):
         magic_id = [plan for plan in self.plans if self.plans[plan] == self.import_path.get().split('/')[-1]]
@@ -62,10 +103,12 @@ class GUI:
         # main.save_to_file(self, self.import_path.get().split('/')[-1])
 
         # saving Report to file
-        files = self.magic_plan_api.get_files_by_plan(magic_id, filetype='pdf')
-        if len(files) == 1:
-            directory = self.export_path.get().removesuffix(self.export_path.get().split('/')[-1])
-            write_file_from_url(list(files.values())[-1], str(directory) + list(files.keys())[-1])
+        try:
+            directory = re.sub(self.export_path.get().split('/')[-1], '', self.export_path.get())
+            for file in self.download_files:
+                write_file_from_url(self.download_files[file], str(directory) + file)
+        except:
+            print("File downloading error")
 
         main.convert_to_xml(param_data=self.xml, api=self.api_import_checker, export_path=str(self.export_path.get()))
         tkinter.messagebox.showinfo("Convert", "Die Datei wurde erfolgreich umgewandelt.")
@@ -81,7 +124,7 @@ class GUI:
                                  title="Save as")
         else:
             name = asksaveasfile(mode='w', initialfile="AUFMASS-" + str(datetime.now().date()) + ".xml",
-                             title="Save as")
+                                 title="Save as")
         self.export_path.set(name.name)
 
     def on_closing(self):
@@ -172,3 +215,4 @@ class GUI:
     def reload_projects(self):
         self.plans = main.dataCentre.reload_plans()
         self.load_projects()
+
