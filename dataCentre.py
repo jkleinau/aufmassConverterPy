@@ -83,6 +83,6 @@ class DataCentre:
             customer_id = self.data['credenitals']['customerID'][0]
             private_key = self.data['credenitals']['private_key'][0]
             user_email = self.data['credenitals']['user_email'][0]
-            return MagicPlanAPI(customerID=customer_id, private_key=private_key, user_email=user_email)
+            self.magic_api = MagicPlanAPI(customerID=customer_id, private_key=private_key, user_email=user_email)
         except:
-            return MagicPlanAPI()
+            self.magic_api = MagicPlanAPI()

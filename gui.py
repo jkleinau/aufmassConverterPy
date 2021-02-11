@@ -14,7 +14,7 @@ class GUI(threading.Thread):
 
     def __init__(self):
         super().__init__()
-        self.magic_plan_api = MagicPlanAPI()
+        self.magic_plan_api = main.dataCentre.magic_api
         self.plans = dict()
         self.fenster = Tk()
         self.api_import_checker = False
@@ -33,12 +33,12 @@ class GUI(threading.Thread):
         export_textfield = Entry(self.fenster, textvariable=self.export_path, bd=2)
 
         account_label = Label(self.fenster, text="Account: ", anchor=E)
-        user_label = Label(self.fenster, text="matthias.herzog", anchor=E)
+        self.user_label = Label(self.fenster, text=main.dataCentre.data['credentials']['name'][0], anchor=E)
 
         download_files_button = Button(self.fenster, text="Dowload files",
                                        command=lambda: self.setup_show_files())
         account_button = Button(self.fenster, text="Change Accounts",
-                                command=lambda: self.button_action_import())
+                                command=lambda: self.setup_account_change())
         import_button = Button(self.fenster, text="Import",
                                command=lambda: self.button_action_import())
         import_button_api = Button(self.fenster, text="Import from API",
@@ -63,7 +63,7 @@ class GUI(threading.Thread):
         convert_button.place(x=255, y=160, width=100, height=30)
         # login_button.place(x=360, y=160, width=100, height=30)
         account_label.place(x=400, y=160, width=120, height=30)
-        user_label.place(x=510, y=160, width=95, height=30)
+        self.user_label.place(x=510, y=160, width=95, height=30)
         self.fenster.mainloop()
 
     def setup_show_files(self):
@@ -132,32 +132,36 @@ class GUI(threading.Thread):
             main.dataCentre.save_data()
             self.fenster.destroy()
 
-    def login_check(self):
-        user_label = Label(self.fenster, text=self.username_entry.get(), anchor=E)
-        user_label.place(x=525, y=160, width=85, height=30)
-        self.login.destroy()
+    def login(self):
+        main.dataCentre.data['credentials']['name'][0] = self.username_entry.get()
+        main.dataCentre.data['credentials']['user_email'][0] = self.email_entry.get()
+        main.dataCentre.save_data()
+        main.dataCentre.connect_to_api()
+        self.user_label['text'] = self.username_entry.get()
+        self.account_change.destroy()
 
-    def setup_login(self):
-        self.login = Tk()
-        self.login.title("Login")
-        self.login.iconbitmap(self.icon_path)
-        self.login.resizable = False
+    def setup_account_change(self):
+        self.account_change = Tk()
+        self.account_change.title("Chang Account")
+        self.account_change.geometry("400x170")
+        self.account_change.iconbitmap(self.icon_path)
+        self.account_change.resizable = False
 
         # username label and text entry box
-        usernameLabel = Label(self.login, text="User Name:").grid(row=0, column=0, sticky=E, padx=5, pady=5)
+        Label(self.account_change, text="Name:").place(x=10, y=10, width=50, height=60)
 
-        self.username_entry = Entry(self.login, textvariable=self.username)
-        self.username_entry.grid(row=0, column=1, padx=5, pady=5)
+        self.username_entry = Entry(self.account_change, textvariable=self.username)
+        self.username_entry.place(x=70, y=20, width=320, height=30)
 
         # password label and password entry box
-        passwordLabel = Label(self.login, text="Password:").grid(row=1, column=0, sticky=E, padx=5, pady=5)
-        self.password = StringVar()
-        passwordEntry = Entry(self.login, textvariable=self.password, show='*').grid(row=1, column=1, padx=5, pady=5)
+        Label(self.account_change, text="Email:").place(x=10, y=70, width=50, height=60)
+        self.user_email = StringVar()
 
+        self.email_entry = Entry(self.account_change, textvariable=self.user_email)
+        self.email_entry.place(x=70, y=80, width=320, height=30)
         # login button
-        loginButton = Button(self.login, text="Login", command=self.login_check).grid(row=4, column=0, sticky=N,
-                                                                                      columnspan=2, padx=5, pady=10)
-        self.login.mainloop()
+        Button(self.account_change, text="Login", command=lambda: self.login()).place(x=150, y=130, width=100,
+                                                                              height=30)
 
     def setup_api_select(self):
         self.api_select = Tk()
@@ -215,4 +219,3 @@ class GUI(threading.Thread):
     def reload_projects(self):
         self.plans = main.dataCentre.reload_plans()
         self.load_projects()
-
