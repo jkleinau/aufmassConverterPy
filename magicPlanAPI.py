@@ -63,23 +63,31 @@ class MagicPlanAPI:
         return requests.get('https://cloud.magic-plan.com/api/v2/workgroups/users', headers=self.headers).json()
 
     def get_projects(self, as_json=False):
+
         payload = {
-            'page': '1',
+            'page': 1,
             'sort': 'Plans.name',
             'direction': 'desc'
         }
-        r = requests.get('https://cloud.magic-plan.com/api/v2/workgroups/plans', params=payload,
-                         headers=self.headers)
-        data = r.json()
-        # return data as json for later use
+        plans = list()
+        data_plans = list()
+        while True:
+            r = requests.get('https://cloud.magic-plan.com/api/v2/workgroups/plans', params=payload,
+                             headers=self.headers)
+            data = r.json()
+            data_plans += data['data']['plans']
+            for plan in data['data']['plans']:
+                plans.append({
+                    'id': plan['id'],
+                    'name': plan['name']
+                })
+            # return data as json for later use
+            payload['page'] += 1
+            if not data['data']['paging']['next_page']:
+                break
         if as_json:
-            return data['data']['plans']
+            return data_plans
 
         # convert data to dict
-        plans = list()
-        for plan in data['data']['plans']:
-            plans.append({
-                'id': plan['id'],
-                'name': plan['name']
-            })
+
         return plans

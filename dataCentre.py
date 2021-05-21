@@ -15,7 +15,7 @@ class DataCentre:
         }
         self.data = dict()
         self.load_data()
-        self.magic_api = self.connect_to_api()
+        self.connect_to_api()
 
     def get_search_plans(self, search):
         """
