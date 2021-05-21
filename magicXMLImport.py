@@ -55,9 +55,9 @@ def create_polylines(data):
 def link_position_to_component(rooms, poly=None):
     for room in rooms:
         for pos in room.positions.values():
-            if float(pos.menge) == round(float(room.data['Bodenfläche']), 1) or float(pos.menge) == round(float(room.data['Bodenfläche']), 1)/2:
+            if float(pos.menge) == round(float(room.data['Bodenfläche']), 1) or float(pos.menge) == round(
+                    float(room.data['Bodenfläche']), 1) / 2:
                 pos.aufmass_zeilen.append(room.data_to_aufmasszeile('Bodenfläche'))
-
             if pos.ceiling == '1':
                 pos.aufmass_zeilen.append(room.data_to_aufmasszeile('Deckenfläche'))
             walls = [wall for wall in room.components.values() if wall.typ == 'Wand']
@@ -77,6 +77,8 @@ def link_position_to_component(rooms, poly=None):
                         pos.aufmass_zeilen.remove(component[0].to_aufmass_zeile())
                     except ValueError:
                         pass
+            if pos.surface and len(pos.aufmass_zeilen) == 0:
+                pos.aufmass_zeilen.append(room.data_to_aufmasszeile('Bodenfläche'))
     return rooms
 
 
@@ -111,7 +113,7 @@ def create_positions(data):
                 except:
                     ceiling = '0'
                 positions[symbol] = Position(menge=menge, artikel_nr=artikel_nr, pos_id=pos_id, uid=uid, symbol=symbol,
-                                             links=links, ceiling=ceiling)
+                                             links=links, ceiling=ceiling, surface=True)
         except:
             print("Der Artikel konnte nicht korrekt eingelesen werden:\t" + str(position))
             pass

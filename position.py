@@ -4,7 +4,8 @@ from aufmassZeile import *
 
 class Position:
     def __init__(self, menge=None, artikel_nr=None, positions_nr=None, pos_id=None, uid=None, symbol=None,
-                 aufmass_zeilen=None, links=None, ceiling=None):
+                 aufmass_zeilen=None, links=None, ceiling=None, surface=False):
+        self.surface = surface
         self.ceiling = ceiling
         self.symbol = symbol
         self.pos_id = pos_id
@@ -22,7 +23,7 @@ class Position:
     def __str__(self):
         return f"Position {self.artikel_nr}, mit {len(self.aufmass_zeilen)} Aufmasszeilen"
 
-    def write_to_xml(self, root) :
+    def write_to_xml(self, root):
         """
         Writes the Position to the given root Element in XML
         :param root: Root Element
