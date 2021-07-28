@@ -4,10 +4,10 @@ block_cipher = None
 
 
 a = Analysis(['main.py'],
-             pathex=['C:\\Users\\BSU Holding 02\\PycharmProjects\\aufmassConverterPy'],
+             pathex=['C:\\Users\\BSU04\\PycharmProjects\\aufmassConverterPy'],
              binaries=[],
              datas=[('resources/data','resources/data'), ('resources/data/icon','resources/data/icon')],
-             hiddenimports=['numpy'],
+             hiddenimports=['numpy', 'pandas'],
              hookspath=[],
              runtime_hooks=[],
              excludes=[],

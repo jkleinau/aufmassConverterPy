@@ -10,10 +10,9 @@ from magicPlanAPI import MagicPlanAPI, write_file_from_url
 import threading
 
 
-class GUI(threading.Thread):
+class GUI:
 
     def __init__(self):
-        super().__init__()
         self.magic_plan_api = main.dataCentre.magic_api
         self.plans = dict()
         self.fenster = Tk()

@@ -46,7 +46,6 @@ class MagicPlanAPI:
             payload['filetype'] = filetype
         if since:
             payload['since'] = since
-
         r = requests.post('https://cloud.sensopia.com/listfiles.php', payload)
         return get_file_urls(r.text, filetype=filetype)
 
